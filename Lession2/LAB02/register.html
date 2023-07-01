@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành viên</title>
+
+</head>
+<body>
+    <h1 align="center">Đăng ký thành viên</h1>
+
+    <form action="" name="frmRegister" id="frmRegister">
+        <table width="80%" border="0"  align="center">
+            <tbody>                
+                <tr>
+                    <td>
+                        Họ và Tên:
+                    </td>
+                    <td>
+                        <input type="text" name="hoTen"  id="hoTen" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tên đăng nhập:
+                    </td>
+                    <td>
+                        <input type="text" name="taiKhoan"  id="taiKhoan" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Mật khẩu:
+                    </td>
+                    <td>
+                        <input type="password" name="matKhau" id="matKhau" size="30" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ảnh đại diện:
+                    </td>
+                    <td>
+                        <input type="file" name="avatar" id="avatar">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td>
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Nam</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Nữ</label>                 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sở thích</td>
+                    <td>
+                        <input type="checkbox" name="bongDa" id="bongDa">
+                        <label for="bongDa">Bóng Đá</label>
+                        <input type="checkbox" name="xemPhim" id="xemPhim">
+                        <label for="xemPhim">Xem Phim</label> <br>
+                        <input type="checkbox" name="duLich" id="duLich">
+                        <label for="duLich">Du lịch</label>
+                        <input type="checkbox" name="boi" id="boi">
+                        <label for="boi">Bơi</label>
+                        <input type="checkbox" name="ngheNhac" id="ngheNhac">
+                        <label for="ngheNhac">Nghe Nhạc</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Quê quán:
+                    </td>
+                    <td>
+                        <select name="province" id="province">
+                            <option value="">---Chọn Tỉnh---</option>
+                            <option value="">Hà Nội</option>
+                            <option value="">Hải Phòng</option>
+                            <option value="">Hải Dương</option>
+                            <option value="">Nam Định</option>
+                            <option value="">Phú Thọ</option>
+                            <option value="">Hưng Yên</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Địa chỉ:
+                    </td>
+                    <td>
+                        <input type="text" name="adress" id="adress" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td>
+                        <input type="tel" name="mobile" id="mobile" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mô tả ngắn:</td>
+                    <td>                      
+                        <textarea name="description" id="description" cols="40" rows="5" width =100%></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Đăng ký" name="register" id="register">
+                        <input type="reset" value="Làm lại" name="reset" id="reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
