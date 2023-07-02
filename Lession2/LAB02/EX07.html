@@ -4,84 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <style>
+        .container {
+            width: 526px;
+            height: 430px;
+            border: 1px solid #ccc;
+        }
+        
+        .logo {
+            background-color: red;
+            height: 36px;
+        }
+        h1{
+            margin: 8px;
+        }
+        table {
+            width: 92%;
+            margin: 0px 16px 0px 16px;
+        }
+        tr td {
+            width: 46%;
+            margin: 8px 0px 8px 16px;
+        }     
+        tr td #item{
+            width: 100%;
+        }
+        tr td textarea{
+            width: 100%;
+        }
+        tr td select{
+            width: 100%;
+        }
+        tr td #priority{
+            width: 192px;
+        }
+        tr td #date{
+            width: 192px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>To Do List</h1>
-    <form action="" name="frmToDoList" id="frmToDoList">
-        <table width="600px">
-           <tbody>
-                <tr>
-                    <td colspan="2">
-                        <b>Item</b>
-                    </td>
-                </tr>
-                <tr>                    
-                    <td colspan="2">
-                        <input type="text" name="" id=""  >
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <b>Description</b>
-                    </td>
-                </tr>
-                <tr>                   
-                    <td colspan="2">
-                        <textarea name="" id="" rows="5"></textarea>
-                    </td>
-                </tr>
-                <tr>                    
-                    <td>
-                        <b>Priority</b>
-                    </td>
-                    <td>
-                        <b>Category</b>
-                    </td>
-                </tr>
-                <tr>                    
-                    <td>
-                        <select name="priority" id="priority">
-                            <option value="low">Low</option>
-                            <option value="low">Medium</option>
-                            <option value="low">High</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="priority" id="priority">
-                            <option value="low">Persional</option>
-                            <option value="low">Choice 1</option>
-                            <option value="low">Choice 2</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <b>Due Date</b>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        <input type="date" name="" id="">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <b>Status</b>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <input type="checkbox" name="status" id="status">
-                        <label for="status">Done.</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="Submit" name="submit" id="submit"> 
-                    </td>
-                </tr>
-           </tbody>
-        </table>
-    </form>
+    <div class="container">
+        <div class="logo">
+            <img src="imgs/logo_EX07.PNG" alt="">
+        </div>
+        <h1>To Do List</h1>
+        <hr>
+        <form action="" name="frmToDoList" id="frmToDoList">
+            <table>
+               <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <b>Item</b>
+                        </td>
+                    </tr>
+                    <tr>                    
+                        <td colspan="2">
+                            <input type="text" name="item" id="item"  >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <b>Description</b>
+                        </td>
+                    </tr>
+                    <tr>                   
+                        <td colspan="2">
+                            <textarea name="" id="" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>                    
+                        <td>
+                            <b>Priority</b>
+                        </td>
+                        <td>
+                            <b>Category</b>
+                        </td>
+                    </tr>
+                    <tr>                    
+                        <td>
+                            <select name="priority" id="priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="category" id="category">
+                                <option value="persional">Persional</option>
+                                <option value="choice1">Choice 1</option>
+                                <option value="choice2">Choice 2</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <b>Due Date</b>
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" name="date" id="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <b>Status</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="checkbox" name="status" id="status">
+                            <label for="status">Done.</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit" name="submit" id="submit"> 
+                        </td>
+                    </tr>
+               </tbody>
+            </table>
+        </form>
+    </div>
 </body>
 </html>

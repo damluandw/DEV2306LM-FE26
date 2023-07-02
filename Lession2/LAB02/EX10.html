@@ -4,83 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký Facebook</title>
+    <style>
+        .container{
+            width: 500px;
+            margin: 0 24px 0 24px;
+            background-color: rgb(242, 242, 250);
+        }
+        .margin24{
+            margin: 24px;
+        }
+        .inputText{
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid gray;
+            width: 426px;            
+        }
+        .name .inputText{
+            width: 208px;   
+        }
+
+        select {
+            height: 24px;
+            width: 84px;
+        }
+        .birthday{
+            display: flex;
+            flex-wrap:nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .help{
+            width: 168px;
+        }
+        a{
+            text-decoration: none;
+        }
+        tr .dieuKhoan p{
+            width: 340px;
+            color: gray;
+        }
+        .submit{
+            height: 36px;
+            width: 168px;
+            background-color: rgb(95, 157, 74);
+            border-radius: 4px;
+            color: white;
+            border: 1px solid;
+            
+        }
+        .doanhNghiep{
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-    <h1>Đăng ký</h1>
-    <p>Luôn miễn phí</p>
-    <form action="">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <input type="text" name="lastName" id="lastName" placeholder="Họ">
-                        <input type="text" name="firstName" id="firstName" placeholder="Tên">
-                    </td>                    
-                </tr>
-                <tr>
-                    <td >
-                        <input type="text" name="account" id="account" placeholder="Số di động hoặc email">
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <input type="password" name="password" id="password">
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        Ngày sinh
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <select name="day" id="day">
-                            <option value="">Ngày</option>
-                        </select>
-                        <select name="day" id="day">
-                            <option value="">Tháng</option>
-                        </select>
-                        <select name="day" id="day">
-                            <option value="">Năm</option>
-                        </select>
-                        <small>
-                            <a href="">Tại sao tôi cần cung cấp ngày sinh của mình?</a>
-                        </small>                        
-                    </td>
-                </tr>
-                <tr>
-                    <td >
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">Nữ</label>  
-                        <input type="radio" name="gender" id="male">
-                        <label for="male">Nam</label>                       
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>
-                            Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với
-                            <a href="">Điều khoản</a> của chúng tôi và rằng bạn đã đọc 
-                            <a href="">Chính sách dữ liệu</a> của chúng tôi, bao gồm
-                            <a href="">Sử dụng cookie</a>. Bạn có thể nhận được thông báo qua 
-                            SMS từ Facebook và có thế bỏ chọn bất kỳ lúc nào.
-                        </p>
-                    </td>                
-                </tr>
-                <tr>
-                    <td>
-                        <button>Tạo tài khoản</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>
-                            <a href="Tạo trang"></a> dành cho người nổi tiếng, nhãn hiệu hoặc doah nghiệp.
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+    <div class="container">
+        <h1 class="margin24">Đăng ký</h1>
+        <p class="margin24">Luôn miễn phí</p>
+        <form action="" class="margin24">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="name">
+                            <input class="inputText" type="text" name="lastName" id="lastName" placeholder="Họ">
+                            <input class="inputText" type="text" name="firstName" id="firstName" placeholder="Tên">
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td >
+                            <input class="inputText" type="text" name="account" id="account" placeholder="Số di động hoặc email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <input class="inputText" type="password" name="password" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            Ngày sinh
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="birthday">
+                            <div>
+                                <select name="day" id="day">
+                                    <option value="">Ngày</option>
+                                </select>
+                                <select name="day" id="day">
+                                    <option value="">Tháng</option>
+                                </select>
+                                <select name="day" id="day">
+                                    <option value="">Năm</option>
+                                </select>
+                            </div>
+                            <div class="help">
+                                <small>
+                                    <a href="">Tại sao tôi cần cung cấp ngày sinh của mình?</a>
+                                </small> 
+                            </div>                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Nữ</label>  
+                            <input type="radio" name="gender" id="male">
+                            <label for="male">Nam</label>                       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="dieuKhoan">
+                            <p>
+                                <small>
+                                    Bằng cách nhấp vào Tạo tài khoản, bạn đồng ý với
+                                    <a href="">Điều khoản</a> của chúng tôi và rằng bạn đã đọc 
+                                    <a href="">Chính sách dữ liệu</a> của chúng tôi, bao gồm
+                                    <a href="">Sử dụng cookie</a>. Bạn có thể nhận được thông báo qua 
+                                    SMS từ Facebook và có thế bỏ chọn bất kỳ lúc nào.
+                                </small>
+                            </p>
+                        </td>                
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="submit">
+                                <b>
+                                    Tạo tài khoản
+                                </b>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="doanhNghiep">
+                            <p>
+                                <a href="">Tạo trang</a> dành cho người nổi tiếng, nhãn hiệu hoặc doanh nghiệp.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
 </body>
 </html>

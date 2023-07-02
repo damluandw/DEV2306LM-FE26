@@ -6,28 +6,55 @@
     <title>Menu</title>
     <style>
         ul { 
-            display: block;
-            width:560px;       
-            list-style-type: none;
-            color: yellow;       
-            background-color: red;    
-            text-align: center;                
+            display: inline-block;     
+            list-style-type: none;    
+            text-align: center; 
+                          
         }
-        ul li {
-    
-            width: 80px;            
+        li:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        li:last-child {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        ul li {    
+            margin: -2px;
+            display: inline-block;
+            padding: 9px;
+            background-color: red;                     
+        }
+        ul li a {
+            text-decoration: none;
+            color: yellow;  
         }
     </style>
 </head>
 <body>
     <ul>
-        <li>Trang chủ</li>
-        <li>Tin tức</li>
-        <li>Sản phẫm</li>
-        <li>Khóa học</li>
-        <li>Liên hệ</li>
-        <li>Đăng ký</li>
-        <li>Đăng nhập</li>
+        <li>
+            <a href="">Trang chủ</a>
+        </li>
+        <li>
+            <a href="">Tin tức</a>
+        </li>
+        <li>
+            <a href="">Sản phẩm</a>
+        </li>
+        <li>
+            <a href="">Khóa học</a>
+        </li>
+        <li>
+            <a href="">Liên hệ</a>
+        </li>
+        <li>
+            <a href="">Đăng ký</a>
+        </li>
+        <li>
+            <a href="">Đăng nhập</a>
+        </li>
     </ul>
 </body>
 </html>

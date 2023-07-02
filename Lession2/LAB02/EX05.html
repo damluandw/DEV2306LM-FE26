@@ -6,32 +6,55 @@
     <title>Menu</title>
     <style>
         ul { 
-            display: block;
-            width:560px;       
-            list-style-type: none;          
+            display: block;     
+            list-style-type: none;    
+            text-align: center; 
+                          
         }
+        ul li:first-child {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: plum;
+        }        
+       
         ul li {
-            color: yellow;
             display: block;
-            width: 80px; 
-            margin: 16px 0px ;
-            background-color: gray;     
+            width: 150px;
+            margin: 2px;            
+            padding: 9px;
+            background-color: rgb(191, 191, 191);                     
         }
-        .trangChu{
-            background-color: pink;
+        ul li a {
+            text-decoration: none;
+            color: yellow;  
         }
-
     </style>
 </head>
 <body>
     <ul>
-        <li class="trangChu">Trang chủ</li>
-        <li>Tin tức</li>
-        <li>Sản phẫm</li>
-        <li>Khóa học</li>
-        <li>Liên hệ</li>
-        <li>Đăng ký</li>
-        <li>Đăng nhập</li>
+        <li>
+            <a href="">Trang chủ</a>
+        </li>
+        <li>
+            <a href="">Tin tức</a>
+        </li>
+        <li>
+            <a href="">Sản phẩm</a>
+        </li>
+        <li>
+            <a href="">Khóa học</a>
+        </li>
+        <li>
+            <a href="">Liên hệ</a>
+        </li>
+        <li>
+            <a href="">Đăng ký</a>
+        </li>
+        <li>
+            <a href="">Đăng nhập</a>
+        </li>
     </ul>
 </body>
 </html>

@@ -4,39 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập</title>
+    <style>      
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        } 
+       
+        table{
+            background-color: rgb(247, 247, 247);
+            text-align: center;
+            width: 300px;
+            padding-bottom: 26px;
+        }
+        tr .img{
+            text-align: center;
+            padding: 24px 0 16px 0;
+        }
+        tr td input{
+            width: 240px;
+            padding: 8px;
+            border: 4px;
+        }
+        tr td button{
+            width: 248px;
+            padding: 8px;
+            border: 4px;
+            margin: 8px 0 8px 0;
+            color: white;
+            background-color: rgb(74,140,247);
+        }
+        .help{
+            padding-left: 28px;
+            text-align: left;
+        }
+        .taoTK{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <form action="">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <img src="imgs/avatar-nam.jpg" alt="" width="150px">
+   <div class="container">
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="img">
+                            <img src="imgs/icon_ex08.png" alt="" width="100px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" name="password" id="password" placeholder="Mật khẩu" required>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td align="center">
+                            <button id="submit">Đăng nhập</button>
                     </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="email" name="email" id="email" placeholder="Email" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="password" name="password" id="password" placeholder="Mật khẩu" required>
-                    </td>
-                </tr>
-                <tr>
-                   <td align="center">
-                        <button id="submit">Đăng nhập</button>
-                   </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="">Bạn cần trợ giúp?</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
-    <a href="">Tạo một tài khoản</a>
+                    </tr>
+                    <tr>
+                        <td class="help">
+                            <a href="">Bạn cần trợ giúp?</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="taoTK">
+            <a href="">Tạo một tài khoản</a>
+        </div>
+   </div>
 </body>
 </html>

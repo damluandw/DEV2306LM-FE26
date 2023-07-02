@@ -16,6 +16,20 @@
         tfoot{
             text-align: left;
         }
+        .tblFooter div{
+            display: flex;            
+            font-weight: bold;
+        }
+        tr td b{
+            text-align: center;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: rgb(208, 107, 110);
+            text-align: center;
+            color: white;
+            margin: 0 4px 0 4px ;
+        }
     </style>
 </head>
 <body>
@@ -132,9 +146,9 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="6" >
-                    Tổng số có <b>8</b> danh mục
-                </th>
+                <td colspan="6" class="tblFooter" >
+                   <div>Tổng số có: <b>8</b> danh mục</div>
+                </td>
             </tr>
         </tfoot>
     </table>
