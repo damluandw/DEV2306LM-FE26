@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+</head>
+<body>
+    <form action="">
+        <h1>Thêm sản phẩm mới</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        Mã sản phẩm
+                    </td>
+                    <td colspan="5">
+                        <input type="text" name="id" id="id">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Tên sản phẩm
+                    </td>
+                    <td colspan="5">
+                        <input type="text"  name="name" id="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        URL
+                    </td>
+                    <td colspan="5">
+                        <input type="url" name="url" id="url">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Loại sản phẩm</td>
+                    <td colspan="5">
+                        <select name="productType" id="productType">
+                            <option value="option1">PHÒNG KHÁCH</option>
+                            <option value="option2">PHÒNG NGỦ</option>
+                            <option value="option3">PHÒNG BẾP</option>
+                        </select>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Giá cũ</td>
+                    <td>
+                        <input type="number" name="priceOld" id="priceOld" placeholder="0">
+                    </td>
+                    <td>Giá mới</td>
+                    <td>
+                        <input type="number" name="priceNew" id="priceNew" placeholder="0">
+                    </td>
+                    <td>Size</td>
+                    <td>
+                        <input type="text" name="size" id="size" placeholder="">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6"> Mô tả sản phẩm</td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <textarea name="describe" id=""  rows="5"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>       
+    </form>
+</body>
+</html>
