@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng danh sách</title>
     <style>
+        .container{
+            width: 90%;
+            background-color: rgb(244, 246, 249);     
+        }
+        
+        .header{
+            display: flex;
+            flex-wrap:nowrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0 12px 0;
+        }
+        table{
+            width: 100%;
+        }
+        .height28{
+            height: 28px;
+        }
+        select{
+            width: 54px;
+            text-align: center;
+            border: 0;
+        }
+
+        #search{
+            width: 240px;
+            border: 0;
+        }
+        button.height28{
+            background-color: rgb(95, 189, 181);
+            border: 0px;
+            color: #fff;
+        }
         .stt{
 
             text-align: right;
@@ -16,111 +49,139 @@
         tfoot{
             text-align: left;
         }
+        .tblFooter div{
+            display: flex;            
+            font-weight: bold;
+        }
+        tr td b{
+            text-align: center;
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-color: rgb(208, 107, 110);
+            text-align: center;
+            color: white;
+            margin: 0 4px 0 4px ;
+        }
+        .footer{
+            margin: 16px 0 8px 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .page{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            background-color: rgb(51, 122, 183);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <div>
-            <select name="" id="">
-                <option value="">15</option>
-            </select>
-        </div>        
-        <div>
-            <input type="search" name="search" id="search" >
-            <button>
-                Thêm mới
-            </button>
-        </div>       
-    </div>
-    <table  width="90%" border="1px" cellpadding =5px cellspacing =0>
-        <thead>
-            <tr>
-                <th>STT</th>
-                <th>Tên đặc tính kỹ thuật</th>
-                <th>Ngày sửa</th>
-                <th>Thứ tự</th>
-                <th>Trạng thái</th>
-                <th>
-                    Tác vụ
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="stt">1</td>
-                <td>Đặc trưng</td>
-                <td>7/8/2020</td>
-                <td>1</td>
-                <td  class="status">Hoạt động</td>
-                <td>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </td>
-            </tr>
-            <tr>
-                <td  class="stt">2</td>
-                <td>Thông số</td>
-                <td>7/8/2020</td>
-                <td>2</td>
-                <td  class="status">Hoạt động</td>
-                <td>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </td>
-            </tr>
-            <tr>
-                <td class="stt">3</td>
-                <td>Bảo quản</td>
-                <td>7/8/2020</td>
-                <td>3</td>
-                <td  class="status">Hoạt động</td>
-                <td>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </td>
-            </tr>
-            <tr>
-                <td class="stt">4</td>
-                <td>Bảo hành</td>
-                <td>7/8/2020</td>
-                <td>4</td>
-                <td  class="status">Hoạt động</td>
-                <td>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </td>
-            </tr>
-            <tr>
-                <td class="stt">5</td>
-                <td>Cam kết</td>
-                <td>7/8/2020</td>
-                <td>5</td>
-                <td  class="status">Hoạt động</td>
-                <td>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </td>
-            </tr>           
-        </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="6" >
-                    Tổng số có <b>5</b> danh mục
-                </th>
-            </tr>
-        </tfoot>
-    </table>
-    <div>
-        <p>
-            Trang 1/1
-        </p>
-        <div>
-            1
+    <div class="container">
+        <div class="header">
+            <div>
+                <select name="" id="" class="height28">
+                    <option value="">15</option>
+                </select>
+            </div>        
+            <div>
+                <input class="height28 search" type="search" name="search" id="search" placeholder="Nhập tiêu đề tìm kiếm -> Nhấn Enter">
+                <button class="height28">
+                    Thêm mới
+                </button>
+            </div>       
+        </div>
+        <table  width="90%" border="1px" cellpadding =5px cellspacing =0>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên đặc tính kỹ thuật</th>
+                    <th>Ngày sửa</th>
+                    <th>Thứ tự</th>
+                    <th>Trạng thái</th>
+                    <th>
+                        Tác vụ
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="stt">1</td>
+                    <td>Đặc trưng</td>
+                    <td>7/8/2020</td>
+                    <td>1</td>
+                    <td  class="status">Hoạt động</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td  class="stt">2</td>
+                    <td>Thông số</td>
+                    <td>7/8/2020</td>
+                    <td>2</td>
+                    <td  class="status">Hoạt động</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="stt">3</td>
+                    <td>Bảo quản</td>
+                    <td>7/8/2020</td>
+                    <td>3</td>
+                    <td  class="status">Hoạt động</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="stt">4</td>
+                    <td>Bảo hành</td>
+                    <td>7/8/2020</td>
+                    <td>4</td>
+                    <td  class="status">Hoạt động</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="stt">5</td>
+                    <td>Cam kết</td>
+                    <td>7/8/2020</td>
+                    <td>5</td>
+                    <td  class="status">Hoạt động</td>
+                    <td>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </td>
+                </tr>           
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6" class="tblFooter" >
+                       <div>Tổng số có: <b>5</b> đặc tính kỹ thuật</div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="footer">
+            <div>
+                Trang 1/1
+            </div>
+            <div class="page">
+                1
+            </div>
         </div>
     </div>
 </body>
