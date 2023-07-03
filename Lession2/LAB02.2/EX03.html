@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký du lịch</title>
+    <style>
+         .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(163, 86, 30);  
+            width: 688px;
+            margin: auto;
+        }
+      
+        .container form table{          
+            margin: 2px;            
+        }
+        h1{
+            text-align: center;
+            color: rgb(45, 102, 153);
+        }
+        table{
+            background: rgb(244, 249, 217);
+            width: 680px;
+            color: rgb(45, 102, 153);
+        }
+        .submit{
+            text-align: center;
+        }
+        .notification{
+            text-align: center;
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đăng ký du lịch</h1>
+        <form action="">
+            <table  border="1px" cellpadding =5px cellspacing =0>
+                <tbody>
+                    <tr>
+                        <td width =192px>
+                            Họ và tên
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" size="50">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Địa chỉ
+                        </td>
+                        <td>
+                            <input type="text" name="adress" id="adress"size="40">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Điện thoại
+                        </td>
+                        <td>
+                            <input type="tel" name="mobile" id="mobile" size="30">
+                        </td>                    
+                    </tr>
+                    <tr>
+                        <td>
+                            Khách Việt Nam
+                        </td>
+                        <td>
+                            <input type="checkbox" name="isVN" id="isVN">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Chọn tour
+                        </td>
+                        <td>
+                            <select name="tour" id="tour">
+                                <option value="mienBac">Miền Bắc</option>
+                                <option value="">Hà Nội - Hạ Long - Sapa</option>
+                                <option value="">Hà Nội - Chùa Hương - Ninh Bình</option>
+                                <option value="">Hà Nội - Cát Bà</option>
+                                <option value="">Miền Trung</option>
+                                <option value="">Huế - Bạch Mã - Đà Nẵng</option>
+                                <option value="">Nha Trang - Đà Lạt</option>
+                                <option value="">Buôn ma thuột - Gia Lai - Kontum</option>
+                                <option value="">Miền Trung</option>
+                                <option value="">TP-HCM - Cần Thơ - Cà Mau</option>
+                                <option value="">TP.HCM - Mỹ Tho</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phương tiện</td>
+                        <td>
+                            <input type="radio" name="vehicle" id="plane">
+                            <label for="plane">Máy bay</label>
+                            <input type="radio" name="vehicle" id="oto">
+                            <label for="oto">Xe ô tô</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div>
+                                Số lượng đoàn khách
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ghi chú thêm</td>
+                        <td>
+                            <textarea name="note" id="" cols="30" rows="2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="submit">
+                            <button>
+                                Đồng ý
+                            </button>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="2" class="notification">Bạn đã đăng ký thành công!!!!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
