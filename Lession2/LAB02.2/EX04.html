@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Đăng ký Facebook</title>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            margin: 0 24px 0 24px;
+            background-color: rgb(242, 242, 250);
+        }
+
+        .login{            
+            background-color: rgb(58, 87, 149);
+            width: 500px;
+        }
+        .login table {
+            margin: 0 24px 0 24px;
+        }
+        .clrWhite{
+            color: white;
+        }
+        .textCenter{
+            text-align: center;
+        } 
+        .textRight{
+            text-align: right;
+        } 
+
+        .margin24{
+            margin: 24px;
+        }
+        .inputText{
+            height: 24px;
+            border-radius: 4px;
+            border: 1px solid gray;
+            width: 260px;            
+        }  
+        .signUp h2{
+            margin: 24px 24px 0 24px;
+        }
+        .signUp .title{
+            margin: 0 24px 0 24px;
+        }
+        .width142{
+            width: 142px;
+            margin-right: 12px;
+        }
+
+        .btnLogin{
+            background-color: rgb(95, 120, 172);
+            border: 1px solid black;
+        }
+        select {
+            height: 24px;
+            width: 76px;  
+            margin-right: 4px;          
+        }
+        #gender{
+            height: 24px;
+            width: 100px;  
+        }
+        .birthday{
+            display: flex;
+            flex-wrap:nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .help{
+            width: 260px;
+        }
+        a{
+            text-decoration: none;
+        }
+        tr .dieuKhoan p{
+            width: 260px;   
+        }
+        .btnSignUp{
+            height: 36px;
+            width: 168px;
+            background-color: rgb(95, 157, 74);
+            border-radius: 4px;    
+            border: 1px solid; 
+        }
+        .doanhNghiep{
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="login">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="clrWhite">Email or Phone</td>
+                        <td class="clrWhite">Password</td>
+                    </tr>
+                    <tr>   
+                        <td>
+                            <input class="width142" type="text" name="account" id="account">
+                        </td>
+                        <td>
+                            <input class="width142" type="password" name="password" id="password">
+                        </td>
+                        <td>
+                            <button id="submit" class="clrWhite btnLogin">Log In</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="cache" id="cache">
+                            <label for="cache" class="fontBlur"><small>Keep me logged in</small></label>
+                        </td>
+                        <td>
+                            <a href="" class="fontBlur"><small>Forgot your password?</small></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div class="signUp">
+            <h2 class="">Sign Up</h2>
+            <p class="title">It's free and always will be.</p>
+            <hr width="446px">
+            <form action="" class="margin24">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="textRight">
+                                First Name:
+                            </td>
+                            <td class="lastName">
+                                <input class="inputText" type="text" name="lastName" id="lastName" >
+                                
+                            </td>                    
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Last Name:
+                            </td>
+                            <td  class="firstName">
+                                <input class="inputText" type="text" name="firstName" id="firstName" >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Your Email:
+                            </td>
+                            <td >
+                                <input class="inputText" type="email" name="account" id="account">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Re-enter Email:
+                            </td>
+                            <td >
+                                <input class="inputText" type="email" name="reAccount" id="reAccount">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                New Password:
+                            </td>
+                            <td >
+                                <input class="inputText" type="password" name="password" id="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                I am:
+                            </td>
+                            <td>
+                                <select name="gender" id="gender">
+                                    <option value="">Select Sex:</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Birthday:
+                            </td>
+                            <td class="birthday">                                
+                                <select name="month" id="month">
+                                    <option value="">Month:</option>
+                                </select>
+                                <select name="day" id="day">
+                                    <option value="">Day:</option>
+                                </select>
+                                <select name="year" id="year">
+                                    <option value="">Year:</option>
+                                </select>                                                                                   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div class="help">
+                                    <small>
+                                        <a href="">Why do I need to provide my birthday?</a>
+                                    </small> 
+                                </div>   
+                            </td>
+                        </tr>                       
+                        <tr>
+                            <td></td>
+                            <td class="dieuKhoan">
+                                <p>
+                                    <small>
+                                        By click Sign Up, you agree ro our 
+                                        <a href="">Terms</a> and that you have read and undertand our  
+                                        <a href="">Data Use Policy</a> including our
+                                        <a href="">Cookie Use</a>.
+                                    </small>
+                                </p>
+                            </td>                
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="textCenter">
+                                <button class="btnSignUp clrWhite">
+                                    <b>
+                                        Sign Up
+                                    </b>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <hr width="446px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="doanhNghiep" colspan="2">
+                                <p>
+                                    <b><a href="">Create a Page</a> for a celebrity, band or bussiness.</b>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
