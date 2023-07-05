@@ -5,57 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên hệ</title>
     <style>
+        .container{
+            width: 600px;  
+            font-family: Arial, Helvetica, sans-serif;   
+        }
         .submit{
             background-color: blue;
             color: white;
         }
+        .width380{
+            width: 380px; 
+        }        
+        table{
+            width: 800px;
+        }
+        input{
+            width: 320px;
+        }
+        button{
+            margin-left: 228px;
+            height: 28px;
+            width: 100px;
+        }
+        textarea{
+            width: 320px;
+        }
     </style>
 </head>
 <body>
-    <form action="">
-        <table>
-            <tbody>
-                <tr>
-                    <td>
-                        <h2>Liên hệ ngay với chuyên gia của chúng tôi</h2>
-                    </td>
-                    <td rowspan="7">
-                        <img src="imgs/doctor.png" alt="doctor" width="300px">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="name" id="name" placeholder="Họ tên">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="email" name="email" id="email" placeholder="Email">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="tel" name="mobile" id="mobile" placeholder="Số điện thoại">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" name="adress" id="adress" placeholder="Địa chỉ">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <textarea name="noidung" id="noidung" rows="5" placeholder="Nội dung"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="right">
-                        <button class="submit">Gửi thông tin</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </form>
+    <div class="container">
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="width380">
+                            <h2>Liên hệ ngay với chuyên gia của chúng tôi</h2>
+                        </td>
+                        <td rowspan="7">
+                            <img src="imgs/doctor.png" alt="doctor" width="300px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="Họ tên">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="tel" name="mobile" id="mobile" placeholder="Số điện thoại">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="adress" id="adress" placeholder="Địa chỉ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="noidung" id="noidung" rows="5" placeholder="Nội dung"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="submit">Gửi thông tin</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    
 
 </body>
 </html>
