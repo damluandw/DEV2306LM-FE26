@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạp chí HTML5 & CSS3</title>
+    <style>
+        .container{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(235, 235, 235);
+            width: 564px;
+        }
+       
+        .textRight{
+            text-align: right;
+        }
+        .width346{
+            width: 346px;
+            
+        }
+        .margin4{
+            margin: 4px;
+        }
+
+        .form{
+            margin: 24px 24px 24px 0;
+        }
+
+        h1{            
+            font-size: 20px;
+            color: rgb(74, 166, 199);
+            margin-bottom: 0px;
+        }
+        hr{
+            margin-top: -2px;
+            color: rgb(74, 166, 199);
+        }
+        .topic p{
+            margin-left: 12px;
+        }
+        #avgOld{
+            height: 1px;
+            color: rgb(150, 150, 150);
+            background-color: rgb(150, 150, 150);
+        }
+        .btn{
+            margin-top: 8px;
+            width: 100px;
+            color: rgb(74, 166, 199);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Chào mừng bạn đến với tạp chí HTML5 & CSS3
+        </h1>
+        <hr>
+        <div class= "form">
+            <form action="">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="textRight">
+                                Tên đăng nhập:
+                            </td>
+                            <td>
+                                <input type="text" name="user" id="user" class="width346 margin4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Mật khẩu:
+                            </td>
+                            <td>
+                                <input type="password" name="password" id="password" class="width346 margin4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Email:
+                            </td>
+                            <td>
+                                <input type="email" name="email" id="email" class="width346 margin4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight">
+                                Thành phố:
+                            </td>
+                            <td>
+                                <input type="text" name="city" id="city" class="width346 margin4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="textRight ">
+                               <p class="margin4"> Độ tuổi trung bình:</p>
+                            </td>
+                            <td>
+                                <input type="range" name="avgOld" id="avgOld"  class="width346 margin4" min ="0" max="100" value="25">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="topic">
+                                <p>
+                                    Bạn muốn theo dõi chủ đề nào?
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" name="HTML5Core" id="HTML5Core">
+                                <label for="HTML5Core">HTML5 cơ Bản</label>
+                                <input type="checkbox" name="CSS3Core" id="CSS3Core">
+                                <label for="CSS3Core">CSS3 cơ bản</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" name="HTML5Hard" id="HTML5Hard">
+                                <label for="HTML5Hard">HTML5 nâng cao</label>
+                                <input type="checkbox" name="CSS3Hard" id="CSS3Hard">
+                                <label for="CSS3Hard">CSS3 nâng cao</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="textRight">
+                                <input type="reset" name="reset" id="reset" value="Làm Lại" class="btn">
+                                <input type="submit" name="submit" id="submit" value="Đăng Ký" class="btn">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Thông tin đăng ký</h1>
+        <form action="">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            Tên đăng nhập
+                        </td>
+                        <td>
+                            <input type="text" name="user" id="user">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mật khẩu
+                        </td>
+                        <td>
+                            <input type="password" name="password" id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Giới tính
+                        </td>
+                        <td>
+                            <input type="radio" name="gender" id="male" checked>
+                            <label for="male">Nam</label>
+                            <input type="radio" name="gender" id="female">
+                            <label for="female">Nữ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ngôn ngữ lập trình
+                        </td>
+                        <td>
+                            <input type="checkbox" name="languae" id="cshap">
+                            <label for="cshap">Ngôn ngữ lập trình C#</label><br>
+                            <input type="checkbox" name="language" id="java">
+                            <label for="java">Ngôn ngữ Java</label><br>
+                            <input type="checkbox" name="language" id="php">
+                            <label for="php">Ngôn ngữ PHP</label><br>
+                            <input type="checkbox" name="language" id="different">
+                            <label for="different">Ngôn ngữ khác</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tỉnh thành
+                        </td>
+                        <td>
+                            <select name="city" id="city">
+                                <option value="HN">Hà Nội</option>
+                                <option value="HP">Hải Phòng</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="signUp" id="signUp" value="Đăng ký">
+                            <input type="reset" name="reset" id="reset" value="Reset">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
