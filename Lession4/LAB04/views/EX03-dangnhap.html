@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;        
+        }      
+        .container-all{
+            width: 100%;       
+            display: flex;       
+            justify-content: center;
+        }
+        .google-form{
+            border: 1px solid #ccc;
+            width: 448px;  
+            border-radius: 4px;
+        }
+        img{
+            height: 76px;
+            /* margin: 12px; */
+        }
+
+        h1{
+            margin: 0px;
+            font-weight: normal;
+        }
+        h1+p{
+            margin: 4px;
+            font-size: 14px;
+        }
+        .container{
+            text-align: center;
+            width: 368px;
+            margin: 40px;
+        }
+        
+        form input{
+            text-align: left;
+            width: 336px;
+            height: 28px;
+            border: 1px solid #ccc;
+            padding: 13px 15px;
+            border-radius: 4px;
+            margin-top: 24px;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;  
+            color: rgb(27, 102, 201);         
+        }
+        .text-alignLeft{
+            text-align: left;
+        }
+        .btn-control{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .btn{
+            width: 110px;
+            height: 36px;
+            margin: 2px 0;
+            font-size: 16px;
+        }
+        #btn-taoTK{
+            color: rgb(27, 102, 201);      
+            background-color: #fff;
+            border: 0;
+        }
+        #btn-tiepTheo{
+            color:  #fff;     
+            background-color:  rgb(27, 102, 201);  
+            border: 0;
+            border-radius: 4px;
+        }
+        p>span{
+            color: #5F6F94;
+        }
+        .paragraph{
+            margin: 40px 0;
+            font-size: 14px;
+        }
+        .language,.help{
+            width: 448px;
+            height: 50px;
+            
+        }
+        select{
+            height: 48px;
+            width: 184px;            
+            padding:16px;
+            border: 0;
+            color: #5F6F94;
+        }
+        .help a span{
+            width: 48px;
+            height: 18px;
+            padding: 16px;
+            color: #5F6F94;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-all">
+        <section class="google-form">
+            <div class="container"> 
+                <img src="../imgs/png-google-logo.webp" alt="logo_google">
+                <h1>Đăng nhập</h1>
+                <p>Sử dụng Tài khoản Google của bạn</p>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Email hoặc số điện thoại">           
+                </form>
+                <p class="text-alignLeft">
+                    <a href="#" >Bạn quên địa chỉ email?</a>
+                </p>            
+                <p class="text-alignLeft paragraph">
+                    <span>
+                        Đây không phải là máy tính của bạn? Hãy sử dụng chế độ
+                        Khách để đăng nhập một cách riêng tư. 
+                    </span>
+                    <a href="#" >Tìm hiểu thêm</a>
+                </p>
+                <div class="btn-control">
+                    <button class="btn" id="btn-taoTK">Tạo tài khoản</button>
+                    <button class="btn" id="btn-tiepTheo">Tiếp theo</button>
+                </div>
+            </div>
+        </section>        
+    </div>
+
+    <div class="container-all">
+        <section class="language">
+            <select name="language" id="language">
+                <option value="tiengViet">Tiếng Việt</option>
+                <option value="english">English</option>
+            </select>
+           
+        </section>
+    </div>
+    <div class="container-all">            
+        <section class="help">
+            <a href="#">
+                <span>Trợ giúp</span>
+            </a>
+            <a href="#">
+                <span>Quyền riêng tư</span>
+            </a>
+            <a href="#">
+                <span>Điều khoản</span>
+            </a>
+        </section>
+    </div>   
+</body>
+</html>

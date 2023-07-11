@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        /* body{
+            display: flex;
+            justify-content: center;
+        } */
+        
+        header{
+            display: flex;
+            justify-content: center;   
+        }
+        
+        .header{
+            width: 300px; 
+            text-align: center;          
+        }
+        .header img{
+            width: 40%;
+        }
+        .header img+p{
+            color: #5F6F94;
+            margin: 0 0 12px 0;
+        }
+        section{
+            display: flex;
+            justify-content: center;       
+        }
+        .container{
+            width: 304px;
+            border: 1px solid rgb(247, 247, 247);
+            background-color: rgb(247, 247, 247);
+        }
+        .logo{
+            text-align: center;
+            margin: 10px 0px 30px;
+        }
+        .box{
+            border: 1px solid rgb(247, 247, 247);
+            background-color: rgb(247, 247, 247);
+            width: 264px;
+            margin: 20px;
+        }
+        img{
+            width: 30%;
+        }
+        input{
+            width: 254px;
+            padding-left: 6px;
+            height: 28px;
+            border: 1px solid #ccc;
+        }
+        button{
+            margin: 8px 0;
+            width: 264px;
+            height: 28px;
+            background-color: rgb(27, 102, 201);
+            color: #fff;
+            border: 0;
+            border-radius: 4px;
+        }
+        
+        .help{
+            /* padding-left: 28px; */
+            text-align: left;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 500;  
+            color: rgb(27, 102, 201);
+        }
+        footer{
+            margin-top: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="../imgs/png-google-logo.webp" alt="png-google-logo">
+            <p>Đăng nhập để thêm tài khoản khác</p>
+        </div>
+    </header>         
+    <section>
+        <div class="container">      
+            <div class="box">
+                <div class="logo">
+                    <img src="../imgs/icon-user.png" alt="icon-user">
+                </div>
+                <div class="form-login">
+                    <form action="">
+                        <div class="account">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="password">
+                            <input type="password" name="padding" id="password" placeholder="Mật khẩu">
+                        </div>
+                        <div class="btn">
+                            <button id="btn-login">
+                                Đăng nhập
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="help">
+                    <a href="#">Bạn cần trợ giúp?</a>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <footer>
+        <a href="#">Tạo một tài khoản</a>
+    </footer>
+</body>
+</html>
