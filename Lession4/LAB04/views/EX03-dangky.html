@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header{
+            width: 300px; 
+            margin-left: 20px;                 
+        }
+        .header img{
+            width: 40%;
+        }
+        .header h2{
+            margin: 0px;
+            font-weight: normal;
+        }
+        .header h2+p{
+            /* color: #5F6F94; */
+            margin-top: 12px;
+        }
+        section{
+            display: flex;
+            justify-content: left;
+        }
+        .left{
+            width: 472px;
+            margin-left: 20px;
+        }
+        form{
+            width: 462px;
+        }
+        .name input,.password input{
+            width: 220px;
+            height: 24PX;
+            margin-top: 12px;
+        }
+        #email{
+            margin-top: 16px ;
+            width: 452px;
+            height: 24PX;
+        }
+        .gmail span,.password span{
+            font-size: 12px;
+            color: #5F6F94;
+        }
+        .show{
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        a{
+            text-decoration: none;
+            font-weight: 500;  
+            color: rgb(27, 102, 201);
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+        }
+        .btn button{
+            width: 102px;
+            height: 28px;
+            border-radius: 4px;
+        }
+        #signIn{
+            width: 102px;
+            height: 28px;
+            color: rgb(27, 102, 201);
+            background-color: #fff;
+            border: 0;
+        }
+        #continue{
+            color: #fff;
+            background-color: rgb(27, 102, 201);
+            border: 0;
+        }
+        #continue a{   
+            color: #fff;
+        }
+        .right{
+            width: 472px;   
+            margin-left: 40px;   
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="../imgs/png-google-logo.webp" alt="png-google-logo">
+            <h2>Tạo Tài khoản Google</h2>
+            <p>Tiếp tục với Gmail</p>
+        </div>
+    </header>
+    <section>
+        <div class="left">
+            <form action="">
+                <div class="name">
+                    <div>
+                        <input type="text" name="firstName" id="firstName" placeholder="Họ">
+                        <input type="text" name="lastName" id="lastName" placeholder="Tên">
+                    </div>
+                </div>
+                <div class="gmail">
+                    <div>
+                        <input type="text" name="email" id="email" placeholder="Tên người dùng">
+                    </div>
+                    <span>Bạn có thẻ sử dụng chữ cái,số và dấu chấm</span>
+                </div>
+                <div class="password">
+                    <div>
+                        <input type="password" name="password" id="password" placeholder="Mật khẩu">
+                        <input type="password" name="repassword" id="repassword" placeholder="Xác nhận">
+                    </div>
+                    <span>Sử dụng 8 ký tự trở lên và kết hợp chữ cái, chữ số và buổi tượng</span>
+                </div>
+                <div class="show">
+                    <input type="checkbox" name="showPassword" id="showPassword">
+                    <label for="showPassword">Hiển thị mật khẩu</label>
+                </div>
+                <div class="btn">
+                    <button id="signIn">
+                        <a href="EX03-dangnhap-2.html">Đăng nhập</a>
+                    </button>
+                    <button id="continue">
+                        <a href="">Tiếp theo</a>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="right">
+            <img src="../imgs/logo_dangKy.PNG" alt="logo_dangKy">
+        </div>
+    </section>
+</body>
+</html>
