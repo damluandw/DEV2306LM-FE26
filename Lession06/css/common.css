@@ -95,6 +95,9 @@ html{
 .w-40{
     width: 40%;
 }
+.w-40{
+    width: 45%;
+}
 .w-30{
     width: 30%;
 }
@@ -102,8 +105,17 @@ html{
 .w-35{
     width: 35%;
 }
+.w-60{
+    width: 60%;
+}
+.w-65{
+    width: 65%;
+}
 .w-70{
     width: 70%;
+}
+.w-75{
+    width: 75%;
 }
 .w-80{
     width: 80%;
@@ -134,15 +146,18 @@ html{
     border-right: none;
 }
 
+.header-mid{
+    margin: 1rem auto;
+}
 
 .menu-mid .search
 ,.menu-mid .commit-transport{
-    margin: auto;    
+    margin:  auto ;  
 }
 
 .menu-mid #text-search{
     height: 2.5rem;
-    width: 70%;
+    width: 80%;
     border: 1px solid #ccc;
     border-radius: 2px;
     padding-left: 1rem; 
@@ -158,11 +173,75 @@ html{
     font-size: 1rem;
 }
 
-.commit-transport .menu-icon{
-    margin-right: 1rem;
+.commit .menu-icon img{
+    width: 2.5rem;   
+}
+
+.transport .menu-icon img{
+    width: 3.5rem;
 }
 
 .commit-transport .content{
     text-transform: uppercase;
     flex-wrap: nowrap ;
+    width: 12.2rem;
+    margin-left: 1rem;
 }
+
+.header-botton{
+    background-color: green;
+    height: 3rem;    
+}
+.header-botton .list-item .item{
+    text-transform: uppercase;
+    font-family: OpenSans-Bold ;
+    color: #fff;
+    line-height: 3rem;
+}
+.header-botton .list-item .item a{
+    color: #fff;
+}
+.header-botton .item.active{
+    background-color: rgb(255, 63, 0);    
+}
+.header-botton .category
+,.banner .banner-left{
+    width: 20%;
+}
+
+.header-botton .list-item .item i{
+    padding: 0 0.6rem;
+    color: #fff;
+}
+.banner{
+    margin-bottom: 1rem;
+}
+.banner .banner-left .menu-banner .item{
+    line-height: 3rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.banner .banner-left .menu-banner .item i{
+   color: green;
+   padding: 0 0.5rem;
+}
+.banner .banner-right{
+    margin-left: auto;
+    width: 78%;    
+}
+
+.banner .banner-right .page-info{
+    margin-top: 0.5rem;   
+    margin-bottom: 0.5rem;   
+}
+.banner .banner-right .page-info i{
+    margin: 0.5rem 0.3rem;  
+    color: #ccc;
+    font-size: 0.5rem;
+    /* line-height: ; */
+}
+.banner .banner-right .img-banner img{
+    width: 100%;
+    height: 13rem;
+    /* object-fit: unset; */
+}
+
