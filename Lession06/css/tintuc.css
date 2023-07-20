@@ -70,3 +70,14 @@
 .new-main-item{
     padding: 1.5rem 0;
 }
+
+.page p{
+    border: solid 1px #ccc;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem ;
+}
+.page p:hover {
+   border-color: green;
+}
+
