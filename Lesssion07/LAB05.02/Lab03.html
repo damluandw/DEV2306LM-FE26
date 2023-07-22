@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var number = prompt("Nhập vào một số có 2 chữ số bất kỳ");
+        document.write("Bạn vừa nhập vào số "+ number + "<br>");
+        document.write("Các số chẵn từ 1 đến "+ number + " là:<br>");
+        var countNumberLe =0;
+        var countNumberChan =0;
+        var totlaLe = totlaChan =0 ;
+        
+        for( let i =1 ; i<= number ;i++ ){
+            if(i%2 == 0){
+                document.write(i + "<br>");
+                countNumberChan++;
+                totlaChan+=i;
+            }
+            
+        }
+        document.write("Có "+ countNumberChan + " số chẵn và tổng các số chẵn bằng " + totlaChan+" <br>");
+
+        document.write("Các số lẻ từ 1 đến "+ number + " là:<br>");
+        for( let i =1 ; i<= number;i++ ){
+            if(i%2 != 0){
+                document.write(i + "<br>");
+                countNumberLe++;
+                totlaLe+=i;
+            }
+            
+        }
+        document.write("Có "+ countNumberLe + " số lẻ và tổng các số chẵn bằng " + totlaLe+" <br>");
+        document.write("Tổng các số chẵn và lẻ là:", totlaChan + totlaLe);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

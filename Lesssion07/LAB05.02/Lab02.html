@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB03</title>
+    <script>
+        var so_a = prompt("Bạn hãy nhập vào số a :");
+        var so_b = prompt("Bạn hãy nhập vào số b :");
+        var so_c = prompt("Bạn hãy nhập vào số c :");
+        if(so_a == 0){
+            ptb1(so_b,so_c);
+        }else{
+            ptb2(so_a,so_b,so_c)
+        }
+        function ptb1(b,c){
+            if(b==0 ){
+                if(c != 0){
+                    document.write("phương trình vô nghiệm");
+                }else{
+                    document.write("phương trình có vô số nghiệm");
+                }
+            }else{
+                document.write("phương trình có nghiệm x= ", -c/b);
+            }
+        }
+        function ptb2(a,b,c){
+            if(a == 0){
+                if(b ==0){
+                    if(c == 0){
+                        document.write("phương trình có vô số nghiệm");
+                    }else{
+                        document.write("phương trình vô nghiệm");
+                    }
+                }else{
+                    document.write("phương trình có nghiệm duy nhất x = ",-c/a);
+                }
+            }else{
+                var delta = b*b  - 4 * a *c;
+                if(delta > 0){
+                    document.write("phương trình có 2 nghiệm x1 = ",(-b + Math.sqrt(delta))/(2 *a) + " và x2 =" , (-b - Math.sqrt(delta))/(2 *a));
+                }else if(delta == 0){
+                    document.write("phương trình có nghiệm kép x = ",-b/(2*a));
+                }else{
+                    document.write("phương trình vô nghiệm");
+                }
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

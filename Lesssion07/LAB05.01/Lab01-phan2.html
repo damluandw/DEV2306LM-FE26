@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script language ="JavaScript">
+        function check(){
+            if(formLogin.username.value == "admin" && formLogin.password.value == "12345"){
+                alert("Welcome to world of JavaScript");
+                return true;
+            }else{
+                alert("Invalid Username or password");
+                return false;
+            }
+        }
+        function losefocusName(){
+            if(formLogin.username.value == ""){
+                alert("You can not leave the name field blank")
+                // formLogin.username.focus();
+                return false;
+            }
+        }
+        function losefocusPassword(){
+            if(formLogin.password.value == ""){
+                alert("You can not leave the name field blank")
+                // formLogin.password.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Login Information</h2>
+    <form action="" name="formLogin">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        User Name:
+                    </td>
+                    <td>
+                        <input type="text" name="username" onblur="losefocusName()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="password" name="password" onblur="losefocusPassword()">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Login" onclick="check()">
+                        <input type="reset" name="reset" id="reset" value="Reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
