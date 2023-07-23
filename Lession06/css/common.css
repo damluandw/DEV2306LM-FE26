@@ -137,14 +137,19 @@ html{
 }
 .menu-top a.phone{
     font-family: OpenSans-Bold;
-    padding-right: 0.5rem;
     font-size: 1rem;
-    border-right: 1px solid #ccc ;
+    line-height: 25px;
 }
 .menu-top .icon-item{
     padding: 0 0.5rem;
     border-right: 1px solid #ccc ;
+    
 }
+.menu-top .icon-item i{
+    line-height: 25px;    
+}
+
+
 
 
 .menu-top .icon-item.icon-phone{
@@ -156,6 +161,11 @@ html{
     margin: 1rem auto;
 }
 
+
+.menu-mid  img{
+    width: 50%;
+}
+
 .menu-mid .search
 ,.menu-mid .commit-transport{
     margin:  auto ;  
@@ -164,19 +174,22 @@ html{
 .menu-mid #text-search{
     height: 2.5rem;
     width: 80%;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    padding-left: 1rem; 
-    padding-right: 2.5rem; 
+    border: 1px solid #ccc;    
+    padding-left: 1rem;    
     font-size: 1rem;
+    /* margin: 0 auto; */
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 .menu-mid #btn-search{
     height: 2.5rem;
     width: 2.5rem;
-    margin-left: -2.8rem;
+    margin-left: -0.2rem;
     border: 1px solid #ccc;
     background-color: #fff;
     font-size: 1rem;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
 .commit .menu-icon img{
@@ -292,9 +305,7 @@ html{
     background-color: rgb(52, 211, 52);
     padding: 2.5rem;
 }
-.box-footer-bottom{
-    
-}
+
 .maps iframe
 ,.footer-facebook iframe{
     width: 100%;
@@ -365,37 +376,113 @@ html{
     
 }
 @media only screen and (max-width: 800px) {
-    .w-container{
-        width: 100%;
-        padding: 0 1rem;
+
+    .menu-mid .search{
+        width: 30%;
+
     }
-    
+    .commit-transport{
+        width: 45%;
+        justify-content: space-between;
+    }
+    .menu-mid .logo,
     .header-botton .category
     ,.banner .banner-left
     ,.menu-new-hot{
         width: 25%;
     }
     .banner .banner-right
-    ,.news .menu-new-main{
-        width: 60%;
+    /* ,.news .menu-new-main */
+    {
+        width: 72% ;
     }
-    
+
+    .commit-transport{
+        flex-wrap: wrap;
+    }
+
+    .commit, .transport {
+        flex-wrap: nowrap;
+    }
 }
 
-@media only screen and (max-width: 599px) {
-    .w-container{
-        width: 100%;
-        padding: 0 1rem;
-    }
+@media only screen and (max-width: 600px) {
+
     
     .header-botton .category
     ,.banner .banner-left
     ,.menu-new-hot{
         width: 25%;
     }
-    .banner .banner-right
-    ,.news .menu-new-main{
-        width: 60%;
-    }
     
+    .footer-top-left .item {
+        padding: 0.5rem;
+    }
+    .maps,.footer-facebook{
+        width: 40%;
+    }
+    html{
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 599px) {
+    .menu-mid{
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .menu-mid .logo{
+        width: 25%;
+    }
+    .menu-mid .search{
+        width: 70%;
+    }
+    .menu-mid .search #text-search{
+        width: 90%;
+        padding: 0 1rem 0 0;
+    }
+
+    .commit-transport{
+        margin-top: 1rem !important;
+        width: 100%;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+    .commit,content{
+        justify-content: left;
+    }
+    .header-botton
+    .menu-botton{
+        display: none ;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .menu-mid{
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .menu-mid .logo{
+        width: 20%;
+    }
+   
+    .menu-mid .search{
+        display: none ;
+    }
+    .menu-mid .search #text-search{
+        width: 90%;
+        padding: 0 1rem 0 0;
+    }
+
+    .commit-transport{
+        margin: 0 !important;
+        width: 80%;        
+        justify-content: space-between;
+        padding: 0 !important;
+    }
+    /* .commit,content{
+        justify-content: left;
+    } */
+    .header-botton
+    .menu-botton{
+        display: none ;
+    }
 }

@@ -81,3 +81,11 @@
    border-color: green;
 }
 
+
+@media only screen and (max-width: 800px) {
+
+    .news .menu-new-main{
+        width: 72%  !important;
+    }
+    
+}
