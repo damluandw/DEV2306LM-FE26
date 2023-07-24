@@ -67,3 +67,21 @@ body{
 .item-level-1:hover .list-level-2{
     display: block;
 }
+
+@keyframes showTop {
+    0%{
+        top: 200%;
+        opacity: 0.2;
+    }
+    
+    100%{
+        top: 100%; 
+        opacity: 1;       
+    }
+}
+
+.item-level-1:hover .list-level-2 {
+    display: block;
+    animation-name: showTop;
+    animation-duration: 1s;
+}

@@ -42,7 +42,6 @@ console.log("số lần xuất hiện của phần tử 66 là:",tmp)
 
 var array =[1,7,9,100,55,88,99,66,44,7,100,88,99,66,7,11,22,66,8];
 //log ra màn hình số lần xuất hiện của phần tử có giá trị khác nhau
-var arrayTemp=[];
 
 var countNumer =0;
 
@@ -54,11 +53,9 @@ for(let i=0; i< array.length;i++)
         if(array[j] == array[i]){
             check = false;
             break;
-        }
-        
+        }        
     }
     if(check){
-        
         let count =1;
         for(let k=i+1; k< array.length;k++)
         {
@@ -67,6 +64,54 @@ for(let i=0; i< array.length;i++)
             }
         }
         console.log("Số lần xuất hiện của phần từ ",array[i], "trong mảng đã cho là: ", count);
-
     }
+}
+//C2 tạo 1 arrTemp
+var arrayTemp=[];
+
+var arrayLenght =array.length
+for(let i=0; i< arrayLenght;i++)
+{
+    let check =true;
+    for(let j=0; j< arrayTemp.length;j++)
+    {
+        if(arrayTemp[j] == array[i]){
+            check = false;
+            break;
+        } 
+    }
+    if(check)
+        arrayTemp.push(array[i]);
+}
+var arrayTempLenght =arrayTemp.length
+for(let i=0; i< arrayTempLenght;i++)
+{
+    let count =0
+    for(let j=0; j< arrayLenght;j++)
+    {
+        if(array[j] == arrayTemp[i]){
+             count ++;
+        } 
+    }
+    console.log("Số lần xuất hiện của phần từ ",arrayTemp[i], "trong mảng đã cho là: ", count);
+}
+
+//C3 tác động tới dữ liệu gốc
+
+
+//C4
+array.sort();
+var count =1;
+for(let i=0; i< arrayLenght;)
+{
+    for(let j=i+1; j< arrayTemp.length;j++)
+    {
+        if(array[i] == array[j]){
+            count++;
+        }else{
+            i=j;
+            count=0;
+        }
+    }
+    console.log("Số lần xuất hiện của phần từ ",array[i], "trong mảng đã cho là: ", count);
 }
