@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTVN</title>
+    <script>
+      var arrCity = [
+        {
+          nameCity: "Hà Nội",
+          district: [
+            {
+              nameDistrict: "Ba Đình",
+              wards: ["Điện Biên", "Đội Cấn", "Giảng Võ"],
+            },
+            {
+              nameDistrict: "Tây Hồ",
+              wards: ["Thụy Khuê", "Yên Phụ", "Nhật Tân"],
+            },
+            {
+              nameDistrict: "Cầu Giấy",
+              wards: ["Nghĩa Đô", "Quan Hoa", "Dịch Vọng"],
+            },
+          ],
+        },
+        {
+          nameCity: "Hải Phòng",
+          district: [
+            {
+              nameDistrict: "Đồ Sơn",
+              wards: ["Ngọc Hải", "Minh Đức", "Bàng La"],
+            },
+            {
+              nameDistrict: "Hồng Bàng",
+              wards: ["Minh Khai", "Hùng Vương", "Quán Toan"],
+            },
+            {
+              nameDistrict: "Kiến An",
+              wards: ["Tràng Minh", "Văn Đẩu", "Đồng Hoà"],
+            },
+          ],
+        },
+        {
+          nameCity: "Hải Dương",
+          district: [
+            {
+              nameDistrict: "Thanh Hà",
+              wards: ["Quyết Thắng", "Tân Việt", "Cẩm Chế"],
+            },
+            {
+              nameDistrict: "Cẩm Giàng",
+              wards: ["Thạch Lỗi", "Cẩm Phúc", "Tân Trường"],
+            },
+            {
+              nameDistrict: "Bình Giàng",
+              wards: ["Hưng Thịnh", "Thái Học", "Cổ Bi"],
+            },
+          ],
+        },
+      ];
+      function search() {
+        var wards = document.getElementById("search").value;
+
+        var controlDistrict = 0;
+        var controlCity = 0;
+        var check = false;
+        for (i = 0; i < arrCity.length; i++) {
+          for (j = 0; j < arrCity[i].district.length; j++) {
+            for (k = 0; k < arrCity[i].district[j].wards.length; k++) {
+              if (arrCity[i].district[j].wards[k] == wards) {
+                controlDistrict = j;
+                controlCity = i;
+                check = true;
+                break;
+              }
+            }
+            if (check == true) {
+              break;
+            }
+          }
+          if (check == true) {
+            break;
+          }
+        }
+        if (check) {
+          document.getElementById("diachi").innerHTML =
+            "Địa chỉ: " +
+            wards +
+            " - " +
+            arrCity[controlCity].district[controlDistrict].nameDistrict +
+            " - " +
+            arrCity[controlCity].nameCity;
+        } else {
+          document.getElementById("diachi").innerHTML =
+            "Không tìm thấy địa chỉ";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="search" name="search" id="search" />
+      <button onclick="search()">Search</button>
+    </div>
+    <div>
+      <label for="" id="diachi"></label>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập thông tin sản phẩm</title>
+    <style>
+      .row {
+        display: flex;
+        margin: 1rem;
+      }
+      .title {
+        width: 10%;
+      }
+      .input {
+        width: 15%;
+      }
+      .input input {
+        width: 100%;
+      }
+      .input textarea {
+        width: 100%;
+      }
+      .add {
+        width: 25%;
+        text-align: center;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+    <script>
+      var objProduct = {
+        id: "",
+        namePro: "",
+        description: "",
+        quatity: 0,
+        type: "",
+        img: "",
+      };
+      function checkBlank(id) {
+        debugger;
+        switch (id) {
+          case "id":
+            objProduct.id = document.getElementById("id").value;
+            break;
+          case "name-product":
+            objProduct.namePro = document.getElementById("name-product").value;
+            break;
+          case "description":
+            objProduct.description =
+              document.getElementById("description").value;
+            break;
+          case "quatity":
+            objProduct.quatity = document.getElementById("quatity").value;
+            break;
+          case "price":
+            objProduct.price = document.getElementById("price").value;
+            break;
+          // case "img-pro" :
+          //     objProduct.img = document.getElementById("img-pro").value;
+          //     break;
+        }
+        var tmp = document.getElementById("txtError" + id);
+        if (document.getElementById(id).value == "") {
+          tmp.innerHTML = "Thông tin không được bỏ trống";
+          tmp.className = "error";
+          return false;
+        } else {
+          tmp.innerHTML = "";
+          tmp.className = "";
+          return true;
+        }
+      }
+      function checkSelector(val) {
+        objProduct.type = val.value;
+        if (val.value == "") {
+          document.getElementById("txtErrortype").innerHTML =
+            "Vui lòng chọn lại loại sản phẩm";
+          document.getElementById("txtErrortype").className = "error";
+          return false;
+        } else {
+          document.getElementById("txtErrortype").innerHTML = "";
+          document.getElementById("txtErrortype").className = "";
+          return true;
+        }
+      }
+      function submit() {
+        checkBlank("id");
+        checkBlank("name-product");
+        checkBlank("description");
+        checkBlank("quatity");
+        checkBlank("price");
+        checkSelector(objProduct.type);
+      }
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <caption>
+        <h2>Thông tin sản phẩm</h2>
+      </caption>
+      <div class="productInfo">
+        <div class="row">
+          <div class="title">Mã sản phẩm:</div>
+          <div class="input">
+            <input type="text" name="id" id="id" onblur="checkBlank(this.id)" />
+            <br /><label for="" id="txtErrorid"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Tên sản phẩm:</div>
+          <div class="input">
+            <input
+              type="text"
+              name="name-product"
+              id="name-product"
+              onblur="checkBlank(this.id)"
+            />
+            <br /><label for="" id="txtErrorname-product"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Mô tả sản phẩm:</div>
+          <div class="input">
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="5"
+              onblur="checkBlank(this.id)"
+            ></textarea>
+            <br /><label for="" id="txtErrordescription"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Số lượng sản phẩm:</div>
+          <div class="input">
+            <input
+              type="number"
+              name="quatity"
+              id="quatity"
+              onblur="checkBlank(this.id)"
+            />
+            <br /><label for="" id="txtErrorquatity"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Giá sản phẩm:</div>
+          <div class="input">
+            <input
+              type="number"
+              name="price"
+              id="price"
+              onblur="checkBlank(this.id)"
+            />
+            <br /><label for="" id="txtErrorprice"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Loại sản phẩm:</div>
+          <div class="input">
+            <select name="type" id="type" onchange="checkSelector(this)">
+              <option value="">Chọn loại sản phẩm</option>
+              <option value="iphone">Iphone</option>
+              <option value="samsung">SamSung</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="lg">LG</option>
+            </select>
+            <br /><label for="" id="txtErrortype"></label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="title">Hình ảnh:</div>
+          <div class="input">
+            <input type="file" name="img-pro" id="img-pro" />
+          </div>
+        </div>
+        <div class="add">
+          <button onclick="submit()">Thêm sản phẩm</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

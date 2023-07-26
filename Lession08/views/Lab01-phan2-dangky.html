@@ -1,214 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng ký thành viên</title>
     <style>
-         .error{
-            color: red;
-        }
-       
+      .error {
+        color: red;
+      }
     </style>
     <script>
-        var objRegister={
-            userName : "",
-            pass : "",
-            rePass : "",
-            email : "",
-            tel : "",
-            gender : "male",
-            age : "0-13",
-            preference : "",
-            province : "",
-            description : "",
-        }
+      var objRegister = {
+        userName: "",
+        pass: "",
+        rePass: "",
+        email: "",
+        tel: "",
+        gender: "male",
+        age: "0-13",
+        preference: "",
+        province: "",
+        description: "",
+      };
 
+      function checkName() {
+        objRegister.userName = document.getElementById("userName").value;
+        if (objRegister.userName == "") {
+          document.getElementById("txtErrorUserName").innerHTML =
+            "Bạn chưa nhập user name";
+          document.getElementById("txtErrorUserName").className = "error";
+          return false;
+        } else {
+          document.getElementById("txtErrorUserName").innerHTML = "";
+          document.getElementById("txtErrorUserName").className = "";
+          return true;
+        }
+      }
+      function checkPassword() {
+        objRegister.pass = document.getElementById("password").value;
+        var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+        if (objRegister.pass == "") {
+          document.getElementById("txtErrorPass").innerHTML =
+            "Bạn chưa nhập password";
+          document.getElementById("txtErrorPass").className = "error";
+          return false;
+        }
+        // else if(objRegister.pass.match(passw)){
+        //     document.getElementById("txtErrorPass").innerHTML ="Password từ 8 ký tự trở lên và bao gồm ký tự viết hoa và ký tự đặc biệt";
+        //     document.getElementById("txtErrorPass").className ="error"
+        // }
+        else {
+          document.getElementById("txtErrorPass").innerHTML = "";
+          document.getElementById("txtErrorPass").className = "";
+          return true;
+        }
+      }
+      function checkRePassword() {
+        objRegister.rePass = document.getElementById("rePassword").value;
+        if (objRegister.pass != objRegister.rePass) {
+          document.getElementById("txtErrorRePass").innerHTML =
+            "Mật khẩu không khớp";
+          document.getElementById("txtErrorRePass").className = "error";
+          return false;
+        } else {
+          document.getElementById("txtErrorRePass").innerHTML = "";
+          document.getElementById("txtErrorRePass").className = "";
+          return true;
+        }
+      }
+      var form = document.getElementById("frmRegister");
+      function submitForm(event) {
+        event.preventDefault();
+      }
 
-        function checkName(){
-            objRegister.userName = document.getElementById("userName").value;
-            if(objRegister.userName == ""){
-                document.getElementById("txtErrorUserName").innerHTML ="Bạn chưa nhập user name";
-                document.getElementById("txtErrorUserName").className ="error";
-                return false;
-            }else{
-                document.getElementById("txtErrorUserName").innerHTML ="";
-                document.getElementById("txtErrorUserName").className ="";
-                return true;
-            }
-            
+      function login() {
+       
+        if (
+          checkName() == true &&
+          checkPassword() == true &&
+          checkRePassword() == true
+        ) {
+          alert("Đăng ký thành công");
+          return true;
+        } else {
+        //   form.addEventListener("submit", event.submitForm(onclick));
+          return false;
         }
-        function checkPassword(){
-            objRegister.pass = document.getElementById("password").value;
-            var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
-            if(objRegister.pass == ""){
-                document.getElementById("txtErrorPass").innerHTML ="Bạn chưa nhập password";
-                document.getElementById("txtErrorPass").className ="error";
-                return false;
-            }
-            // else if(objRegister.pass.match(passw)){
-            //     document.getElementById("txtErrorPass").innerHTML ="Password từ 8 ký tự trở lên và bao gồm ký tự viết hoa và ký tự đặc biệt";
-            //     document.getElementById("txtErrorPass").className ="error"
-            // }            
-            else{
-                document.getElementById("txtErrorPass").innerHTML ="";
-                document.getElementById("txtErrorPass").className ="";
-                return true;
-            }
-        }
-        function checkRePassword(){
-          
-            objRegister.rePass = document.getElementById("rePassword").value;
-            if(objRegister.pass != objRegister.rePass){
-                document.getElementById("txtErrorRePass").innerHTML ="Mật khẩu không khớp";
-                document.getElementById("txtErrorRePass").className ="error";
-                return false;
-            }else{
-                document.getElementById("txtErrorRePass").innerHTML ="";
-                document.getElementById("txtErrorRePass").className ="";
-                return true;
-            }
-        }
-        var form  = document.getElementById("frmRegister");
-        function submitForm(event) {
-            event.preventDefault();               
-        }
-
-        function login(){     
-            debugger;
-            if(checkName() == true && checkPassword() ==true && checkRePassword() ==true){
-                alert("Đăng ký thành công");
-            }else{
-                form.addEventListener('submit',event.submitForm(onclick));
-                return false;
-            }
-        }
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <form action="" name="frmRegister" id="frmRegister">
-        <table width="80%" border="0"  align="center">
-            <caption>
-                <h2>Đăng ký thành viên</h2>
-            </caption>
-            <tbody> 
-                <tr>
-                    <td>
-                        <b>User Name</b>
-                    </td>
-                    <td>
-                        <input type="text" name="userName"  id="userName" size="30"  onblur ="checkName()">
-                        <br><label for="" id="txtErrorUserName"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Mật khẩu</b>
-                    </td>
-                    <td>
-                        <input type="password" name="password" id="password" size="30" onblur ="checkPassword()">
-                        <br><label for="" id="txtErrorPass"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Nhập lại mật khẩu</b>
-                    </td>
-                    <td>
-                        <input type="password" name="rePassword" id="rePassword" size="30" onblur ="checkRePassword()">  
-                        <br><label for="" id="txtErrorRePass"></label>
-                    </td>
-                </tr>   
-                <tr>
-                    <td>
-                       <b>Email</b>
-                    </td>
-                    <td>
-                        <input type="email" name="email" id="email" size="40" >
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                       <b>Số điện thoại</b>
-                    </td>
-                    <td>
-                        <input type="tel" name="tel" id="tel" size="30" >
-                    </td>
-                </tr>                   
-                <tr>
-                    <td>
-                        <b>Giới tính</b>
-                    </td>
-                    <td>
-                        <input type="radio" name="gender" id="male" checked>
-                        <label for="male">Nam</label>
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">Nữ</label>                 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Độ tuổi</b>
-                    </td>
-                    <td>
-                        <input type="radio" name="age13" id="ageUnder13" checked>
-                        <label for="age13">Dưới 13 tuổi</label>
-                        <input type="radio" name="gender" id="age13To17">
-                        <label for="age13To17">Từ 13 đến 17 tuổi</label>
-                        <input type="radio" name="gender" id="age18To25">
-                        <label for="age18To25">Từ 18 đến 25 tuổi</label> 
-                        <input type="radio" name="gender" id="ageOver25">
-                        <label for="ageOver25">Trên 25</label>              
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Sở thích</b>
-                    </td>
-                    <td>
-                        <input type="checkbox" name="amNhac" id="amNhac">
-                        <label for="amNhac">Âm nhạc</label>
-                        <input type="checkbox" name="game" id="game">
-                        <label for="game">Game</label>
-                        <input type="checkbox" name="theThao" id="theThao">
-                        <label for="theThao">Thể thao</label>
-                        <input type="checkbox" name="duLich" id="duLich">
-                        <label for="duLich">Du lịch</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <b>Quê quán</b>
-                    </td>
-                    <td>
-                        <select name="province" id="province">
-                            <option value="">Chọn tỉnh/thành phố</option>
-                            <option value="">Hà Nội</option>                        
-                            <option value="">Hải Phòng</option>
-                            <option value="">Quảng Ninh</option>
-                            <option value="">Vĩnh Phúc</option>
-                            <option value="">Hải Dương</option>
-                        </select>
-                    </td>
-                </tr>              
-                <tr>
-                    <td>
-                        <b>Mô tả ngắn</b>
-                    </td>
-                    <td>                      
-                        <textarea name="description" id="description" cols="30" rows="4" placeholder="Mô tả về bản thân bạn..."></textarea>
-                    </td>
-                </tr>
-                <tr align="center">                   
-                    <td colspan="2">
-                        <input type="submit" value="Đăng ký" name="register" id="register" onclick="login()">
-                        <input type="reset" value="Làm lại" name="reset" id="reset">
-                    </td>
-                </tr>
-            </tbody>
-            
-        </table>
+      <table width="80%" border="0" align="center">
+        <caption>
+          <h2>Đăng ký thành viên</h2>
+        </caption>
+        <tbody>
+          <tr>
+            <td>
+              <b>User Name</b>
+            </td>
+            <td>
+              <input
+                type="text"
+                name="userName"
+                id="userName"
+                size="30"
+                onblur="checkName()"
+              />
+              <br /><label for="" id="txtErrorUserName"></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Mật khẩu</b>
+            </td>
+            <td>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                size="30"
+                onblur="checkPassword()"
+              />
+              <br /><label for="" id="txtErrorPass"></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Nhập lại mật khẩu</b>
+            </td>
+            <td>
+              <input
+                type="password"
+                name="rePassword"
+                id="rePassword"
+                size="30"
+                onblur="checkRePassword()"
+              />
+              <br /><label for="" id="txtErrorRePass"></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Email</b>
+            </td>
+            <td>
+              <input type="email" name="email" id="email" size="40" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Số điện thoại</b>
+            </td>
+            <td>
+              <input type="tel" name="tel" id="tel" size="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Giới tính</b>
+            </td>
+            <td>
+              <input type="radio" name="gender" id="male" checked />
+              <label for="male">Nam</label>
+              <input type="radio" name="gender" id="female" />
+              <label for="female">Nữ</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Độ tuổi</b>
+            </td>
+            <td>
+              <input type="radio" name="age13" id="ageUnder13" checked />
+              <label for="age13">Dưới 13 tuổi</label>
+              <input type="radio" name="gender" id="age13To17" />
+              <label for="age13To17">Từ 13 đến 17 tuổi</label>
+              <input type="radio" name="gender" id="age18To25" />
+              <label for="age18To25">Từ 18 đến 25 tuổi</label>
+              <input type="radio" name="gender" id="ageOver25" />
+              <label for="ageOver25">Trên 25</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Sở thích</b>
+            </td>
+            <td>
+              <input type="checkbox" name="amNhac" id="amNhac" />
+              <label for="amNhac">Âm nhạc</label>
+              <input type="checkbox" name="game" id="game" />
+              <label for="game">Game</label>
+              <input type="checkbox" name="theThao" id="theThao" />
+              <label for="theThao">Thể thao</label>
+              <input type="checkbox" name="duLich" id="duLich" />
+              <label for="duLich">Du lịch</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Quê quán</b>
+            </td>
+            <td>
+              <select name="province" id="province">
+                <option value="">Chọn tỉnh/thành phố</option>
+                <option value="">Hà Nội</option>
+                <option value="">Hải Phòng</option>
+                <option value="">Quảng Ninh</option>
+                <option value="">Vĩnh Phúc</option>
+                <option value="">Hải Dương</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Mô tả ngắn</b>
+            </td>
+            <td>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="4"
+                placeholder="Mô tả về bản thân bạn..."
+              ></textarea>
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2">
+              <button name="register" id="register" onclick="login()">
+                Đăng ký
+              </button>
+              <input type="reset" value="Làm lại" name="reset" id="reset" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </form>
-</body>
+  </body>
 </html>
