@@ -39,7 +39,6 @@
         img: "",
       };
       function checkBlank(id) {
-        debugger;
         switch (id) {
           case "id":
             objProduct.id = document.getElementById("id").value;
@@ -85,18 +84,29 @@
           return true;
         }
       }
+
       function submit() {
-        checkBlank("id");
-        checkBlank("name-product");
-        checkBlank("description");
-        checkBlank("quatity");
-        checkBlank("price");
-        checkSelector(objProduct.type);
+        if (
+          checkBlank("id") &&
+          checkBlank("name-product") &&
+          checkBlank("description") &&
+          checkBlank("quatity") &&
+          checkBlank("price") &&
+          checkSelector(objProduct.type)
+        ) {
+          alert("Thêm sản phẩm thành công");
+          return true;
+        } else {
+          event.preventDefault();
+          return false;
+        }
       }
+      var form = document.getElementById("frmAddPro");
+      form.addEventListener("submit", submit());
     </script>
   </head>
   <body>
-    <form action="">
+    <form action="" name="frmAddPro" id="frmAddPro">
       <caption>
         <h2>Thông tin sản phẩm</h2>
       </caption>
@@ -177,7 +187,13 @@
           </div>
         </div>
         <div class="add">
-          <button onclick="submit()">Thêm sản phẩm</button>
+          <input
+            type="submit"
+            value="Thêm sản phẩm"
+            name="themSP"
+            id="themSP"
+            onclick="submit()"
+          />
         </div>
       </div>
     </form>

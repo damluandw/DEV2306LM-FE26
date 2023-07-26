@@ -69,25 +69,18 @@
           return true;
         }
       }
-      var form = document.getElementById("frmRegister");
-      function submitForm(event) {
-        event.preventDefault();
-      }
 
       function login() {
-       
-        if (
-          checkName() == true &&
-          checkPassword() == true &&
-          checkRePassword() == true
-        ) {
+        if (checkName() && checkPassword() && checkRePassword()) {
           alert("Đăng ký thành công");
           return true;
         } else {
-        //   form.addEventListener("submit", event.submitForm(onclick));
+          event.preventDefault();
           return false;
         }
       }
+      var form = document.getElementById("frmRegister");
+      form.addEventListener("submit", login());
     </script>
   </head>
   <body>
@@ -230,9 +223,13 @@
           </tr>
           <tr align="center">
             <td colspan="2">
-              <button name="register" id="register" onclick="login()">
-                Đăng ký
-              </button>
+              <input
+                type="submit"
+                value="Đăng ký"
+                name="register"
+                id="register"
+                onclick="login()"
+              />
               <input type="reset" value="Làm lại" name="reset" id="reset" />
             </td>
           </tr>
