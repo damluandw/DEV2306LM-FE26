@@ -85,7 +85,8 @@
         }
       }
 
-      function submit() {
+      function themSanPham() {
+       
         if (
           checkBlank("id") &&
           checkBlank("name-product") &&
@@ -101,8 +102,6 @@
           return false;
         }
       }
-      var form = document.getElementById("frmAddPro");
-      form.addEventListener("submit", submit());
     </script>
   </head>
   <body>
@@ -180,20 +179,24 @@
             <br /><label for="" id="txtErrortype"></label>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="title">Hình ảnh:</div>
           <div class="input">
             <input type="file" name="img-pro" id="img-pro" />
           </div>
-        </div>
+        </div> -->
         <div class="add">
-          <input
+          <!-- <input
             type="submit"
             value="Thêm sản phẩm"
             name="themSP"
             id="themSP"
             onclick="submit()"
-          />
+          /> -->
+          <!-- <input type="button" name="themSP" id="themSP"  onclick="themSP()" value="Thêm sản phẩm"> -->
+          <button name="themSP" id="themSP" onclick="themSanPham()">
+            Thêm sản phẩm
+          </button>
         </div>
       </div>
     </form>
