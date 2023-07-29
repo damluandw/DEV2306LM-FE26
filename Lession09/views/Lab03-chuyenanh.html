@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuyển ảnh</title>
+    <style>
+      #main {
+        width: 670px;
+        height: 446px;
+        margin: 0 auto;
+      }
+      #thun ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      #thun ul li {
+        float: left;
+        margin-right: 2px;
+      }
+      #thun ul li img {
+        width: 105px;
+        border: solid 2px #ccc;
+      }
+      .actived {
+        border: solid 4px red !important;
+      }
+    </style>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a>img").click(function (e) {
+          img = $(this).attr('src');
+          $("#image > img").attr({
+            'src' :img
+          });
+          $("a>img").removeClass('actived');
+          $(this).addClass('actived')
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="image">
+        <img src="../imgs/14_ Am tra 1 coc.png" alt="14_ Am tra 1 coc" />
+      </div>
+      <div id="thun">
+        <ul>
+          <li>
+            <a href="javasript:void(0)">
+              <img src="../imgs/14_ Am tra 1 coc.png" alt="14_Am tra 1 coc" class="actived"/>
+            </a>
+          </li>
+          <li>
+            <a href="javasript:void(0)">
+              <img
+                src="../imgs/15_ Coc tra 1(1).png"
+                alt="15_ Coc tra 1(1).png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="javasript:void(0)">
+              <img
+                src="../imgs/16_ Am tra 3 coc.png"
+                alt="16_ Am tra 3 coc.png"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="javasript:void(0)">
+              <img src="../imgs/14_ Am tra 1 coc.png" alt="14_Am tra 1 coc" />
+            </a>
+          </li>
+          <li>
+            <a href="javasript:void(0)">
+              <img src="../imgs/16_ Am tra 3 coc.png" alt="16_ Am tra 3 coc" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load content</title>
+    <style>
+        .clearfix{
+            overflow: hidden;
+            clear: both;
+        }
+        #main ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #main ul li {
+            float: left;
+            margin-right: 5px;
+        }
+        #main ul li a{
+            border-left: solid 1px #ccc;
+            border-right: solid 1px #ccc;
+            border-top: solid 1px #ccc;
+            padding: 8px 20px;
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            text-decoration: none;
+            background-color: #d2d3d5;
+            color: #000;
+        }
+        .selected{
+            border-bottom: solid 1px #fff;
+            background-color: #782a90 !important;
+            color: #fff !important;
+        }
+        #content{
+            border: solid 1px #ccc;
+            width: 500px;
+            height: 300px;
+            margin-top: -1px;
+            padding: 5px 10px;
+        }
+    </style>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+     <script>
+        $(document).ready(function ($) {
+          $("#content").load("tabs/html.html");
+          $("#main ul li a").click(function(event){
+            $('a').removeClass('selected');
+            id = event.target.id;
+            $('#'+id).addClass('selected');
+            $('#content').load("tabs/"+id+".html")
+          })
+        });
+      </script>
+</head>
+<body>
+    <div id="main" class="clearfix">
+        <ul class="clearfix">
+            <li>
+                <a href="javasript:void(0)" class="selected" id="html">
+                  HTML
+                </a>
+            </li>
+            <li>
+                <a href="javasript:void(0)" id="css">
+                  CSS
+                </a>
+            </li>
+            <li>
+                <a href="javasript:void(0)" id="jQuery">
+                  jQuery
+                </a>
+            </li>
+            <li>
+                <a href="javasript:void(0)"  id="php">
+                  PHP
+                </a>
+            </li>
+        </ul>
+        <div id="content">
+
+        </div>
+    </div>
+</body>
+</html>
