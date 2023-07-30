@@ -71,7 +71,7 @@ function setView(obj) {
 function setListView(list,search) {
     var count =  list.length;
     $('.new-page-conten .list-news').html('');
-    for (i = 0; i < count; i++) {
+    for (let i = 0; i < count; i++) {
         let obj = list[i];
         if(obj.title.toLowerCase().includes(search.toLowerCase()) || search ==""){
             setView(obj);
@@ -95,7 +95,7 @@ function setPageNews(list) {
     $('.new-page-conten .list-news').html('');
     let start =(pageIndex-1)*pageSize;
     let end =pageIndex*pageSize;
-    for (i = start && i < count; i < end && i< count; i++) {
+    for (i = start; i < end && i< count; i++) {
         let obj = list[i];
         setView(obj);
     }
@@ -103,22 +103,21 @@ function setPageNews(list) {
 }
 
 function setNumberPages(list){
-    var countPage
+    var countPage;
     if(list.length%pageSize ==0)
         countPage = list.length/pageSize;
     else{        
         countPage = Math.round(list.length/pageSize+ 0.5);
     }
-    $('.new-page-number').append(`<li class="page" value="0" onclick="changePageNumber(this.value)"><</li>`);
-    for (i = 1; i<= countPage; i++) {
-        var view = ` <li class="page" value="${i}"  onclick="changePageNumber(this.value)">${i}</li>`;
+    $('.new-page-number').append(`<li class="page" value="0" onclick="changePageNumber(0)"><</li>`);
+    for (let page = 1; page<= countPage; page++) {
+        var view = ` <li class="page" value="${page}"  onclick="changePageNumber(${page})">${page}</li>`;
         $('.new-page-number').append(view);
     }   
-    $('.new-page-number').append(`<li class="page" value="99999"  onclick="changePageNumber(this.value)">></li>`);
+    $('.new-page-number').append(`<li class="page" value="99999"  onclick="changePageNumber(99999)">></li>`);
 }
 
 function changePageNumber(val){  
-    console.log(val);
     if(val == 0){
         if(pageIndex <=1){
             pageIndex =1
