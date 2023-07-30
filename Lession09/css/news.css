@@ -75,3 +75,8 @@ footer{
 .icon span{
     font-size: 1.2rem;
 }
+
+.selected{
+    border: 1px solid red !important;
+
+}

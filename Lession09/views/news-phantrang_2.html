@@ -67,11 +67,23 @@
       <div class="news-page-title">
         <h2 class="text-center">TIN TỨC</h2>
       </div>
-      <div class="">
+      <div class="d-flex">
         <form action="" class="form-search">
           <input type="text" name="search" id="search" />
           <button type="button" onclick="searchItem()">search</button>
         </form>
+        <div class="page-size">
+          <select
+            name="pageSize"
+            id="page-sỉze"
+            onchange="choicePageSize(this)"
+          >
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
       </div>
 
       <div class="new-page-conten">
@@ -130,6 +142,6 @@
       </div>
     </footer>
 
-    <script src="../js/news.js"></script>
+    <script src="../js/news_2.js"></script>
   </body>
 </html>

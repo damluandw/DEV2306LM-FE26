@@ -8,21 +8,21 @@ var listNews = [
   },
   {
     id: 2,
-    title: "tin tức 2",
+    title: "tin tức 12",
     content:
       "Trà thảo dược được coi là một loại thực phẩm chức năng có tác dụng tốt cho sức khỏe. Tuy nhiên, để có...  ",
     img: "../imgs/15_ Coc tra 1(1).png",
   },
   {
     id: 3,
-    title: "tin tức 3",
+    title: "tin tức 13",
     content:
       "Trà thảo dược được coi là một loại thực phẩm chức năng có tác dụng tốt cho sức khỏe. Tuy nhiên, để có...  ",
     img: "../imgs/16_ Am tra 3 coc.png",
   },
   {
     id: 4,
-    title: "tin tức 4",
+    title: "tin tức 14",
     content:
       "Trà thảo dược được coi là một loại thực phẩm chức năng có tác dụng tốt cho sức khỏe. Tuy nhiên, để có...  ",
     img: "../imgs/14_ Am tra 1 coc.png",
@@ -56,6 +56,35 @@ var listNews = [
     img: "../imgs/15_ Coc tra 1(1).png",
   },
 ];
+// var listTemp;
+
+var pages = {
+  pageIndex: 1,
+  pageSize: 3,
+  searchTitle: "",
+};
+
+function getCountPage(list) {
+  if (list.length % pages.pageSize == 0) return list.length / pages.pageSize;
+  else {
+    return Math.round(list.length / pages.pageSize + 0.5);
+  }
+}
+
+function setViewNumberPages(list) {
+  let countPage = getCountPage(list);
+  $(".new-page-number").html(``);
+  $(".new-page-number").append(
+    `<li class="page" value="0" id="page0" onclick="changePageNumber(0)"><</li>`
+  );
+  for (let page = 1; page <= countPage; page++) {
+    let view = ` <li class="page" value="${page}"  id="page${page}"  onclick="changePageNumber(${page})">${page}</li>`;
+    $(".new-page-number").append(view);
+  }
+  $(".new-page-number").append(
+    `<li class="page" value="99999" id="page99999" onclick="changePageNumber(99999)">></li>`
+  );
+}
 
 function setView(obj) {
   var view = `<div class="news-item">
@@ -74,85 +103,72 @@ function setView(obj) {
   $(".new-page-conten .list-news").append(view);
 }
 
-function setListView(list, search) {
-  var count = list.length;
-  $(".new-page-conten .list-news").html("");
+function getListView(list) {
+  let count = list.length;
+  var listTmp = [];
+  // $('.new-page-conten .list-news').html('');
   for (let i = 0; i < count; i++) {
     let obj = list[i];
     if (
-      obj.title.toLowerCase().includes(search.toLowerCase()) ||
-      search == ""
+      obj.title.toLowerCase().includes(pages.searchTitle.toLowerCase()) ||
+      pages.searchTitle == ""
     ) {
-      setView(obj);
+      listTmp.push(obj);
     }
   }
+  return listTmp;
 }
 
 function searchItem() {
-  // var title = document.getElementById("search").value;
-  var title = $(".form-search #search").val();
-  setListView(listNews, title);
-  // return false;
-  // => syntax: $ + ('<selector>') + . + action(param)
+  pages.searchTitle = $("#search").val();
+  viewPages(listNews);
 }
 
-var pageIndex = 1;
-var pageSize = 3;
-
+function checkPage(maxPage) {
+  if (pages.pageIndex < 1) {
+    pages.pageInde = 1;
+  } else if (pages.pageIndex > maxPage) {
+    pages.pageIndex = maxPage;
+  }
+}
 function setPageNews(list) {
-  var count = list.length;
+  let maxPage = getCountPage(list);
+  checkPage(maxPage);
+  let count = list.length;
   $(".new-page-conten .list-news").html("");
-  let start = (pageIndex - 1) * pageSize;
-  let end = pageIndex * pageSize;
+  let start = (pages.pageIndex - 1) * pages.pageSize;
+  let end = pages.pageIndex * pages.pageSize;
   for (i = start; i < end && i < count; i++) {
     let obj = list[i];
     setView(obj);
   }
 }
 
-function setNumberPages(list) {
-  var countPage;
-  if (list.length % pageSize == 0) countPage = list.length / pageSize;
-  else {
-    countPage = Math.round(list.length / pageSize + 0.5);
-  }
-  $(".new-page-number").append(
-    `<li class="page" value="0" onclick="changePageNumber(0)"><</li>`
-  );
-  for (let page = 1; page <= countPage; page++) {
-    var view = ` <li class="page" value="${page}"  onclick="changePageNumber(${page})">${page}</li>`;
-    $(".new-page-number").append(view);
-  }
-  $(".new-page-number").append(
-    `<li class="page" value="99999"  onclick="changePageNumber(99999)">></li>`
-  );
-}
-
 function changePageNumber(val) {
   if (val == 0) {
-    if (pageIndex <= 1) {
-      pageIndex = 1;
-      return;
-    } else {
-      pageIndex--;
-    }
+    pages.pageIndex--;
   } else if (val == 99999) {
-    var countPage;
-    if (listNews.length % pageSize == 0) countPage = listNews.length / pageSize;
-    else {
-      countPage = Math.round(listNews.length / pageSize + 0.5);
-    }
-    if (pageIndex >= countPage) {
-      pageIndex = countPage;
-      return;
-    } else {
-      pageIndex++;
-    }
+    pages.pageIndex++;
   } else {
-    pageIndex = parseInt(val);
+    pages.pageIndex = parseInt(val);
   }
-  setPageNews(listNews);
+  viewPages();
 }
 
-setPageNews(listNews);
-setNumberPages(listNews);
+function cssChoicePage(val) {
+  $(".new-page-number .page.selected").removeClass(".selected");
+  $(".new-page-number .page#page" + val).addClass("selected");
+}
+
+function choicePageSize(obj) {
+  pages.pageSize = obj.value;
+  viewPages();
+}
+
+function viewPages() {
+  let listTemp = getListView(listNews);
+  setPageNews(listTemp);
+  setViewNumberPages(listTemp);
+  cssChoicePage(pages.pageIndex);
+}
+viewPages(listNews);
