@@ -1,6 +1,3 @@
-
-
-
 var listNews = [
     {
         id: 1,
@@ -71,14 +68,6 @@ function setView(obj) {
     $('.new-page-conten .list-news').append(view);
 }
 
-
-// function setListNews() {
-//     var count =  listNews.length
-//     for (i = 0; i < count; i++) {
-//         let obj = listNews[i];
-//         setView(obj);
-//     }
-// }
 function setListView(list,search) {
     var count =  list.length;
     $('.new-page-conten .list-news').html('');
@@ -91,15 +80,12 @@ function setListView(list,search) {
 }
 
 function searchItem() {
-    debugger;
     // var title = document.getElementById("search").value;
     var title = $('.form-search #search').val();
     setListView(listNews,title);
     // return false;
     // => syntax: $ + ('<selector>') + . + action(param)
 }
-// setListNews();
-// setListView(listNews,"");
 
 var pageIndex =1;
 var pageSize=3;
@@ -113,9 +99,45 @@ function setPageNews(list) {
         let obj = list[i];
         setView(obj);
     }
+    
 }
+
+function setNumberPages(list){
+    var countPage
+    if(list.length%pageSize ==0)
+        countPage = list.length/pageSize;
+    else{        
+        countPage = Math.round(list.length/pageSize+ 0.5);
+    }
+    $('.new-page-number').append(`<li class="page" value="0" onclick="changePageNumber(this.value)"><</li>`);
+    for (i = 1; i<= countPage; i++) {
+        var view = ` <li class="page" value="${i}"  onclick="changePageNumber(this.value)">${i}</li>`;
+        $('.new-page-number').append(view);
+    }   
+    $('.new-page-number').append(`<li class="page" value="99999"  onclick="changePageNumber(this.value)">></li>`);
+}
+
+function changePageNumber(val){  
+    console.log(val);
+    if(val == 0){
+        if(pageIndex <=1){
+            pageIndex =1
+        }else{
+            pageIndex--;
+        }
+    }
+    else if(val == 99999){
+        if(pageIndex >= listNews.length){
+            pageIndex =listNews.length;
+        }else{
+            pageIndex++;
+        }
+    }else{
+        pageIndex = parseInt(val);
+    }
+    setPageNews(listNews);
+}
+
 setPageNews(listNews);
-function changePageNumber(pageNumber){
-    pageIndex = pageNumber;
-    setPageNews(listNews) 
-}
+setNumberPages(listNews);
+
