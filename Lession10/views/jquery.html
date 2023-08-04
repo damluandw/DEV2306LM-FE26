@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/jquery.css" />
+  </head>
+  <body>
+    <section class="w-90 margin-auto">
+      <div class="d-flex">
+        <div class="box box-left w-65">
+          <div class="nav-top ">
+            <div class="d-flex justify-between w-97 margin-auto">
+              <div class="btn-add">
+                <button class="btn bg-blue cl-white">Thêm mới sinh viên</button>
+              </div>
+              <div class="search">
+                <input
+                  type="search"
+                  name="search"
+                  id="txt-search"
+                  placeholder="Search Here"
+                />
+                <button class="btn bg-blue cl-white">Tìm kiếm</button>
+              </div>
+              <div class="sort">
+                <input
+                  type="text"
+                  name="sort"
+                  id="txt-sort"
+                  placeholder="Sắp xếp"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="list-sv w-97 margin-auto">
+            <table class="w-100">
+              <legend>Danh sách sinh viên</legend>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Mã sinh viên</th>
+                  <th>Tên sinh viên</th>
+                  <th>Tuổi</th>
+                  <th>Giới tính</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>SV001</td>
+                  <td>Nguyễn văn Á</td>
+                  <td>20</td>
+                  <td>Nam</td>
+                  <td>
+                    <button class="btn bg-orangered">Xem</button>
+                    <button class="btn bg-orangered-yellow">Sửa</button>
+                    <button class="btn bg--blue-green">Xóa</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="box box-right w-35">
+          <form action="" class="w-90 margin-auto">
+            <legend>Thông tin sinh viên</legend>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Mã sinh viên</td>
+                  <td>
+                    <input type="text" name="ma-sv" id="ma-sv" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tên sinh viên</td>
+                  <td>
+                    <input type="text" name="ten-sv" id="ten-sv" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Tuổi</td>
+                  <td>
+                    <input
+                      type="number"
+                      name="tuoi-sv"
+                      id="tuoi-sv"
+                      value="0"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Giới tính</td>
+                  <td>
+                    <input type="text" name="gioi-tinh" id="gioi-tinh" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ngày sinh</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="ngay-sinh"
+                      id="ngay-sinh"
+                      placeholder="dd/mm/yyyy"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nơi sinh</td>
+                  <td>
+                    <input
+                      type="text"
+                      name="noi-sinh"
+                      id="noi-sinh"
+                      placeholder="Hà Nội"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Địa chỉ</td>
+                  <td>
+                    <input type="text" name="dia-chi" id="dia-chi" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <button class="btn btn-save bg-blue cl-white">Save</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

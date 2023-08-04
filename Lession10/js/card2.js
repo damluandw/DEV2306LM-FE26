@@ -42,7 +42,7 @@ function sumPrice(list) {
 // )
 
 function setProductItem(obj) {
-  let item = `<div class="item border-1">
+  let item = `<div class="item border-1" id ="item-${obj.id}">
                 <div class="d-flex justify-between">
                     <div class="image-item w-23">
                         <img class="" src="${obj.img}" alt="">
@@ -58,18 +58,18 @@ function setProductItem(obj) {
                     <div class="quantity-item w-23">
                         <button type="button" class="btn-sub sub-${
                           obj.id
-                        }" onclick ="subProduct('${obj.id}')">-</button>
+                        }" >-</button>
                             <span id="product-quantity-${obj.id}">${
     obj.quantity
   }</span>
                         <button type="button" class="btn-add add-${
                           obj.id
-                        }" onclick ="addProduct('${obj.id}')">+</button>
+                        }">+</button>
                     </div>
                     <div class="del-pro">
-                    <button type="button" class="btn-del" onclick ="delProduct('${
+                    <button type="button" class="btn-del" id="del-pro-${
                       obj.id
-                    }')"><span><i class="fa-solid fa-trash-can"></i></span></button>
+                    }" ><span><i class="fa-solid fa-trash-can"></i></span></button>
                     </div>
                 </div>
             </div>`;
@@ -84,78 +84,50 @@ function showListCard(list) {
     setProductItem(obj);
   }
 }
-function subProduct(id) {
-  let count = listProduct.length;
-  for (let i = 0; i < count; i++) {
-    if (id == listProduct[i].id) {
-      var quantity = listProduct[i].quantity;
-      listProduct[i].quantity =
-        parseInt(quantity) < 2 ? 1 : parseInt(quantity) - 1;
-      $("#product-quantity-" + id).html(listProduct[i].quantity);
-    }
-  }
-  sumPrice(listProduct);
-}
-
-function addProduct(id) {
-  let count = listProduct.length;
-  for (let i = 0; i < count; i++) {
-    if (id == listProduct[i].id)
-      if (listProduct[i].quantity < listProduct[i].limit) {
-        listProduct[i].quantity++;
-        $("#product-quantity-" + id).html(listProduct[i].quantity);
-      }
-  }
-  sumPrice(listProduct);
-}
-function delProduct(id) {
-  for (let i = 0; i < listProduct.length; i++) {
-    if (id == listProduct[i].id) {
-      listProduct.splice(i, 1);
-    }
-  }
-  $(".list-item").html("");
-  showListCard(listProduct);
-  sumPrice(listProduct);
-}
 
 showListCard(listProduct);
 sumPrice(listProduct);
 
-// function changeQuantity(id, quantity) {
-//   let count = listProduct.length;
-//   for (let i = 0; i < count; i++) {
-//     if (id == listProduct[i].id) listProduct[i].quantity = quantity;
-//   }
-//   $(this).siblings("span").text(quantity);
-//   sumPrice(listProduct);
-// }
-// $('.btn-sub').click(function(){
-//   var quantity = $(this).siblings('span').text();
-//   quantity = (parseInt(quantity) < 1) ? 0 : (parseInt(quantity) - 1) ;
-//   // let name = $(this).siblings('span').attr('id');
-//   // let id = name.substring("product-quantity-".length,name.length);
-//   // changeQuantity(id,quantity);
-//   $(this).siblings('span').text(quantity);
-//   // sumPrice(listProduct);
-// })
+function changeQuantity(id, phepTinh) {
+  let count = listProduct.length;
+  for (let i = 0; i < count; i++) {
+    if (id == listProduct[i].id) {
+      let quantity = listProduct[i].quantity;
+      if (phepTinh == "-") {
+        quantity = parseInt(quantity) < 2 ? 1 : parseInt(quantity) - 1;
+      } else {
+        if (quantity < listProduct[i].limit) {
+          quantity = parseInt(quantity) + 1;
+        } 
+      }
+      listProduct[i].quantity = quantity;
+      return quantity;
+    }
+  }
+}
 
-// $(".btn-add").click(function () {
-//   var quantity = $(this).siblings("span").text();
-//   quantity = parseInt(quantity) + 1;
-//   let name = $(this).siblings("span").attr("id");
-//   let id = name.substring("product-quantity-".length, name.length);
-//   $(this).siblings("span").text(quantity);
-//   changeQuantity(id, quantity);
-//   sumPrice(listProduct);
-// });
+$(".btn-sub").click(function () {  
+  let name = $(this).siblings("span").attr("id");
+  let id = name.substring("product-quantity-".length, name.length);
+  let quantity =changeQuantity(id, "-");
+  $(this).siblings("span").text(quantity);
+  sumPrice(listProduct);
+});
 
-// $(".btn-sub").click(function () {
-//   var quantity = $(this).siblings("span").text(); // quantity = 0
-//   quantity = parseInt(quantity) < 1 ? 0 : parseInt(quantity) - 1;
-//   $(this).siblings("span").text(quantity);
-//   // sumPrice(listProduct);
-// });
+$(".btn-add").click(function () {
+  let name = $(this).siblings("span").attr("id");
+  let id = name.substring("product-quantity-".length, name.length);
+  let quantity =changeQuantity(id, "+");
+  $(this).siblings("span").text(quantity);
+  sumPrice(listProduct);
+});
+$(".btn-del").click(function () {
+  let name = $(this).attr("id");
+  let id = name.substring("del-pro-".length, name.length);
+  listProduct = listProduct.filter((x) => x.id != id);
+  $("#item-" + id).remove();
+  sumPrice(listProduct);
+});
 
 // btvn: Xây dựng giỏ hàng dựa theo data có sẵn
 // chức năng: tính tổng sản phẩm, tăng giảm số lượng theo từng sản phẩm
