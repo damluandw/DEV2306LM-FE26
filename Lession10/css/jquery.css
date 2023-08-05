@@ -102,3 +102,11 @@ legend{
     width: 16rem;
     padding-left: 0.8rem;
 }
+.err{
+    color: red;
+    font-size: 0.6rem;
+    display: none;
+}
+.actived{
+    display: block;
+}
