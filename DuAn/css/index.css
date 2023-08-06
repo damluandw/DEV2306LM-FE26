@@ -1,0 +1,68 @@
+
+.title-pro-left {
+  background-color: green;
+  color: #fff;
+  height: 2rem;
+}
+
+.title-pro-left h3 {
+  color: #fff;
+  padding-top: 0.25rem;
+  font-size: 1rem;
+  height: 2rem;
+}
+
+.title-pro-left .img-icon img {
+  height: 1.5rem;
+  padding: 0.25rem 0.8rem;
+}
+.menu-pro-hot,
+.title-pro-bn,
+.title-pro-right{
+  width: 100%;
+}
+.title-pro-right {
+  text-align: left;
+  justify-content: end;
+}
+.title-pro-right i {
+    color: green;
+}
+.title-pro-right p{
+    font-size: 0.9rem;
+    padding-right: 0.3rem;
+}
+
+.pro-right{
+  margin-left: auto;
+  width: 78%;
+}
+
+.title-pro-item{
+  text-align: center;
+}
+.describe-item{
+  display: none;
+  background-color: green;
+  /* opacity: 0.2; */
+}
+
+.describe-item .btn-pro-item{
+  background-color: #fff;
+  border: solid 1px #ccc ;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.btn-pro-item{
+  margin-left: 1.5rem;
+}
+.describe-item .btn-pro-item a{
+  text-transform: uppercase;
+}
+.item-pro:hover .describe-item{
+  display: block;
+}
+
+.item-pro-top{
+  
+}
