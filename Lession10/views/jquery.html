@@ -6,20 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/jquery.css" />
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <section class="w-90 margin-auto">
       <div class="d-flex">
         <div class="box box-left w-65">
-          <div class="nav-top ">
+          <div class="nav-top">
             <div class="d-flex justify-between w-97 margin-auto">
               <div class="add-sv">
-                <button type="button" class="btn bg-blue cl-white" id="btn-add" onclick="themSinhVien()">Thêm mới sinh viên</button>
+                <button
+                  type="button"
+                  class="btn bg-blue cl-white"
+                  id="btn-add"
+                  onclick="themSinhVien()"
+                >
+                  Thêm mới sinh viên
+                </button>
               </div>
               <div class="search">
                 <input
@@ -28,7 +35,9 @@
                   id="txt-search"
                   placeholder="Search Here"
                 />
-                <button type="button" class="btn bg-blue cl-white">Tìm kiếm</button>
+                <button type="button" class="btn bg-blue cl-white">
+                  Tìm kiếm
+                </button>
               </div>
               <div class="sort">
                 <input
@@ -53,14 +62,12 @@
                   <th>Hành động</th>
                 </tr>
               </thead>
-              <tbody class="list-item">
-                
-              </tbody>
+              <tbody class="list-item"></tbody>
             </table>
           </div>
         </div>
         <div class="box box-right w-35">
-          <form action="" class="w-90 margin-auto" name = "formThongTin">
+          <form action="" class="w-90 margin-auto" name="formThongTin">
             <legend>Thông tin sinh viên</legend>
             <table>
               <tbody>
@@ -68,7 +75,7 @@
                   <td>Mã sinh viên</td>
                   <td>
                     <input type="text" name="masv" id="ma-sv" />
-                    <br>
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
@@ -76,28 +83,28 @@
                   <td>Tên sinh viên</td>
                   <td>
                     <input type="text" name="tensv" id="ten-sv" />
-                    <br>
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Tuổi</td>
                   <td>
-                    <input
-                      type="number"
-                      name="tuoisv"
-                      id="tuoi-sv"
-                      value="0"
-                    />
-                    <br>
-                    <span class="err">Thông tin không được để trống</span>
+                    <input type="number" name="tuoisv" id="tuoi-sv" value="0" />
+                    <br />
+                    <span class="err">Vui lòng nhập lại độ tuổi</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Giới tính</td>
                   <td>
-                    <input type="text" name="gioitinh" id="gioi-tinh" placeholder="Nam"/>
-                    <br>
+                    <input
+                      type="text"
+                      name="gioitinh"
+                      id="gioi-tinh"
+                      placeholder="Nam"
+                    />
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
@@ -109,9 +116,8 @@
                       name="ngaysinh"
                       id="ngay-sinh"
                       placeholder="dd/mm/yyyy"
-                      onchange="validateDate() "
                     />
-                    <br>
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
@@ -124,7 +130,7 @@
                       id="noi-sinh"
                       placeholder="Hà Nội"
                     />
-                    <br>
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
@@ -132,13 +138,20 @@
                   <td>Địa chỉ</td>
                   <td>
                     <input type="text" name="diachi" id="dia-chi" />
-                    <br>
+                    <br />
                     <span class="err">Thông tin không được để trống</span>
                   </td>
                 </tr>
                 <tr>
                   <td colspan="2">
-                    <button type="button" id="save-sv" class="btn btn-save bg-blue cl-white" onclick="saveSinhVien()">Save</button>
+                    <button
+                      type="button"
+                      id="save-sv"
+                      class="btn btn-save bg-blue cl-white"
+                      onclick="saveSinhVien()"
+                    >
+                      Save
+                    </button>
                   </td>
                 </tr>
               </tbody>

@@ -88,7 +88,7 @@ function setData() {
   ]);
 }
 function getData() {
-  listSinhVien = localStorage.getItem("listSV");
+  return localStorage.getItem("listSV");
 }
 
 function setData(stt, obj) {
@@ -240,7 +240,6 @@ $(".box-right input").focusout(function () {
   let check = true;
   switch (AttrID) {
     case "tuoi-sv":
-      debugger;
       check = validateAge(val);
       break;
     case "gioi-tinh":
@@ -257,60 +256,42 @@ $(".box-right input").focusout(function () {
   }
 });
 
-function validateDatetime(strDate) {
-  // let count = strDate.length;
-  // let date = strDate.substring(8, 10);
-  // let month = strDate.substring(5, 7);
-  // let year = strDate.substring(0, 4);
-  // let kytu5 = strDate.substring(4, 5);
-  // let kytu7 = strDate.substring(4, 5);
-  // let check = true;
-  // if(count != 10 && count !=0){
-  //   $("#ngay-sinh").siblings("span").html("Sai thông tin định dạng");
-  //   $("#ngay-sinh").siblings("span").addClass("actived");
-  //   check = false;
-  // }
-
-  // if(kytu5!= "/" && kytu7 != "/"){
-  //   check = false;
-  // }
-  // else if()
-
-  var currVal = strDate;
-  if (currVal == "") check = false;
-
-  //Declare Regex
-  var rxDatePattern = /^((0?[1-9]|1[012])[/](0?[1-9]|[12][0-9]|3[01])[/](19|20)?[0-9]{2})*$/;
-  var dtArray = currVal.match(rxDatePattern); // is format OK?
-
-  if (dtArray == null) check = false;
-  if (!check) {
+function validateDatetime() {
+  let strDate= formThongTin.ngaysinh.value.toString();
+  let count = strDate.length;
+ 
+  if(count != 10 && count !=0){
     $("#ngay-sinh").siblings("span").html("Sai thông tin định dạng");
     $("#ngay-sinh").siblings("span").addClass("actived");
-    return check;
+    return false;
   }
-  //Checks for mm/dd/yyyy format.
-  dtDay = dtArray[1];
-  dtMonth = dtArray[3];
-  dtYear = dtArray[5];
-
-  if (dtMonth < 1 || dtMonth > 12) check = false;
-  else if (dtDay < 1 || dtDay > 31) check = false;
-  else if (
-    (dtMonth == 4 || dtMonth == 6 || dtMonth == 9 || dtMonth == 11) &&
-    dtDay == 31
-  )
-    check = false;
-  else if (dtMonth == 2) {
-    var isleap = dtYear % 4 == 0 && (dtYear % 100 != 0 || dtYear % 400 == 0);
-    if (dtDay > 29 || (dtDay == 29 && !isleap)) check = false;
-  }
-  if (!check) {
+  let date = strDate.substring(0, 2);
+  let month = strDate.substring(3, 5);
+  let year = strDate.substring(6, 10);
+  let kytu5 = strDate.substring(2, 3);
+  let kytu7 = strDate.substring(5, 6);
+  if(kytu5!= "/" && kytu7 != "/"){
     $("#ngay-sinh").siblings("span").html("Sai thông tin định dạng");
     $("#ngay-sinh").siblings("span").addClass("actived");
-    return check;
+    return false;
   }
+
+  let datetime = new Date(month+"/" +date+ "/" +year);
+  if(!(datetime instanceof Date && !isNaN(datetime.valueOf()))){
+    $("#ngay-sinh").siblings("span").html("Sai thông tin định dạng");
+    $("#ngay-sinh").siblings("span").addClass("actived");
+    return false;
+  };
   return true;
+}
+
+
+function formatDateTimeNhap(){
+  let strDate= formThongTin.ngaysinh.value.toString();
+  let date = strDate.substring(0, 2);
+  let month = strDate.substring(3, 5);
+  let year = strDate.substring(6, 10);
+  return year +"-"+ month+"-"+date
 }
 
 function validateSex(value) {
@@ -322,20 +303,18 @@ function validateSex(value) {
   return check;
 }
 
-
-
-
 function validateAge(value) {
   let val = parseInt(value);
-  if ((val) => 10 && val <= 60) {
-    return true;
-  } else {
-    $(this).siblings("span").html("Vui lòng nhập lại giới tính");
+  if (val < 10 || val > 60) {
+    $(this).siblings("span").html("Vui lòng nhập lại độ tuổi");
+    $(this).siblings("span").addClass("actived");
     return false;
+  } else {    
+    return true;
   }
 }
 
-function checkBlank() {
+function checkValidate() {
   let check = true;
   if (formThongTin.masv.value == "") {
     $("#ma-sv").siblings("span").addClass("actived");
@@ -351,7 +330,7 @@ function checkBlank() {
   }
   if (
     formThongTin.tuoisv.value == "" ||
-    validateAge(formThongTin.tuoisv.value)
+    !validateAge(formThongTin.tuoisv.value)
   ) {
     $("#tuoi-sv").siblings("span").addClass("actived");
     check = false;
@@ -360,7 +339,7 @@ function checkBlank() {
   }
   if (
     formThongTin.gioitinh.value == "" ||
-    validateSex(formThongTin.gioitinh.value)
+    !validateSex(formThongTin.gioitinh.value)
   ) {
     $("#gioi-tinh").siblings("span").addClass("actived");
     check = false;
@@ -373,6 +352,12 @@ function checkBlank() {
   } else {
     $("#noi-sinh").siblings("span").removeClass("actived");
   }
+  if (formThongTin.ngaysinh.value == "" || !validateDatetime()) {
+    $("#ngay-sinh").siblings("span").addClass("actived");
+    check = false;
+  } else {
+    $("#ngay-sinh").siblings("span").removeClass("actived");
+  }
   if (formThongTin.diachi.value == "") {
     $("#dia-chi").siblings("span").addClass("actived");
     check = false;
@@ -383,13 +368,13 @@ function checkBlank() {
 }
 
 function saveSinhVien() {
-  if (checkBlank()) {
+  if (checkValidate()) {
     let obj = {
       studentId: formThongTin.masv.value,
       studentName: formThongTin.tensv.value,
       age: parseInt(formThongTin.tuoisv.value),
       sex: formThongTin.gioitinh.value.toLowerCase() == "nam" ? 0 : 1,
-      birthDate: formThongTin.ngaysinh.value,
+      birthDate: formatDateTimeNhap(),
       birthPlace: formThongTin.noisinh.value,
       adress: formThongTin.diachi.value,
     };
