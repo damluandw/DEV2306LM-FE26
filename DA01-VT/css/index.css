@@ -41,7 +41,7 @@
 .body-right {
   width: 79%;
 }
-.box-product{
+.box-product {
   margin-bottom: 2rem;
 }
 .item-product {
@@ -89,7 +89,7 @@
   height: 9rem;
   display: -webkit-box;
   -webkit-line-clamp: 6; /* number of lines to show */
-          line-clamp: 6; 
+  line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -103,4 +103,155 @@
 .img-product {
   width: 100%;
   height: 15rem;
+}
+.title-product-item {
+  margin: 0.5rem;
+}
+
+.title-product-item h4 {
+  font-size: 1rem;
+  font-family: OpenSans-Medium;
+  margin: 0;
+}
+
+.line-header {
+  width: 2rem;
+}
+.line-buttom {
+  position: relative;
+  height: 4px;
+  margin-bottom: 1.5rem;
+}
+.box-new-header,
+.box-reviews-header {
+  width: 4px;
+  height: 4px;
+  border: solid 1px #47ae49;
+}
+/* .box-new-header::before{
+  content: '\2212';
+  display: inline;
+  width: 10px;
+  height: 1px;
+  
+} */
+
+.line-header {
+  margin: 0;
+  position: absolute;
+  width: 3rem;
+  background-color: #47ae49;
+  bottom: 50%;
+}
+.line-left {
+  right: calc(50% + 6px) ;
+  /* right: -moz-calc(50% -8px);
+  right: -webkit-calc(50% -8px); */
+}
+.line-right {
+  left: calc(50% + 6px) ;
+}
+.title-bottom {
+  width: 90%;
+  margin: auto;
+}
+
+.title-news-item {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.title-news-item {
+  margin: 1rem 0 0.5rem;
+}
+.title-news-item h4 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.date-new {
+  margin: 0;
+}
+.date-new img {
+  width: 0.7rem;
+}
+.date-new span {
+  padding-left: 0.1rem;
+  font-family: OpenSans-Italic;
+  font-size: 0.7rem;
+  margin: auto;
+}
+.news-description {
+  margin: 0.5rem 0 1rem 0;
+}
+.new-detail {
+  text-align: justify;
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.btn-more {
+  border: solid 1px #47ae49;
+  padding: 0.2rem 1rem;
+}
+.btn-more span i {
+  padding-left: 0.5rem;
+}
+
+/* REVEWS */
+.reviews {
+  margin: 4.8rem 0;
+}
+
+.box-review {
+  padding: 2rem 1.5rem;
+  border: 2px dashed #ccc;
+  border-radius: 6px;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.box-review .review-detail {
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 6; /* number of lines to show */
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.arrow-down {
+  position: absolute;
+  left: 2.5rem;
+  bottom: -2rem;
+  width: 2rem;
+  height: 2rem;
+  border-left: 2px dashed #ccc;
+  border-top: 2px solid #fff;
+}
+.arrow-down-2 {
+  position: absolute;
+  bottom: -2rem;
+  left: 3.5rem;
+  width: 0px;
+  height: 2rem;
+  border-right: 2px dashed #ccc;
+  transform: skew(-45deg);
+}
+
+.name-user{
+  font-family: OpenSans-Bold;
+  font-size: 1rem;
+}
+.adress-user{
+  font-size: 1rem;
 }
