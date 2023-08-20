@@ -1,0 +1,126 @@
+.list-product {
+    margin-top: 1rem;
+  }
+  
+  .title-item-header {
+    position: relative;
+    margin: auto 0;
+    padding: 0.5rem;
+    background-color: #47ae49;
+  }
+  
+  .list-item .title-header {
+    font-size: 1.2rem;
+    margin: auto 0;
+    padding-left: 0.5rem;
+  }
+  /* .list-item .title-item-left::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: 50%;
+      width: 1rem;
+      background-color: #47ae49;
+  } */
+  .title-item-right a {
+    margin: auto 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+  .title-item-right p {
+    margin: auto 0;
+    padding-right: 0.5rem;
+  }
+  
+  .body-left {
+    margin-top: 1rem;
+  }
+  
+  .box-product {
+    margin-bottom: 2rem;
+  }
+  .item-top {
+    position: relative;
+  }
+  .product-hover {
+    display: none;
+  }
+  
+  .item-product:hover .item-top .bg-product-hover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    content: "";
+    width: 100%;
+    background-color: #47ae49;
+    opacity: 0.8;
+  }
+  
+  .item-product:hover .product-hover {
+    display: block;
+  }
+  .bg-product-hover,
+  .product-hover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+  .product-description {
+    margin: auto 1rem;
+  }
+  
+  .product-detail,
+  .btn-product {
+    font-size: 1rem;
+    opacity: 1 !important;
+  }
+  .btn-product {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+  }
+  
+  .product-detail {
+    padding-top: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+    min-height: 9rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* number of lines to show */
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .btn-detail {
+    margin-left: 1rem;
+  }
+  .btn-buy {
+    margin-right: 1rem;
+  }
+  
+  .product-description .btn {
+    border: solid 1px #ccc;
+    padding: 0.2rem 0.8rem;
+    background-color: #fff;
+  }
+  .img-product {
+    width: 100%;
+  }
+  .title-product-item {
+    margin: 0.5rem;
+  }
+  
+  .title-product-item h4 {
+    font-size: 1rem;
+    font-family: OpenSans-Medium;
+    margin: 0;
+  }
+  
+.product-page-number .page{
+    border: 1px solid green;
+    padding: 0.2rem 0.4rem;
+    margin: 2rem 0.2rem 0rem 0.2rem;
+}

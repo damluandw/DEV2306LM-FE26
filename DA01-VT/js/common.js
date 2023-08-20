@@ -14,6 +14,44 @@ $(document).ready(function () {
     slidesToScroll: 1,
     // autoplay: true,
     // autoplaySpeed: 2000,
-    arrows: false
+    arrows: false,
+  });
+
+});
+
+$(".btn-menu").click(function () {
+  $(this).each(function () {
+    let ktClass = $(this).hasClass("bg-red");
+    if (!ktClass) {
+      $(this).addClass("bg-red");
+      $(".list-nav-header-mobile").addClass("active-mobile");
+    } else {
+      $(this).removeClass("bg-red");
+      $(".list-nav-header-mobile").removeClass("active-mobile");
+    }
   });
 });
+
+$(".list-nav-header-mobile li").click(function () {
+  $(this).each(function () {
+    let ktClass = $(this).hasClass("bg-red");
+    // let ktClass2 = $(this).children(".menu-lv2-mobile").hasClass(".menu-lv2-mobile");
+    
+    
+    $(this).siblings("li").removeClass("bg-red");
+    $(this).siblings("li").children(".menu-lv2-mobile").removeClass("active-mobile");
+    if (!ktClass ) {
+      $(this).addClass("bg-red");
+      $(this).children(".menu-lv2-mobile").addClass("active-mobile");
+    } else {
+      $(this).removeClass("bg-red");
+      $(this).children(".menu-lv2-mobile").removeClass("active-mobile");
+    }
+  });
+});
+
+
+
+
+
+

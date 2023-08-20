@@ -84,6 +84,9 @@ p {
 .bg-green {
   background-color: #47ae49 !important;
 }
+.bg-red {
+  background-color: #ff3f00;
+}
 
 .flex-swap {
   flex-wrap: wrap;
@@ -142,6 +145,7 @@ p {
 .nav-header {
   text-transform: uppercase;
 }
+
 ul {
   padding: 0;
   margin: 0;
@@ -405,4 +409,144 @@ address {
   .content-title {
     width: 10rem;
   }
+}
+
+/* MOBILE */
+.menu-botton-mobile {
+  display: none;
+  font-family: OpenSans-Bold;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 700px) {
+  .content {
+    display: none !important;
+  }
+  .header-top {
+    margin-bottom: 0.8rem;
+  }
+  .menu-botton,
+  .banner-left,
+  .body-left,
+  .footer-top {
+    display: none;
+  }
+  .list-nav-header {
+    flex-direction: column !important;
+  }
+  .list-nav-header li {
+    width: 100%;
+  }
+  .list-nav-header li a {
+    /* padding: 5rem; */
+  }
+  .header-bottom ul li {
+    padding: 0.8rem;
+  }
+  .category {
+    background-color: #47ae49;
+  }
+  .title-item-header {
+    width: 18.6rem;
+  }
+  .search {
+    width: 64%;
+  }
+  .body-right,
+  .banner-right {
+    width: 100%;
+  }
+  .text-search {
+    width: 80%;
+  }
+  .search {
+    justify-content: flex-end;
+  }
+  .menu-botton-mobile {
+    display: block;
+  }
+}
+
+.btn-menu {
+  padding: 0.6rem 1rem;
+}
+
+.list-nav-header-mobile {
+  display: none;
+}
+.menu-botton-mobile > ul > li {
+  padding: 0;
+}
+.menu-botton-mobile ul li div {
+  padding: 0.8rem;
+  text-transform: uppercase;
+}
+.menu-botton-mobile span {
+  padding-right: 0.8rem;
+}
+.menu-lv2-mobile {
+  display: none;
+  background-color: #fff;
+}
+.nav-header-mobile {
+  padding: 0;
+}
+.active-mobile {
+  display: block;
+}
+.menu-lv2-mobile span {
+  font-family: OpenSans-Medium;
+}
+/* CARD */
+.image-item-card {
+  width: 8rem;
+}
+.margin-auto {
+  margin: auto;
+}
+
+.item-card {
+  margin-bottom: 0.8rem;
+}
+
+/* Product */
+.header-list-item {
+  margin-top: 1rem;
+}
+.title-new-hot {
+  font-family: OpenSans-Bold;
+  font-size: 1rem;
+  margin: auto 0;
+  padding-bottom: 0;
+}
+.box-title-new{  
+  border-bottom: solid 3px green;
+  height: 100%;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.new-hot-item{
+  border-bottom: dashed 1px green;
+  padding: 1rem 0;
+}
+
+.title-item h4{
+  font-weight: normal;
+  font-size: 1rem;  
+  margin-bottom: 1rem;  
+} 
+
+.date-new{
+  color: #414141;
+  font-size: 0.8rem; 
+}
+.new-hot-item .img-item{
+  width: 5rem;
+  height: 5rem;
+  margin-right: 0.8rem;
+}
+.new-hot-item .img-item img{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
 }
