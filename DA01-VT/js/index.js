@@ -73,7 +73,7 @@ var listProduct = [
   },
 ];
 
-var listCardSet = [
+var listCartSet = [
   {
     id: "SP01",
     img: "../imgs/sp/sp-kimtien-1.png",
@@ -85,7 +85,7 @@ var listCardSet = [
       "Cây Vạn Niên Thanh có ý nghĩa phong thủy tăng tài vận cho gia chủ. Người ta quan niệm, trồng vạn niên thanh trong nhà ngày tết mang đến sự sung túc",
   },
 ];
-var listCard ;
+var listCart ;
 function setLocal(key, value) {
     localStorage.removeItem(key);
     if (!key || !value) {return;}
@@ -98,10 +98,10 @@ function setLocal(key, value) {
 
 
 function getLocal(key){
-    listCard = JSON.parse(localStorage.getItem(key));
+    listCart = JSON.parse(localStorage.getItem(key));
 }
-// setLocal("listCards",listCardSet);
-getLocal("listCards");
+// setLocal("listCarts",listCartSet);
+getLocal("listCarts");
 
 function setProductItem(obj, idHTML) {
   let item = `<div class="col-xl-3 col-sm-4 col-6 box-product">
@@ -159,40 +159,40 @@ function showListPro(list, idHTML) {
 }
 showListPro(listProduct, "#list-product-hot");
 
-function setCardItem(obj) {
-  let item = `<div class="item-card" id ="item-card-${obj.id}">
+function setCartItem(obj) {
+  let item = `<div class="item-cart" id ="item-cart-${obj.id}">
                   <div class="d-flex justify-between">
-                      <div class="image-item-card margin-auto">
+                      <div class="image-item-cart margin-auto">
                           <img class="w-100" src="${obj.img}" alt="">
                       </div>
-                      <div class="title-item-card margin-auto">
+                      <div class="title-item-cart margin-auto">
                           <h3>${obj.proName}</h3>
                       </div>
-                      <div class="price-item-card margin-auto">
-                          <span id="card-price-${obj.id}" data-price="${
+                      <div class="price-item-cart margin-auto">
+                          <span id="cart-price-${obj.id}" data-price="${
     obj.price
   }">${Intl.NumberFormat("en-US").format(obj.price)}</span><span> VNĐ</span>
                       </div>
-                      <div class="quantity-item-card margin-auto">
+                      <div class="quantity-item-cart margin-auto">
                           <button type="button" class="btn-sub btn sub-${
                             obj.id
-                          }" data-id="${obj.id}" onclick="subCard('${
+                          }" data-id="${obj.id}" onclick="subCart('${
     obj.id
   }')">-</button>
-                              <span id="card-quantity-${obj.id}">${
+                              <span id="cart-quantity-${obj.id}">${
     obj.quantity
   }</span>
                           <button type="button" class="btn-add btn add-${
                             obj.id
                           }"
-                          data-id="${obj.id}" onclick="addCard('${
+                          data-id="${obj.id}" onclick="addCart('${
     obj.id
   }')">+</button>
                       </div>
-                      <div class="del-card margin-auto">
-                      <button  type="button" class="btn-del btn" id="del-card-${
+                      <div class="del-cart margin-auto">
+                      <button  type="button" class="btn-del btn" id="del-cart-${
                         obj.id
-                      }" data-id="${obj.id}" onclick="delCard('${
+                      }" data-id="${obj.id}" onclick="delCart('${
     obj.id
   }')"><span><i class="fa-solid fa-trash-can"></i></span></button>
                       </div>
@@ -200,51 +200,51 @@ function setCardItem(obj) {
               </div>`;
   $(".modal-body").append(item);
 }
-function showListCard(list) {
+function showlistCart(list) {
   let count = list.length;
   for (let i = 0; i < count; i++) {
     let obj = list[i];
-    setCardItem(obj);
+    setCartItem(obj);
   }
 }
-showListCard(listCard);
+showlistCart(listCart);
 
 function changeQuantity(id, phepTinh) {
-  let count = listCard.length;
+  let count = listCart.length;
   for (let i = 0; i < count; i++) {
-    if (id == listCard[i].id) {
-      let quantity = listCard[i].quantity;
+    if (id == listCart[i].id) {
+      let quantity = listCart[i].quantity;
       if (phepTinh == "-") {
         quantity = parseInt(quantity) < 2 ? 1 : parseInt(quantity) - 1;
       } else {
-        if (quantity < listCard[i].limit) {
+        if (quantity < listCart[i].limit) {
           quantity = parseInt(quantity) + 1;
         }
       }
-      listCard[i].quantity = quantity;
-      setLocal("listCards",listCard);
+      listCart[i].quantity = quantity;
+      setLocal("listCarts",listCart);
       return quantity;
     }
   } 
 }
 
-function subCard(id) {
+function subCart(id) {
   let quantity = changeQuantity(id, "-");
-  $("#card-quantity-"+id).text(quantity);
+  $("#cart-quantity-"+id).text(quantity);
 }
 
-function addCard(id) {
+function addCart(id) {
   let quantity = changeQuantity(id, "+");
-  $("#card-quantity-"+id).text(quantity);
+  $("#cart-quantity-"+id).text(quantity);
 
-  // sumPrice(listCard);
+  // sumPrice(listCart);
 }
 
-function delCard(id) {
-  listCard = listCard.filter((x) => x.id != id);
-  $("#item-card-" + id).remove();
-  setLocal("listCards",listCard);
-  // sumPrice(listCard);
+function delCart(id) {
+  listCart = listCart.filter((x) => x.id != id);
+  $("#item-cart-" + id).remove();
+  setLocal("listCarts",listCart);
+  // sumPrice(listCart);
 }
 // $(".btn-sub").click(function () {
 //   let id = $(this).attr("data-id");
@@ -255,13 +255,13 @@ function delCard(id) {
 $(".btn-buy").click(function () {
   let id = $(this).attr("data-id");
   let objPro = searchPro(listProduct, id);
-  let objCard = searchPro(listCard, id);
-  if (objCard == null) {
+  let objCart = searchPro(listCart, id);
+  if (objCart == null) {
     objPro.quantity = 1;
-    objCard = objPro;
-    setLocal("listCards",listCard);
-    setCardItem(objCard);
-    listCard.push(objCard);
+    objCart = objPro;
+    setLocal("listCarts",listCart);
+    setCartItem(objCart);
+    listCart.push(objCart);
   } else {
     alert("Sản phẩm đã có trong giỏ hàng");
   }

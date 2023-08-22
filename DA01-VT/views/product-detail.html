@@ -26,7 +26,7 @@
     />
 
     <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/product-detail.css" />
   </head>
   <body>
     <header>
@@ -57,7 +57,8 @@
             <img src="../imgs/common/logo.png" alt="logo" />
           </div>
           <div class="search d-flex">
-            <input id="search"
+            <input
+              id="search"
               type="search"
               name="text-search"
               class="text-search"
@@ -213,70 +214,11 @@
             </ul>
           </nav>
         </div>
-        <div class="banner d-flex justify-between">
-          <div class="banner-left w-left">
-            <ul class="menu-banner">
-              <li class="menu-item-banner">
-                <a href="#" class="menu-item-banner-link">
-                  <img src="../imgs/common/icon.png" alt="icon.png" />
-                  <span> Cây trang trí trong nhà </span>
-                </a>
-              </li>
-              <li class="menu-item-banner">
-                <a href="#" class="menu-item-banner-link">
-                  <img src="../imgs/common/icon.png" alt="icon.png" />
-                  <span> Cây trang trí sân vườn </span>
-                </a>
-              </li>
-              <li class="menu-item-banner">
-                <a href="#" class="menu-item-banner-link">
-                  <img src="../imgs/common/icon.png" alt="icon.png" />
-                  <span> Cây phong thủy </span>
-                </a>
-              </li>
-              <li class="menu-item-banner">
-                <a href="#" class="menu-item-banner-link">
-                  <img src="../imgs/common/icon.png" alt="icon.png" />
-                  <span> Cây bóng mát </span>
-                </a>
-              </li>
-              <li class="menu-item-banner">
-                <a href="#" class="menu-item-banner-link">
-                  <img src="../imgs/common/icon.png" alt="icon.png" />
-                  <span> Dịch vụ vật tư </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="banner-right w-right">
-            <div class="page-info">
-              <a href="#">Trang chủ</a>
-              <span><i class="fa-solid fa-greater-than"></i></span> 
-              <a  href="#">Sản Phẩm</a>
-          </div>
-            <div class="img-banner">
-              <div class="single-item">
-                <img
-                  class="img-banner"
-                  src="../imgs/common/banner.png"
-                  alt="banner.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-banner"
-                  src="../imgs/common/banner.png"
-                  alt="banner.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-banner"
-                  src="../imgs/common/banner.png"
-                  alt="banner.png"
-                />
-              </div>
-            </div>
+        <div class="banner">
+          <div class="page-info">
+            <a href="#">Trang chủ</a>
+            <span><i class="fa-solid fa-greater-than"></i></span>
+            <a href="#">Sản Phẩm</a>
           </div>
         </div>
       </div>
@@ -284,98 +226,123 @@
 
     <section>
       <div class="container">
-        <article class="list-item">
-          <div class="header-list-item d-flex justify-between">
-            <div class="w-left">
-              <div class="box-title-new d-flex">
-                <h3 class="title-new-hot">TIN NỔI BẬT</h3>
+        <div class="row">
+          <div class="product-left col-5">
+            <div class="img-product-top slider-for">
+              <div class="single-item">
+                <img
+                  class="img-product"
+                  src="../imgs/sp/sp-cay-canh-dep.png"
+                  alt="product.png"
+                />
+              </div>
+              <div class="single-item">
+                <img
+                  class="img-product"
+                  src="../imgs/sp/sp-kimtien-1.png"
+                  alt="product.png"
+                />
+              </div>
+              <div class="single-item">
+                <img
+                  class="img-product"
+                  src="../imgs/sp/sp-kimtien-2.png"
+                  alt="product.png"
+                />
+              </div>
+              <div class="single-item">
+                <img
+                  class="img-product col-3"
+                  src="../imgs/sp/sp-sen-da-3-mau.png"
+                  alt="product.png"
+                />
               </div>
             </div>
-            <div class="title-item-right d-flex justify-between w-right">
-              <div class="title-item-header">
-                <div class="box-item-left">
-                  <div class="title-item-left d-flex">
-                    <div class="img-icon">
-                      <img src="../imgs/common/icon-h.png" alt="icon-h" />
-                    </div>
-                    <h3 class="cl-white title-header">Sản phẩm bán chạy</h3>
-                  </div>
-                  <div class="arrow-right arrow-right-1"></div>
-                  <div class="arrow-right arrow-right-2"></div>
-                  <div class="arrow-right arrow-right-3"></div>
-                </div>
+            <div class="img-product-bottom slider-nav w-100">
+              <div class="single-item">
+                <img
+                  class="img-product col-3"
+                  src="../imgs/sp/sp-cay-canh-dep.png"
+                  alt="product.png"
+                />
               </div>
-              <a href="#" class="d-flex">
-                <p>Xem tất cả</p>
-                <span><i class="fa-solid fa-caret-right cl-green"></i></span>
-              </a>
+              <div class="single-item">
+                <img
+                  class="img-product col-3"
+                  src="../imgs/sp/sp-kimtien-1.png"
+                  alt="product.png"
+                />
+              </div>
+              <div class="single-item">
+                <img
+                  class="img-product col-3"
+                  src="../imgs/sp/sp-kimtien-2.png"
+                  alt="product.png"
+                />
+              </div>
+              <div class="single-item">
+                <img
+                  class="img-product col-3"
+                  src="../imgs/sp/sp-sen-da-3-mau.png"
+                  alt="product.png"
+                />
+              </div>
             </div>
           </div>
-          <div class="body-item d-flex justify-between">
-            <div class="body-left w-left">
-              <div class="list-new-hot">
-                <div class="new-hot-item d-flex justify-between">
-                  <div class="img-item">
-                    <img src="../imgs/tintuc/tin01.png" alt="tin01" />
-                  </div>
-                  <div class="title-item">
-                    <h4>Cây kim ngân hợp với tuổi nào ?</h4>
-                    <div class="date-new">
-                      <img src="../imgs/common/clock.png" alt="clock.png" />
-                      <span>28/06/2016</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="new-hot-item d-flex justify-between">
-                  <div class="img-item">
-                    <img src="../imgs/tintuc/tin01.png" alt="tin01" />
-                  </div>
-                  <div class="title-item">
-                    <h4>Cây kim ngân hợp với tuổi nào ?</h4>
-                    <div class="date-new">
-                      <img src="../imgs/common/clock.png" alt="clock.png" />
-                      <span>28/06/2016</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="new-hot-item d-flex justify-between">
-                  <div class="img-item">
-                    <img src="../imgs/tintuc/tin01.png" alt="tin01" />
-                  </div>
-                  <div class="title-item">
-                    <h4>Cây kim ngân hợp với tuổi nào ?</h4>
-                    <div class="date-new">
-                      <img src="../imgs/common/clock.png" alt="clock.png" />
-                      <span>28/06/2016</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="new-hot-item d-flex justify-between">
-                  <div class="img-item">
-                    <img src="../imgs/tintuc/tin01.png" alt="tin01" />
-                  </div>
-                  <div class="title-item">
-                    <h4>Cây kim ngân hợp với tuổi nào ?</h4>
-                    <div class="date-new">
-                      <img src="../imgs/common/clock.png" alt="clock.png" />
-                      <span>28/06/2016</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="product-right col-7">
+            <div class="name-product box-1">
+              <h2>Cây kim ngân</h2>
             </div>
-            <div class="body-right w-right">
-              <div class="list-product row" id="list-product-hot"></div>
-            </div>
-          </div>
-        </article>
-
-        <div class="product-pages d-flex">
-          <div class="w-left"></div>
-          <div class="w-right">
-            <ul class="product-page-number d-flex justify-center">
-             
+            <ul class="box-2">
+              <li><span class="fw-bold">Mã sản phẩm:</span> SP01</li>
+              <li><span class="fw-bold">Tình trạng:</span> Còn hàng</li>
             </ul>
+            <div class="box-3">
+              <div class="d-flex">
+                <div class="col-3">Giá bán:</div>
+                <div class="col-2">Số lượng:</div>
+              </div>
+              <div class="d-flex">
+                <div class="col-3 fw-bold product-price">159,000 đ</div>
+                <div class="col-2 fw-bold product-quatity">
+                  <input type="number" value="01" />
+                </div>
+                <div class="col-3 fw-bold">
+                  <button class="btn bg-green btn-pro-buy">
+                    <span
+                      ><i class="fa-solid fa-cart-shopping cl-white"></i></span
+                    ><span class="cl-white">ĐẶT HÀNG</span>
+                  </button>
+                </div>
+              </div>
+            </div>            
+            <div class="product-description-short box-4">
+              <span class="fw-bold">MÔ TẢ NGẮN</span><br />
+              <p class="product-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. At,
+                dolorem. Minus facere accusamus consequatur hic similique
+                provident aliquid asperiores est laborum laboriosam rem
+                quibusdam, inventore quisquam necessitatibus eligendi, nobis
+                eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Optio hic, accusantium sed nesciunt minima omnis commodi
+                asperiores praesentium similique maxime recusandae, beatae culpa
+                voluptates placeat velit corrupti accusamus et impedit. Lorem
+                ipsum dolor sit amet, consectetur adipisicing elit. Ex accusamus
+                eum quod corporis animi itaque iusto modi dignissimos soluta?
+                Necessitatibus sit dicta, soluta temporibus tenetur
+                exercitationem error provident blanditiis debitis.
+              </p>
+            </div>
+            <div class="box-5 product-tags">
+                <span class="fw-bold">Tags:</span>
+                <a href="#">cây bím tóc</a>
+                <a href="#">cây kim ngân</a>
+                <a href="#">giá kim ngân</a>
+                <a href="#">kim ngan</a>
+            </div>
+            <div class="box-6">
+                
+            </div>
           </div>
         </div>
       </div>
@@ -547,6 +514,6 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <script src="../js/common.js"></script>
-    <script src="../js/product.js"></script>
+    <script src="../js/product-detail.js"></script>
   </body>
 </html>

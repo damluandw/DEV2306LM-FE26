@@ -496,15 +496,15 @@ address {
 .menu-lv2-mobile span {
   font-family: OpenSans-Medium;
 }
-/* CARD */
-.image-item-card {
+/* CART */
+.image-item-cart {
   width: 8rem;
 }
 .margin-auto {
   margin: auto;
 }
 
-.item-card {
+.item-cart {
   margin-bottom: 0.8rem;
 }
 
