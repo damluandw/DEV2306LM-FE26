@@ -224,73 +224,15 @@
       </div>
     </header>
 
-    <section>
+    <section id="main-product">
       <div class="container">
-        <div class="row">
+        <div class="row" id="main-product-top">
           <div class="product-left col-5">
-            <div class="img-product-top slider-for">
-              <div class="single-item">
-                <img
-                  class="img-product"
-                  src="../imgs/sp/sp-cay-canh-dep.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product"
-                  src="../imgs/sp/sp-kimtien-1.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product"
-                  src="../imgs/sp/sp-kimtien-2.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product col-3"
-                  src="../imgs/sp/sp-sen-da-3-mau.png"
-                  alt="product.png"
-                />
-              </div>
-            </div>
-            <div class="img-product-bottom slider-nav w-100">
-              <div class="single-item">
-                <img
-                  class="img-product col-3"
-                  src="../imgs/sp/sp-cay-canh-dep.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product col-3"
-                  src="../imgs/sp/sp-kimtien-1.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product col-3"
-                  src="../imgs/sp/sp-kimtien-2.png"
-                  alt="product.png"
-                />
-              </div>
-              <div class="single-item">
-                <img
-                  class="img-product col-3"
-                  src="../imgs/sp/sp-sen-da-3-mau.png"
-                  alt="product.png"
-                />
-              </div>
-            </div>
+            <div class="img-product-top slider-for"></div>
+            <div class="img-product-bottom slider-nav w-100"></div>
           </div>
           <div class="product-right col-7">
-            <div class="name-product box-1">
+            <!-- <div class="name-product box-1">
               <h2>Cây kim ngân</h2>
             </div>
             <ul class="box-2">
@@ -311,11 +253,11 @@
                   <button class="btn bg-green btn-pro-buy">
                     <span
                       ><i class="fa-solid fa-cart-shopping cl-white"></i></span
-                    ><span class="cl-white">ĐẶT HÀNG</span>
+                    ><span class="cl-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ĐẶT HÀNG</span>
                   </button>
                 </div>
               </div>
-            </div>            
+            </div>
             <div class="product-description-short box-4">
               <span class="fw-bold">MÔ TẢ NGẮN</span><br />
               <p class="product-description">
@@ -334,16 +276,171 @@
               </p>
             </div>
             <div class="box-5 product-tags">
-                <span class="fw-bold">Tags:</span>
-                <a href="#">cây bím tóc</a>
-                <a href="#">cây kim ngân</a>
-                <a href="#">giá kim ngân</a>
-                <a href="#">kim ngan</a>
+              <span class="fw-bold">Tags:</span>
+              <a href="#">cây bím tóc</a>
+              <a href="#">cây kim ngân</a>
+              <a href="#">giá kim ngân</a>
+              <a href="#">kim ngan</a>
             </div>
-            <div class="box-6">
-                
+            <div class="box-6 d-flex">
+              <button class="btn btn-like">
+                <span><i class="fa-solid fa-thumbs-up cl-white"></i></span>
+                <span class="tilte-btn cl-white">Thích 251</span>
+              </button>
+              <button class="btn tilte-btn btn-share">
+                <span class="tilte-btn cl-white">Chia sẻ</span>
+              </button>
+              <button class="btn btn-tweet">
+                <span><i class="fa-brands fa-twitter cl-white"></i></span>
+                <span class="cl-white">Tweet</span>
+              </button>
+              <button class="btn btn-google-plus">
+                <span><i class="fa-brands fa-google-plus-g"></i></span>
+              </button>
+            </div> -->
+          </div>
+        </div>
+        <div class="tabs-product">
+          <ul class="nav nav-tabs bg-green" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active cl-black"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                THÔNG TIN SẢN PHẨM
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link cl-white"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                ĐÁNH GIÁ
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div
+              class="tab-pane fade show active"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Recusandae architecto quo tempore deserunt consequatur quidem a,
+                magnam molestiae! Consequuntur eos minus id saepe quam magni
+                animi quibusdam natus excepturi soluta!Lorem Lorem ipsum dolor
+                sit, amet consectetur adipisicing elit. Necessitatibus, aliquam
+                quia! Expedita, aspernatur? Tempore, ipsam minima nisi quae
+                nulla at! Delectus ut repellendus nihil animi reiciendis
+                blanditiis ducimus temporibus minima.
+              </p>
+              <div class="row para-1">
+                <div class="col-6 col-tab-para">
+                  <h6>Đặc điểm của cây kim ngân</h6>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos, voluptas culpa perspiciatis laboriosam
+                    temporibus qui architecto, asperiores error repudiandae,
+                    eaque rem porro ut. Velit dignissimos eum porro amet
+                    molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos, voluptas culpa perspiciatis
+                    laboriosam temporibus qui architecto, asperiores error
+                    repudiandae, eaque rem porro ut. Velit dignissimos eum porro
+                    amet molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos, voluptas culpa perspiciatis laboriosam
+                    temporibus qui architecto, asperiores error repudiandae,
+                    eaque rem porro ut. Velit dignissimos eum porro amet
+                    molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos, voluptas culpa perspiciatis
+                    laboriosam temporibus qui architecto
+                  </p>
+                </div>
+                <div class="col-6 col-tab-img d-flex justify-content-end">
+                  <img src="../imgs/sp/sp-detail-1.png" alt="sp-detail-1.png" />
+                </div>
+              </div>
+              <div class="row para-2">
+                <div class="col-6 col-tab-img d-flex justify-content-start">
+                  <img src="../imgs/sp/sp-detail-2.png" alt="sp-detail-1.png" />
+                </div>
+                <div class="col-6 col-tab-para">
+                  <h6>Đặc điểm của cây kim ngân</h6>
+                  <p>
+                    <span class="fw-bold">Nhiệt độ:</span> <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos, voluptas culpa perspiciatis laboriosam
+                    temporibus qui architecto, asperiores error repudiandae,
+                    eaque rem porro ut. Velit dignissimos eum porro amet
+                    molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos, voluptas culpa perspiciatis
+                    laboriosam temporibus qui architecto, asperiores error
+                    repudiandae, eaque rem porro ut. Velit dignissimos eum porro
+                    amet molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos.
+                  </p>
+                  <p>
+                    <span class="fw-bold">Ánh sáng:</span> <br />
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dignissimos, voluptas culpa perspiciatis laboriosam
+                    temporibus qui architecto, asperiores error repudiandae,
+                    eaque rem porro ut. Velit dignissimos eum porro amet
+                    molestiae ad? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dignissimos, voluptas culpa perspiciatis
+                    laboriosam temporibus qui architecto
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="profile"
+              role="tabpanel"
+              aria-labelledby="profile-tab"
+            >
+              ...
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products-relate">
+      <div class="container">
+        <div class="title-item-header w-left">
+          <div class="box-item-left">
+            <div class="title-item-left d-flex">
+              <div class="img-icon">
+                <img src="../imgs/common/icon-h.png" alt="icon-h" />
+              </div>
+              <h3 class="cl-white title-header">Sản phẩm liên quan</h3>
+            </div>
+            <div class="arrow-right arrow-right-1"></div>
+            <div class="arrow-right arrow-right-2"></div>
+            <div class="arrow-right arrow-right-3"></div>
+          </div>
+        </div>
+        <div class="product-relate">
+          <!-- <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button> -->
+          <div class="slide-products"></div>
+          <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button> -->
         </div>
       </div>
     </section>

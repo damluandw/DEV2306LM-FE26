@@ -78,6 +78,9 @@ p {
 .cl-white {
   color: #fff !important;
 }
+.cl-black {
+  color: #000 !important;
+}
 .cl-green {
   color: #47ae49 !important;
 }
@@ -185,6 +188,7 @@ ul {
 .img-banner {
   width: 100%;
   object-fit: cover;
+  max-height: 16.3rem;
 }
 
 .img-banner {
@@ -507,6 +511,10 @@ address {
 .item-cart {
   margin-bottom: 0.8rem;
 }
+.title-item-cart h3{
+  font-size: 1rem;
+}
+
 
 /* Product */
 .header-list-item {
