@@ -369,7 +369,7 @@ function setProductItem(obj, idHTML) {
                 <div
                   class="btn-product d-flex justify-content-between"
                 >
-                  <a href="#"
+                  <a href="product-detail.html"
                     ><button class="btn btn-detail">
                       Chi Tiết
                     </button></a
