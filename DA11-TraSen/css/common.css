@@ -1,0 +1,155 @@
+@font-face {
+  font-family: FontawesomeWebfont;
+  src: url(../fonts/fontawesome-webfont.ttf);
+}
+@font-face {
+  font-family: Glyphicons-halflings-regular;
+  src: url(../fonts/glyphicons-halflings-regular.tff);
+}
+
+@font-face {
+  font-family: MULI-BOLD;
+  src: url(../fonts/MULI-BOLD.TTF);
+}
+
+@font-face {
+  font-family: MULI-REGULAR;
+  src: url(../fonts/MULI-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: MULI-SEMIBOLD;
+  src: url(../fonts/MULI-SEMIBOLD.TTF);
+}
+
+@font-face {
+  font-family: MSVN-Artful;
+  src: url(../fonts/SVN-Artful\ Beauty.ttf);
+}
+@font-face {
+  font-family: MSVN-Athena_0;
+  src: url(../fonts/SVN-Athena_0.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #000 !important;
+  text-decoration: none !important;
+  font-size: 20px;
+  font-family: FontawesomeWebfont !important;
+}
+
+.bg-green {
+  background-color: #aabc44;
+}
+
+/* .header-nav ul li{
+    padding: auto 1rem;
+} */
+
+.navbar-nav .nav-link.title-header-nav {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.single-item {
+  position: relative;
+}
+
+.banner-header .slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.banner-header .slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+/* Cách 1 CSS */
+.banner-header .slick-dots li.slick-active button::before {
+  position: absolute;
+  transform: translate(25%, -50%);
+  content: "";
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #aabc44;
+  border: 0;
+  outline: none;
+  z-index: 2;
+}
+
+.banner-header .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0;
+  outline: none;
+  border: 2px solid #aabc44;
+}
+
+/* Cách 2 lấy ảnh */
+
+/* .banner-header .slick-dots li button{
+    background-image: url("../imgs/trang-chu/around.png");
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+}
+.banner-header .slick-dots li.slick-active button {
+    background-image: url("../imgs/trang-chu/around1.png");
+    background-repeat: no-repeat;    
+} */
+
+.content-banner {
+  position: absolute;
+  left: 19rem;
+  top: 0;
+  z-index: 3;
+  width: 18rem;
+}
+.header-banner {
+  position: absolute;
+  top: 8.6rem;
+}
+.title-banner {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.detail-banner {
+  position: absolute;
+  top: 17rem;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+.btn-banner {
+  position: absolute;
+  top: 22rem;
+  text-transform: uppercase;
+  text-align: justify;
+  border-radius: 0;
+  padding: 0.5rem 1.5rem;
+}
