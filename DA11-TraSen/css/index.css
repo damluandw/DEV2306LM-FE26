@@ -1,0 +1,82 @@
+.main {
+  background-image: url("../imgs/trang-chu/bgSanpham.png"),
+    url("../imgs/trang-chu/gioithieu.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position-y: top, bottom;
+}
+.product-outstanding {
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+  /* background-image: url("../imgs/trang-chu/bgSanpham.png"); */
+}
+
+.introduce h3,
+.product-outstanding h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.list-product h4 {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.list-product {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.list-product .slick-arrow {
+  position: absolute;
+  top: 36%;
+  width: 36px;
+  height: 36px;
+  z-index: 1;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.list-product .slick-prev {
+  background-image: url("../imgs/trang-chu/backButton.png");
+  left: -2rem;
+}
+.list-product .slick-next {
+  background-image: url("../imgs/trang-chu/nextButton.png");
+  right: -2rem;
+}
+/* .introduce {
+
+  padding-bottom: 6rem;
+  background-image: url("../imgs/trang-chu/gioithieu.png");
+} */
+
+.introduce {
+  position: relative;
+  height: 42rem;
+}
+.introduce-detail {
+  position: absolute;
+  top: 12rem;
+  text-align: justify;
+  left: 20%;
+}
+.introduce-describe {
+  position: absolute;
+  top: 5rem;
+}
+.introduce-detail p {
+  font-family: MSVN-Athena_0 !important;
+  text-align: justify;
+  width: 27rem;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.introduce-detail button {
+  border-radius: 0;
+  padding: 0.75rem 2.5rem;
+}
