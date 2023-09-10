@@ -38,9 +38,15 @@
   color: #000 !important;
   text-decoration: none !important;
   font-size: 20px;
-  font-family: FontawesomeWebfont !important;
+  font-family: FontawesomeWebfont ;
 }
 
+.font-MSVN-Athena_0{
+  font-family: MSVN-Athena_0 !important ;
+}
+.font-size-10{
+  font-size: 10px;
+}
 .bg-green {
   background-color: #aabc44;
 }
@@ -153,4 +159,23 @@
   border-radius: 0;
   padding: 0.75rem 2.5rem;
 }
+
+/* Footer */
+footer {
+  background-image: url(../imgs/trang-chu/fotter.png);
+  background-repeat: no-repeat; 
+  background-size:  100%;
+  /* background-size: cover cover; */
+ 
+}
+footer ul {
+  font-size: 0.8rem;
+  padding-left: 0;
+}
+
+
+.logo-link a{
+  font-size: 1rem;
+}
+
 

@@ -1,4 +1,4 @@
-.main {
+.bg-1 {
   background-image: url("../imgs/trang-chu/bgSanpham.png"),
     url("../imgs/trang-chu/gioithieu.png");
   background-repeat: no-repeat, no-repeat;
@@ -79,4 +79,44 @@
 .introduce-detail button {
   border-radius: 0;
   padding: 0.75rem 2.5rem;
+}
+
+.item-person{
+  width: 18%;
+  
+}
+.item-person p{
+  width: 90%;
+  font-size: 0.7rem;
+  text-align: center;
+  text-justify: inter-word;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bg-2{
+  background-image: url("../imgs/trang-chu/bannernghenhanandmuangay.png");
+  background-repeat: no-repeat; 
+  background-size: 100%;
+}
+
+.buy{
+  margin-top: 9rem;
+  /* background-image: url("../imgs/trang-chu/bannermuangay.png"); */
+  height: 18rem;
+}
+
+.btn-submit{
+  padding: 0.75rem 4.5rem;
+  border-radius: 0;
+}
+.input-email{
+  height: 3.1rem;
+  width: 55%;
+  border: 2px solid #aabc44;
 }
