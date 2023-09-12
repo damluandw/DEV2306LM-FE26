@@ -9,12 +9,33 @@ $(document).ready(function () {
     // autoplay: true,
     // autoplaySpeed: 2000,
     arrows: true,
+
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
-});
 
-
-$(document).ready(function () {
   $(".list-product .slick-arrow").html("");
-
+});
+$(document).ready(function () {
+  $(".list-product").on("setPosition", function (event, slick, direction) {
+    $(".list-product .slick-arrow").text("");
+  });
+  $(".slider").slick();
 });
 
+// $(document).lis(function () {
+//   $(".list-product .slick-arrow").html("");
+
+// });
