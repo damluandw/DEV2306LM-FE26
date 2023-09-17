@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <div class="header-logo">
+            <a class="navbar-brand" href="#">
+              <img
+                src="../imgs/trang-chu/logophongtra.png"
+                alt="logophongtra.png"
+              />
+            </a>
+          </div>
+          <div class="header-nav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link title-header-nav" href="#"
+                        >Trang chủ</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link title-header-nav" href="#"
+                        >Giới thiệu</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link title-header-nav" href="#">Tin Tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link title-header-nav" href="#">Sản Phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link title-header-nav" href="#">Liên Hệ</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner-header">
+      <div class="imgs-banner-header-product">
+        <div class="single-item">
+          <img
+            class="img-banner w-100"
+            src="../imgs/san-pham/banner.png"
+            alt="banner.png"
+          />
+          <div class="content-banner">
+            <div class="header-banner">
+              <h3 class="title-banner">Sản phẩm</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="../imgs/trang-chu/backBanner.png" alt=""> -->
+    </section>
+    <section class="products">
+      <div class="container">
+        <div class="products-top">
+          <div>
+            <a href="#"><span class="text-secondary">Trang chủ</span></a
+            ><span class="text-secondary">></span>
+            <a href="#"><span class="text-secondary">Sản phẩm</span></a>
+          </div>
+          <div>
+            <h1>Sản phẩm</h1>
+            <hr width="100%" />
+          </div>
+        </div>
+        <div class="products-bottom row">
+          <div class="d-flex justify-content-between">
+            <div><span class="text-secondary">Bộ lọc sản phẩm</span></div>
+            <select name="sort" id="sort" class="text-secondary">
+              <option class="text-secondary" value="">Thứ tự mặc định</option>
+              <option class="text-secondary" value="">Giá thâp đến cao</option>
+              <option class="text-secondary" value="">Giá cao đến thấp</option>
+              <option class="text-secondary" value="">Xếp theo đánh giá</option>
+              <option class="text-secondary" value="">Xếp theo phổ biến</option>
+            </select>
+          </div>
+          <div class="products-bottom-left col-lg-3">
+            <div class="product-filter-type">
+              <h3>Loại sản phẩm</h3>
+              <div class="filter">
+                <input
+                  type="checkbox"
+                  id="traXanhThaiNguyen"
+                  name="traXanhThaiNguyen"
+                  value="traXanhThaiNguyen"
+                />
+                <label class="text-secondary" for="traXanhThaiNguyen">
+                  Trà xanh Thái Nguyên</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="traOlong"
+                  name="traOlong"
+                  value="traOlong"
+                />
+                <label class="text-secondary" for="traOlong"> Trà Olong</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="txShanTuyet"
+                  name="txShanTuyet"
+                  value="txShanTuyet"
+                />
+                <label class="text-secondary" for="txShanTuyet">
+                  Trà xanh Shan tuyết</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="traSen"
+                  name="traSen"
+                  value="traSen"
+                />
+                <label class="text-secondary" for="traSen"> Trà sen</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="traLai"
+                  name="traLai"
+                  value="traLai"
+                />
+                <label class="text-secondary" for="traLai"> Trà lài</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="traThaoDuoc"
+                  name="traThaoDuoc"
+                  value="traThaoDuoc"
+                />
+                <label class="text-secondary" for="traThaoDuoc">
+                  Trà thảo dược</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="dungCuPhaTra"
+                  name="dungCuPhaTra"
+                  value="dungCuPhaTra"
+                />
+                <label class="text-secondary" for="dungCuPhaTra">
+                  Dụng cụ pha trà</label
+                ><br />
+                <input
+                  type="checkbox"
+                  id="nuocPhaTra"
+                  name="nuocPhaTra"
+                  value="nuocPhaTra"
+                />
+                <label class="text-secondary" for="nuocPhaTra">
+                  Nước pha trà</label
+                ><br />
+              </div>
+            </div>
+            <div class="product-filter-price">
+              <h3>Giá thành</h3>
+              <div class="filter">
+                <div class="filter-1">
+                  <label for="customRange2" class="form-label"
+                    >Example range</label
+                  >
+                  <div class="range-slide">
+                    <div class="slide">
+                      <div class="line" id="line" style="left: 0%; right: 0%;"></div>
+                      <span class="thumb" id="thumbMin" style="left: 0%;"></span>
+                      <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+                    </div>
+                    <input id="rangeMin" type="range" max="10000000" min="50000" step="50000" value="50000">
+                    <input id="rangeMax" type="range" max="10000000" min="50000" step="50000" value="10000000">
+                  </div>
+                  <div class="display">
+                    <span id="min">50000</span>
+                    <span id="max">10000000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="products-bottom-right col-lg-9"></div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row pt-4">
+          <div class="col-lg-4">
+            <img
+              src="../imgs/trang-chu/logophongtra.png"
+              alt="logophongtra.png"
+            />
+            <ul class="pt-3 pe-0">
+              <li><a href="tel:7999999999">7999.999.999</a></li>
+              <li>
+                <a
+                  href="mail:trasenbachdiep@gmail.com"
+                  class="font-MSVN-Athena_0"
+                  >trasenbachdiep@gmail.com</a
+                >
+              </li>
+              <li>
+                <address class="font-MSVN-Athena_0">
+                  Số 12, Quảng An, Hồ Tây,Hà Nội
+                </address>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h4 class="text-uppercase">Về Chúng tôi</h4>
+            <ul>
+              <li>
+                <a href="#" class="font-MSVN-Athena_0">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#" class="font-MSVN-Athena_0">Sản phẩm</a>
+              </li>
+              <li>
+                <a href="#" class="font-MSVN-Athena_0">Tin tức</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-contact">
+            <h4>Liên hệ</h4>
+            <div class="logo-link">
+              <a href="#"
+                ><img
+                  src="../imgs/trang-chu/logoyoutube.png"
+                  alt="logoyoutube.png"
+              /></a>
+              <a href="#">
+                <img src="../imgs/trang-chu/logoinsta.png" alt="logoinsta.png"
+              /></a>
+              <a href="#">
+                <img
+                  src="../imgs/trang-chu/logofaceboook.png"
+                  alt="logofaceboook.png"
+              /></a>
+
+              <!-- <a href="#">
+                <span><i class="fa-brands fa-square-youtube"></i></span
+              ></a>
+              <a href="#"
+                ><span><i class="fa-brands fa-instagram"></i></span
+              ></a>
+
+              <a href="#"
+                ><span><i class="fa-brands fa-square-facebook"></i></span
+              ></a> -->
+            </div>
+            <div class="font-MSVN-Athena_0 font-size-10">
+              Copyright © 2010-2023
+            </div>
+            <div class="font-MSVN-Athena_0 font-size-10">
+              Tra Sen Bach Diep. All right rerserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/product.js"></script>
+  </body>
+</html>

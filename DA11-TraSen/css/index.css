@@ -30,8 +30,8 @@
 .list-product .slick-arrow {
   position: absolute;
   top: 36%;
-  width: 36px;
-  height: 36px;
+  width:  1.8rem;
+  height: 1.8rem;
   z-index: 1;
   border: none;
   background-repeat: no-repeat;
