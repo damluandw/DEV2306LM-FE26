@@ -39,6 +39,8 @@
   text-decoration: none !important;
   font-size: 20px;
   font-family: FontawesomeWebfont ;
+  box-sizing: border-box;
+
 }
 
 .font-MSVN-Athena_0{
@@ -204,3 +206,35 @@ footer ul {
   } */
 }
 
+
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.page-link:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.page-link {
+  border: 1px solid #69922b;
+  line-height: 1.25;
+  padding: 0.3rem 0.5rem;
+  color: black;
+  border-radius: 1px !important;
+  text-align: center;
+}
+
+.pagination li {
+  width: 1.8em;
+  height: 1.8em;
+  margin: 0 0.3em;
+  font-size: 16px;
+  /* padding-left: 0.1rem; */
+  /* font-family: sans-serif; */
+  display: flex;
+  align-items: center;
+}
+.active {
+  color: #69922b !important;
+}

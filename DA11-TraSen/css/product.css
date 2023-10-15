@@ -4,6 +4,10 @@
   transform: translate(-50%, -50%);
 }
 
+.filter > .form-check > label{
+  color: #6c757d !important;
+}
+
 .d_price p {
   font-size: 0.9rem;
   color: #7a7a7a;
@@ -22,11 +26,58 @@
   height: 10px;
   border-radius: 0;
   top: -4px;
-  left: 5% ;
+  left: 5%;
 }
 
 #slider-range > span:focus {
   background: #898989;
   outline: none;
   border: 1px solid #898989;
+}
+input#amount {
+  border: 0;
+  outline: 0;
+  font-family: SVN-Athena_0;
+  color: #6c757d !important;
+}
+
+.image5 i {
+  color: #69922b !important;
+}
+.vote i {
+  font-size: 12px;
+}
+.d_new{
+  height: 2em;
+  font-size: 14px;
+  padding: 2px 0.6rem;
+  border-radius: 1px;
+  width: 3em;
+  background-color: #d4f59b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -4px;
+}
+.d_new p {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0;
+  font-size: 12px;
+}
+
+.list-product .items .price-sp * {
+  font-size: 1.4rem;
+}
+.list-product .items .d_trong-luong select {
+  font-family: sans-serif;
+  /* font-size: 1rem; */
+  /* font-weight: 400; */
+  color: #6c757d !important;
+  border: 0;
+}
+.list-product .items .price-sp span {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: sans-serif;
 }

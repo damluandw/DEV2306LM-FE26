@@ -1,0 +1,21 @@
+.img-product-left .slick-list {
+  padding: 0 !important;
+}
+.img-product-left .slick-track {
+  width: 100% !important;
+}
+.img-product-left .single-item{
+ border-radius: 50%;
+}
+.image5 i {
+  color: #69922b !important;
+}
+.vote i {
+  font-size: 16px;
+}
+
+.so-luong-danh-gia{
+  color: #6c757d;
+  align-items: center;
+
+}

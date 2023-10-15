@@ -10,7 +10,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="../css/jquery-ui.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -24,7 +24,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- <link rel="stylesheet" href="../css/jquery-ui.css" /> -->
-    <link rel="stylesheet" href="../css/jquery-ui.min.css" />
+
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/product.css" />
   </head>
@@ -103,7 +103,7 @@
           </div>
         </div>
         <div class="products-bottom row">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between mb-4">
             <div><span class="text-secondary">Bộ lọc sản phẩm</span></div>
             <select name="sort" id="sort" class="text-secondary">
               <option class="text-secondary" value="">Thứ tự mặc định</option>
@@ -117,101 +117,452 @@
             <div class="product-filter-type">
               <h3>Loại sản phẩm</h3>
               <div class="filter">
-                <input
-                  type="checkbox"
-                  id="traXanhThaiNguyen"
-                  name="traXanhThaiNguyen"
-                  value="traXanhThaiNguyen"
-                />
-                <label class="text-secondary" for="traXanhThaiNguyen">
-                  Trà xanh Thái Nguyên</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="traOlong"
-                  name="traOlong"
-                  value="traOlong"
-                />
-                <label class="text-secondary" for="traOlong"> Trà Olong</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="txShanTuyet"
-                  name="txShanTuyet"
-                  value="txShanTuyet"
-                />
-                <label class="text-secondary" for="txShanTuyet">
-                  Trà xanh Shan tuyết</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="traSen"
-                  name="traSen"
-                  value="traSen"
-                />
-                <label class="text-secondary" for="traSen"> Trà sen</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="traLai"
-                  name="traLai"
-                  value="traLai"
-                />
-                <label class="text-secondary" for="traLai"> Trà lài</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="traThaoDuoc"
-                  name="traThaoDuoc"
-                  value="traThaoDuoc"
-                />
-                <label class="text-secondary" for="traThaoDuoc">
-                  Trà thảo dược</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="dungCuPhaTra"
-                  name="dungCuPhaTra"
-                  value="dungCuPhaTra"
-                />
-                <label class="text-secondary" for="dungCuPhaTra">
-                  Dụng cụ pha trà</label
-                ><br />
-                <input
-                  type="checkbox"
-                  id="nuocPhaTra"
-                  name="nuocPhaTra"
-                  value="nuocPhaTra"
-                />
-                <label class="text-secondary" for="nuocPhaTra">
-                  Nước pha trà</label
-                ><br />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type1"
+                  />
+                  <label class="form-check-label" for="type1">
+                    Trà xanh Thái Nguyên
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type2"
+                  />
+                  <label class="form-check-label" for="type2">
+                    Trà xanh Olong
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type3"
+                  />
+                  <label class="form-check-label" for="type3">
+                    Trà xanh Shan Tuyết
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type4"
+                  />
+                  <label class="form-check-label" for="type4"> Trà sen </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type5"
+                  />
+                  <label class="form-check-label" for="type5"> Trà lài </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type6"
+                  />
+                  <label class="form-check-label" for="type6">
+                    Trà thảo dược
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type7"
+                  />
+                  <label class="form-check-label" for="type7">
+                    Dụng cụ pha trà
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="type8"
+                  />
+                  <label class="form-check-label" for="type8">
+                    Nước pha trà
+                  </label>
+                </div>
               </div>
             </div>
             <div class="mt-3 pr-lg-5 d_price">
-              <h5>Giá thành</h5>
-              <div
-                id="slider-range"
-                class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
-              >
+              <h3>Giá thành</h3>
+              <div class="filter">
                 <div
-                  class="ui-slider-range ui-corner-all ui-widget-header"
-                ></div>
-                <span
-                  tabindex="0"
-                  class="ui-slider-handle ui-corner-all ui-state-default"
-                ></span
-                ><span
-                  tabindex="0"
-                  class="ui-slider-handle ui-corner-all ui-state-default"
-                ></span>
+                  id="slider-range"
+                  class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                >
+                  <div
+                    class="ui-slider-range ui-corner-all ui-widget-header"
+                  ></div>
+                  <span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                  ></span
+                  ><span
+                    tabindex="0"
+                    class="ui-slider-handle ui-corner-all ui-state-default"
+                  ></span>
+                </div>
               </div>
               <p class="mt-2">
                 <input type="text" id="amount" readonly="" />
               </p>
             </div>
+            <div class="product-filter-category">
+              <h3>Thương hiệu</h3>
+              <div class="filter">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="category1"
+                  />
+                  <label class="form-check-label" for="category1">
+                    Trà Tân Cương Xanh
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="category2"
+                    checked
+                  />
+                  <label class="form-check-label" for="category2">
+                    Trà Sen Tây Hồ
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="category3"
+                    checked
+                  />
+                  <label class="form-check-label" for="category3">
+                    Trà Sen Tân Lộc
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="products-bottom-right col-lg-9"></div>
+          <div class="products-bottom-right col-lg-9">
+            <div class="list-product row mt-5 mt-lg-0">
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp1.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp2.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp3.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp1.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp2.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-5 item-product">
+                <div class="items container-fluid">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="d_new">
+                      <p>new</p>
+                    </div>
+                  </div>
+                  <div class="d_img-sp">
+                    <a href="#">
+                      <img src="../imgs/san-pham/sp3.png" alt="" />
+                    </a>
+                  </div>
+                  <div class="d_infor text-center mt-3">
+                    <h6><a href="#">Trà Shan Tuyết</a></h6>
+                    <div
+                      class="d-flex justify-content-center align-items-center mt-2"
+                    >
+                      <div class="price-sp">
+                        <p class="m-0">
+                          150,000
+                          <span>VND</span>
+                        </p>
+                      </div>
+                      <div class="d_trong-luong d-flex">
+                        <select name="khoiluong" id="khoiluong">
+                          <option value="100gam">100g</option>
+                          <option value="200gam">200g</option>
+                          <option value="500gam">500g</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination mt-md-4 mt-0 d-flex justify-content-center">
+          <ul class="list-unstyled d-flex justify-content-center">
+            <li class="page-item page-link active">1</li>
+            <li class="page-item page-link">2</li>
+            <li class="page-item page-link">3</li>
+            <li class="page-item page-link">4</li>
+            <li class="page-item page-link"><i class="fas fa-angle-right"></i></li>
+          </ul>
         </div>
       </div>
     </section>
