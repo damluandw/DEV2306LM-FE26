@@ -5,7 +5,7 @@
 h3 {
   position: relative;
   text-align: center;
-  margin: 2rem 0;
+  margin: 5rem 0 3rem;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -15,7 +15,7 @@ h3:before {
   content: "";
   width: 8.5rem;
   height: 0.3rem;
-  top: 100%;
+  top: 110%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #bd945f;
@@ -72,40 +72,154 @@ h3:before {
 #about-us {
   background-image: url("/DA10-XuongMoc/images/ve-chung-toi/bg-about-us.jpg");
   background-repeat: no-repeat;
-  height: 1200px;
+  height: 61rem;
 }
 
 #about-us::before {
   background: rgba(15, 15, 15, 0.9);
   content: "";
   display: block;
-  height: 100%;
+  height: 61rem;
   position: absolute;
   width: 100%;
 }
 
 #about-us .about-us {
-  padding-top: 3rem !important;
+  padding-top: 1rem !important;
   color: #fff;
 }
-.about-us-right p{
-    font-size: 0.75rem;
-    /* line-height: 1.3; */
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.about-us-right p {
+  font-size: 0.75rem;
+  /* line-height: 1.3; */
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.about-us-img{
-    position: relative;
+.about-us-img {
+  position: relative;
 }
-.about-us-img a{
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    width: 100%;
-    transform: translateY(-50%);
-    color: #fff;
+.about-us-img a {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.about-us-right h6 {
+  font-size: 1.5rem;
+}
+.about-us-right h6 b {
+  font-size: 1.5rem;
+  font-family: Gotham-Medium;
+}
+
+.item-about-us {
+  background-color: #fff;
+  width: 47%;
+  z-index: 2;
+}
+
+.about-us-bottom .title-about-us {
+  font-size: 1.5rem;
+  font-family: Gotham-Medium;
+  color: #bd945f;
+}
+
+#tin-tuc {
+}
+
+.tin-tuc-left {
+  position: relative;
+}
+
+.tin-tuc-left .tilte-tin-tuc {
+  position: absolute;
+  top: 70%;
+}
+
+.tin-tuc-left .tilte-tin-tuc {
+  background-color: #bd945f;
+  height: 30%;
+  width: 100%;
+}
+.tin-tuc-left .tilte-tin-tuc h5 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.tin-tuc-right .tilte-tin-tuc p,
+.tin-tuc-left .tilte-tin-tuc p{
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tin-tuc-left .tilte-tin-tuc p{
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+.tin-tuc-right .tilte-tin-tuc p,
+.tin-tuc-left .tilte-tin-tuc p{
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+
+}
+
+.tin-tuc-right .tilte-tin-tuc h5 {
+  color: #bd945f;
+  font-size: 1rem;
+}
+
+.item-doi-tac{
+  width: calc(100% / 7);
+}
+
+
+#lien-he{
+  margin-top: 8rem;
+  background-image: url("/DA10-XuongMoc/images/lienhe-bg.jpg");
+  background-repeat: no-repeat;
+  height: 20rem;
+  position: relative;
+}
+.img-left{
+  position: absolute;
+  top: -50%;
+  left: 3rem;
+}
+
+#lien-he .box-left{
+  font-size: 1.5rem;
+  color: #fff;
+}
+#lien-he .box-left b{
+  font-family: Gotham-Medium;
+}
+#lien-he .box-right input{
+  border: 0;
+  outline: 0;
+}
+#text-lien-he{
+  width: 20rem;
+}
+
+.btn-lien-he{
+  background-color: #fff;
+}
+
+#lien-he label{
+  color: #fff;
+}
+
+#lien-he .line{
+  width: 55%;
+  height: 0.5rem;
+  background-color: #fff;
 }

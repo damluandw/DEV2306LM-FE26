@@ -117,6 +117,9 @@ header ul li.active:before {
   color: #2c2e53;
 }
 
+.cl-yellow {
+  color: #bd945f;
+}
 
 .w-90{
     width: 95%;
