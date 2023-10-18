@@ -1,0 +1,70 @@
+#banner {
+  position: relative;
+  height: 100%;
+}
+#banner .container {
+  position: relative;
+  height: 100%;
+}
+
+#banner img {
+  object-fit: cover;
+}
+
+.btn-mua-ngay {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 60%;
+  left: 70%;
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.products h3 {
+  position: relative;
+  margin: 5rem 0 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.products h3:before {
+  position: absolute;
+  content: "";
+  width: 8.5rem;
+  height: 0.3rem;
+  top: 110%;
+  left: 0%;
+  background-color: #bd945f;
+  animation: menuHover 0.2s ease-in 1;
+}
+.products .xem-tat-ca{
+    margin: 6rem 0 1.5rem;
+}
+.products a{
+    color: #2c2e53;
+}
+
+.image5 i {
+  color: #bd945f !important;
+}
+.vote i {
+  font-size: 1rem;
+}
+
+.product-describe {
+  font-size: 0.8rem;
+  color: #ccc;
+  font-family: "Gotham-Medium";
+}
+.product-price {
+  font-family: "Gotham-Medium";
+}
+.product-info h4 {
+    text-transform: uppercase;
+    color: #2c2e53;
+}
+
+#products-trang-tri{
+    margin-bottom: 3rem;
+}

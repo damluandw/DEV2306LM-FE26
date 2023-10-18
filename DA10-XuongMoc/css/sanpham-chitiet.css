@@ -1,0 +1,120 @@
+#product h2{
+    margin-bottom: 1rem;
+}
+.list-title {
+  margin: 3rem 0;
+}
+.main-product-top-right{
+    padding-left: 3rem;
+}
+
+.btn-chat-lieu {
+  padding: 0.3rem 3rem;
+  border: solid 4px #ccc;
+  margin: 0.5rem 0.5rem 1rem 0;
+  font-weight: bold;
+}
+#price-old {
+  text-decoration: line-through;
+  font-weight: bold;
+}
+#price-new {
+  font-weight: bold;
+  color: #bd945f;
+  font-size: 1.5rem;
+}
+#bao-hanh > div {
+  display: flex;
+  padding: 0.3rem 2rem 0.3rem 0.5rem;
+  border: solid 4px #ccc;
+  margin: 0.5rem 0.5rem 1rem 0;
+  line-height: 34px;
+  font-weight: bold;
+}
+
+#bao-hanh span {
+  margin-left: 0.5rem;
+}
+
+#myTabContent ul {
+  padding: 0;
+}
+#myTabContent li {
+  list-style-type: none;
+  font-family: Gotham-Medium;
+  color: #2c2e53;
+}
+
+.main-product-bottom {
+  color: #2c2e53;
+  font-family: Gotham-Medium !important;
+  margin-bottom: 3rem;
+}
+.main-product-bottom .nav-item button {
+  color: #bd945f !important;
+}
+.main-product-bottom #myTab {
+  border-bottom: 2px solid #bd945f;
+  position: relative;
+}
+.main-product-bottom .nav-item button.active {
+  position: absolute;
+  color: #2c2e53 !important;
+  border: none;
+  border-bottom: 4px solid #2c2e53;
+}
+
+
+.line-col {
+  content: "";
+  background-color: #bd945f;
+  height: 80%;
+  width: 2px;
+  z-index: 2;
+}
+
+
+.products h3 {
+    position: relative;
+    margin: 5rem 0 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .products h3:before {
+    position: absolute;
+    content: "";
+    width: 8.5rem;
+    height: 0.3rem;
+    top: 110%;
+    left: 0%;
+    background-color: #bd945f;
+    animation: menuHover 0.2s ease-in 1;
+  }
+  .products a{
+      color: #2c2e53;
+  }
+  
+  .image5 i {
+    color: #bd945f !important;
+  }
+  .vote i {
+    font-size: 1rem;
+  }
+  
+  .product-describe {
+    font-size: 0.8rem;
+    color: #ccc;
+    font-family: "Gotham-Medium";
+  }
+  .product-price {
+    font-family: "Gotham-Medium";
+  }
+  .product-info h4 {
+      text-transform: uppercase;
+      color: #2c2e53;
+  }
+
+  #products-relate{
+    margin-bottom: 3rem;
+  }

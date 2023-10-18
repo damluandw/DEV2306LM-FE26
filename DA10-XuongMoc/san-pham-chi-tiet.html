@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm chi tiết</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- font  -->
+    <link rel="stylesheet" href="css/font.css" />
+    <!-- style css  -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/sanpham-chitiet.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="Xưởng mộc giá tốt" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#" title="TRANG CHỦ">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="GIỚI THIỆU">GIỚI THIỆU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="SẢN PHẨM">SẢN PHẨM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="TIN TỨC">TIN TỨC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="ĐỐI TÁC">ĐỐI TÁC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" title="LIÊN HỆ">LIÊN HỆ</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- ./header  -->
+    <section id="product">
+      <div class="container">
+        <div class="list-title">
+          <div>
+            <a href="#"><span class="cl-yellow">Trang chủ</span></a
+            ><span class="text-secondary">></span>
+            <a href="#"><span class="cl-yellow">Sản phẩm</span></a>
+            <span class="text-secondary">></span>
+            <a href="#"><span class="cl-yellow">Sản phẩm</span></a>
+          </div>
+        </div>
+        <div class="product">
+          <h2>Bàn uống nước</h2>
+          <div class="main-product-top row">
+            <div class="col-lg-6 main-product-top-left">
+              <div class="img-main-product">
+                <img
+                  class="w-100"
+                  src="../DA10-XuongMoc/images/san-pham-chi-tiet/product-1.png"
+                  alt="product-1.png"
+                />
+              </div>
+              <div class="img-secondary-product row my-4">
+                <div class="col-lg-3">
+                  <img
+                    class="w-100"
+                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-1.png"
+                    alt="sp-1.png"
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <img
+                    class="w-100"
+                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-2.png"
+                    alt="sp-2.png"
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <img
+                    class="w-100"
+                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-3.png"
+                    alt="sp-3.png"
+                  />
+                </div>
+                <div class="col-lg-3">
+                  <img
+                    class="w-100"
+                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-4.png"
+                    alt="sp-4.png"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 main-product-top-right">
+              <div class="chat-lieu">
+                <div><b>Chất liệu</b></div>
+                <div class="list-chat-lieu">
+                  <button class="btn btn-chat-lieu">Gỗ sồi</button>
+                  <button class="btn btn-chat-lieu">Gỗ lim</button>
+                </div>
+              </div>
+              <div class="price">
+                <div id="price-old">12.999.000 <span>VNĐ</span></div>
+                <div id="price-new">9.999.000 <span>VNĐ</span></div>
+              </div>
+              <label id="bao-hanh">
+                <div>
+                  <img
+                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/bao-hanh.png"
+                    alt="bao-hanh.png"
+                  />
+                  <span>Bảo hành sản phẩm lên tới 36 tháng</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="main-product-bottom">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item d-flex" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="dac-trung-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#dac-trung"
+                  type="button"
+                  role="tab"
+                  aria-controls="dac-trung"
+                  aria-selected="true"
+                >
+                  Đặc trưng
+                </button>
+                
+              </li>
+              <li class="nav-item d-flex" role="presentation">
+                <button
+                  class="nav-link"
+                  id="thong-so-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#thong-so"
+                  type="button"
+                  role="tab"
+                  aria-controls="thong-so"
+                  aria-selected="false"
+                >
+                  Thông số
+                </button>
+                <div class="line-col"></div>
+              </li>
+              <li class="nav-item d-flex" role="presentation">
+                <button
+                  class="nav-link"
+                  id="bao-quan-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#bao-quan"
+                  type="button"
+                  role="tab"
+                  aria-controls="bao-quan"
+                  aria-selected="false"
+                >
+                  Bảo quản
+                </button>
+                <div class="line-col"></div>
+              </li>
+              <li class="nav-item d-flex" role="presentation">
+                <button
+                  class="nav-link"
+                  id="bao-hanh-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#bao-hanh"
+                  type="button"
+                  role="tab"
+                  aria-controls="bao-hanh"
+                  aria-selected="false"
+                >
+                  Bảo hành
+                </button>
+                <div class="line-col"></div>
+              </li>
+              <li class="nav-item d-flex" role="presentation">
+                <button
+                  class="nav-link"
+                  id="cam-ket-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#cam-ket"
+                  type="button"
+                  role="tab"
+                  aria-controls="cam-ket"
+                  aria-selected="false"
+                >
+                  Cảm kết
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="dac-trung"
+                role="tabpanel"
+                aria-labelledby="dac-trung-tab"
+              >
+              <ul>
+                <li>- Bàn cà phê cugnws đơn giản với kệ nhở</li>
+                <li>- Phong cách hình học tối giản</li>
+                <li>- Kệ bên trong có kích thước hoàn hảo cho tạp chí, đế lót ly và các phụ kiện phòng khách khac</li>
+                <li>- Cóa thể được sử dụng như một bàn TV thấp - Kệ mỏng hoàn hoản để chứa một hộp hàng đầu hoặc đầu phát blu-ray</li>
+                <li>- Làm bằng gỗ Sheesham cao cấp</li>
+                <li>- Không cần lắp ráp</li>
+              </ul>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="thong-so"
+                role="tabpanel"
+                aria-labelledby="thong-so-tab"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bao-quan"
+                role="tabpanel"
+                aria-labelledby="bao-quan-tab"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bao-hanh"
+                role="tabpanel"
+                aria-labelledby="bao-hanh-tab"
+              >
+                ...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="cam-ket"
+                role="tabpanel"
+                aria-labelledby="cam-ket-tab"
+              >
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./banner  -->
+    <section id="products-relate">
+        <div class="products">
+            <div class="container">
+              <div class="d-flex justify-content-between">
+                <h3>Sản phẩm tương tự</h3>
+                <div class="xem-tat-ca cl-blue"><a href="#">XEM TẤT CẢ</a></div>
+              </div>
+              <div class="list-product row">
+                <div class="item-product col-lg-3">
+                  <div class="img-product">
+                    <img
+                      src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                      alt="sp-1.jpg"
+                    />
+                  </div>
+                  <div class="product-info text-center">
+                    <h4>Giường Châu Âu</h4>
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="product-describe">(Size lớn,trắng sữa)</div>
+                    <div class="product-price">
+                      8.999.000
+                      <span>VNĐ</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-product col-lg-3">
+                  <div class="img-product">
+                    <img
+                      src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                      alt="sp-1.jpg"
+                    />
+                  </div>
+                  <div class="product-info text-center">
+                    <h4>Giường Châu Âu</h4>
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="product-describe">(Size lớn,trắng sữa)</div>
+                    <div class="product-price">
+                      8.999.000
+                      <span>VNĐ</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-product col-lg-3">
+                  <div class="img-product">
+                    <img
+                      src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                      alt="sp-1.jpg"
+                    />
+                  </div>
+                  <div class="product-info text-center">
+                    <h4>Giường Châu Âu</h4>
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="product-describe">(Size lớn,trắng sữa)</div>
+                    <div class="product-price">
+                      8.999.000
+                      <span>VNĐ</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-product col-lg-3">
+                  <div class="img-product">
+                    <img
+                      src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                      alt="sp-1.jpg"
+                    />
+                  </div>
+                  <div class="product-info text-center">
+                    <h4>Giường Châu Âu</h4>
+                    <div class="image5">
+                      <p class="vote m-0">
+                        <span>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="product-describe">(Size lớn,trắng sữa)</div>
+                    <div class="product-price">
+                      8.999.000
+                      <span>VNĐ</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row py-5">
+          <div class="col-lg-4 thong-tin-chung">
+            <h6 class="cl-white">Thông tin chung</h6>
+            <!-- <div class="footer-line"></div> -->
+            <div class="cl-white title-cong-ty">
+              <b>CÔNG TY TNHH HOÀNG HOAN</b>
+            </div>
+            <ul>
+              <li>
+                <span><i class="fa-solid fa-phone cl-white"></i></span>
+                <a class="cl-white" href="tel:0936596425">09999.999.999</a>
+              </li>
+              <li>
+                <span><i class="fa-solid fa-envelope cl-white"></i></span>
+                <a class="cl-white" href="mail:buoidienvn@gmail.com"
+                  >cskh@hoanghoan.vn</a
+                >
+              </li>
+              <li class="d-flex">
+                <span><i class="cl-white fa-solid fa-location-dot"></i></span>
+                <address class="cl-white">
+                  Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội
+                </address>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 footer-about-us">
+            <h6 class="cl-white">Về chúng tôi</h6>
+            <!-- <div class="footer-line"></div> -->
+            <ul>
+              <li><a class="cl-white" href="#">Giới thiêu</a></li>
+              <li><a class="cl-white" href="#">Sản phẩm</a></li>
+              <li><a class="cl-white" href="#">Tin tức</a></li>
+              <li><a class="cl-white" href="#">Đối tác</a></li>
+              <li><a class="cl-white" href="#">Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 ket-noi">
+            <h6 class="cl-white">Kết nối với chúng tôi</h6>
+            <!-- <div class="footer-line"></div> -->
+            <ul class="d-flex">
+              <li class="d-flex flex-column justify-content-center">
+                <a href="#"
+                  ><img
+                    src="../DA10-XuongMoc/images/icon-facebook.png"
+                    alt="zalo-facebook"
+                /></a>
+              </li>
+              <li class="d-flex flex-column justify-content-center">
+                <a href="#"
+                  ><img
+                    src="../DA10-XuongMoc/images/icon-zalo.png"
+                    alt="zalo-icon"
+                /></a>
+              </li>
+              <li class="d-flex flex-column justify-content-center">
+                <a href="#"
+                  ><img
+                    src="../DA10-XuongMoc/images/icon-mail.png"
+                    alt="zalo-mail"
+                /></a>
+              </li>
+            </ul>
+            <div class="icon-da-thong-bao">
+              <img src="../DA10-XuongMoc/images/icon-da-thong-bao.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ./footer  -->
+    <!-- Thư viện js  -->
+    <!-- Thư viện js  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="../DA10-XuongMoc/js/common.js"></script>
+  </body>
+</html>

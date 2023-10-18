@@ -1,3 +1,49 @@
+#banner {
+  position: relative;
+  height: 100%;
+}
+#banner .container {
+  position: relative;
+  height: 100%;
+}
+.banner-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.banner-box .item {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 70%;
+  left: 3rem;
+}
+#banner h2:nth-child(1) {
+  color: #2c2e53;
+  font-family: "Gotham-Ultra";
+  font-size: 2.5rem;
+}
+#banner h2:nth-child(2) {
+  color: #bd945f;
+  font-family: "Gotham-Ultra";
+  font-size: 2.5rem;
+}
+#banner p {
+  font-family: "Gotham-Medium";
+  font-size: 1rem;
+  width: 65%;
+}
+#banner a {
+  background-color: #bd945f;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-family: "Gotham-Ultra";
+  color: #fff;
+  text-transform: uppercase;
+}
+
 #products {
   position: relative;
   margin: 2rem 0;
@@ -152,7 +198,7 @@ h3:before {
   font-size: 1.5rem;
 }
 .tin-tuc-right .tilte-tin-tuc p,
-.tin-tuc-left .tilte-tin-tuc p{
+.tin-tuc-left .tilte-tin-tuc p {
   font-size: 0.75rem;
   line-height: 1rem;
   text-align: justify;
@@ -161,15 +207,14 @@ h3:before {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.tin-tuc-left .tilte-tin-tuc p{
+.tin-tuc-left .tilte-tin-tuc p {
   -webkit-line-clamp: 3;
   line-clamp: 3;
 }
 .tin-tuc-right .tilte-tin-tuc p,
-.tin-tuc-left .tilte-tin-tuc p{
+.tin-tuc-left .tilte-tin-tuc p {
   -webkit-line-clamp: 5;
   line-clamp: 5;
-
 }
 
 .tin-tuc-right .tilte-tin-tuc h5 {
@@ -177,48 +222,47 @@ h3:before {
   font-size: 1rem;
 }
 
-.item-doi-tac{
+.item-doi-tac {
   width: calc(100% / 7);
 }
 
-
-#lien-he{
+#lien-he {
   margin-top: 8rem;
   background-image: url("/DA10-XuongMoc/images/lienhe-bg.jpg");
   background-repeat: no-repeat;
   height: 20rem;
   position: relative;
 }
-.img-left{
+.img-left {
   position: absolute;
   top: -50%;
   left: 3rem;
 }
 
-#lien-he .box-left{
+#lien-he .box-left {
   font-size: 1.5rem;
   color: #fff;
 }
-#lien-he .box-left b{
+#lien-he .box-left b {
   font-family: Gotham-Medium;
 }
-#lien-he .box-right input{
+#lien-he .box-right input {
   border: 0;
   outline: 0;
 }
-#text-lien-he{
+#text-lien-he {
   width: 20rem;
 }
 
-.btn-lien-he{
+.btn-lien-he {
   background-color: #fff;
 }
 
-#lien-he label{
+#lien-he label {
   color: #fff;
 }
 
-#lien-he .line{
+#lien-he .line {
   width: 55%;
   height: 0.5rem;
   background-color: #fff;
