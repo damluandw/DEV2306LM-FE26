@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sản phẩm chi tiết</title>
+    <title>Tất cả sản phẩm</title>
     <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -30,7 +30,7 @@
     <!-- style css  -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/sanpham-chitiet.css" />
+    <link rel="stylesheet" href="css/tatca-sanpham.css" />
   </head>
   <body>
     <header>
@@ -78,236 +78,56 @@
         </nav>
       </div>
     </header>
-    <section>
-      <section id="list-title">
-        <div class="container">
-          <div class="list-title">
-            <div>
-              <a href="#"><span class="cl-yellow">Trang chủ</span></a
-              ><span class="text-secondary">></span>
-              <a href="#"><span class="cl-yellow">Sản phẩm</span></a>
-              <span class="text-secondary">></span>
-              <a href="#"><span class="cl-yellow">Bàn uống nước</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
     <!-- ./header  -->
-    <section id="product">
-      <div class="container">
-        <div class="product">
-          <h2>Bàn uống nước</h2>
-          <div class="main-product-top row">
-            <div class="col-lg-6 main-product-top-left">
-              <div class="img-main-product">
-                <img
-                  class="w-100"
-                  src="../DA10-XuongMoc/images/san-pham-chi-tiet/product-1.png"
-                  alt="product-1.png"
-                />
-              </div>
-              <div class="img-secondary-product row my-4">
-                <div class="col-lg-3">
-                  <img
-                    class="w-100"
-                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-1.png"
-                    alt="sp-1.png"
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <img
-                    class="w-100"
-                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-2.png"
-                    alt="sp-2.png"
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <img
-                    class="w-100"
-                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-3.png"
-                    alt="sp-3.png"
-                  />
-                </div>
-                <div class="col-lg-3">
-                  <img
-                    class="w-100"
-                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/sp-4.png"
-                    alt="sp-4.png"
-                  />
-                </div>
-              </div>
+    <section id="banner">
+      <div class="item-banner">
+        <img
+          src="../DA10-XuongMoc/images/san-pham/sp-banner.png"
+          alt="Thế giới nội thất số 1 việt nam"
+        />
+        <div class="btn-banner">
+          <button class="btn cl-blue btn-mua-ngay">mua ngay</button>
+        </div>
+      </div>
+    </section>
+    <section id="product-filter">
+      <div class="filter">
+        <div class="container">
+          <div class="d-flex justify-content-between">
+            <div class="filter-price d-flex">
+              <span>Chọn mức giá:</span>
+              <ul class="d-flex">
+                <li class="cl-yellow">Dưới 5 triệu</li>
+                <li class="cl-yellow">5-10 triệu</li>
+                <li class="cl-yellow">10-15 triệu</li>
+                <li class="cl-yellow">Trên 15 triệu</li>
+              </ul>
             </div>
-            <div class="col-lg-6 main-product-top-right">
-              <div class="chat-lieu">
-                <div><b>Chất liệu</b></div>
-                <div class="list-chat-lieu">
-                  <button class="btn btn-chat-lieu">Gỗ sồi</button>
-                  <button class="btn btn-chat-lieu">Gỗ lim</button>
-                </div>
-              </div>
-              <div class="price">
-                <div id="price-old">12.999.000 <span>VNĐ</span></div>
-                <div id="price-new">9.999.000 <span>VNĐ</span></div>
-              </div>
-              <label id="bao-hanh">
-                <div>
-                  <img
-                    src="../DA10-XuongMoc/images/san-pham-chi-tiet/bao-hanh.png"
-                    alt="bao-hanh.png"
-                  />
-                  <span>Bảo hành sản phẩm lên tới 36 tháng</span>
-                </div>
-              </label>
-            </div>
-          </div>
-          <div class="main-product-bottom">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item d-flex" role="presentation">
-                <button
-                  class="nav-link active"
-                  id="dac-trung-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#dac-trung"
-                  type="button"
-                  role="tab"
-                  aria-controls="dac-trung"
-                  aria-selected="true"
-                >
-                  Đặc trưng
-                </button>
-              </li>
-              <li class="nav-item d-flex" role="presentation">
-                <button
-                  class="nav-link"
-                  id="thong-so-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#thong-so"
-                  type="button"
-                  role="tab"
-                  aria-controls="thong-so"
-                  aria-selected="false"
-                >
-                  Thông số
-                </button>
-                <div class="line-col"></div>
-              </li>
-              <li class="nav-item d-flex" role="presentation">
-                <button
-                  class="nav-link"
-                  id="bao-quan-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#bao-quan"
-                  type="button"
-                  role="tab"
-                  aria-controls="bao-quan"
-                  aria-selected="false"
-                >
-                  Bảo quản
-                </button>
-                <div class="line-col"></div>
-              </li>
-              <li class="nav-item d-flex" role="presentation">
-                <button
-                  class="nav-link"
-                  id="bao-hanh-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#bao-hanh"
-                  type="button"
-                  role="tab"
-                  aria-controls="bao-hanh"
-                  aria-selected="false"
-                >
-                  Bảo hành
-                </button>
-                <div class="line-col"></div>
-              </li>
-              <li class="nav-item d-flex" role="presentation">
-                <button
-                  class="nav-link"
-                  id="cam-ket-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#cam-ket"
-                  type="button"
-                  role="tab"
-                  aria-controls="cam-ket"
-                  aria-selected="false"
-                >
-                  Cảm kết
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-              <div
-                class="tab-pane fade show active"
-                id="dac-trung"
-                role="tabpanel"
-                aria-labelledby="dac-trung-tab"
-              >
-                <ul>
-                  <li>- Bàn cà phê cugnws đơn giản với kệ nhở</li>
-                  <li>- Phong cách hình học tối giản</li>
-                  <li>
-                    - Kệ bên trong có kích thước hoàn hảo cho tạp chí, đế lót ly
-                    và các phụ kiện phòng khách khac
-                  </li>
-                  <li>
-                    - Cóa thể được sử dụng như một bàn TV thấp - Kệ mỏng hoàn
-                    hoản để chứa một hộp hàng đầu hoặc đầu phát blu-ray
-                  </li>
-                  <li>- Làm bằng gỗ Sheesham cao cấp</li>
-                  <li>- Không cần lắp ráp</li>
-                </ul>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="thong-so"
-                role="tabpanel"
-                aria-labelledby="thong-so-tab"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="bao-quan"
-                role="tabpanel"
-                aria-labelledby="bao-quan-tab"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="bao-hanh"
-                role="tabpanel"
-                aria-labelledby="bao-hanh-tab"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="cam-ket"
-                role="tabpanel"
-                aria-labelledby="cam-ket-tab"
-              >
-                ...
-              </div>
+            <div class="filter-sort">
+              <select class="form-select">
+                <option value="new" selected>Sắp xếp</option>
+                <option value="new">Mới nhất</option>
+                <option value="pho-bien">Phổ biến nhất</option>
+                <option value="price-desc">Giá cao đến thấp</option>
+                <option value="price-asc">Giá thấp đến cao</option>
+              </select>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- ./banner  -->
-    <section id="products-relate">
+    <section id="products">
       <div class="products">
         <div class="container">
-          <div class="d-flex justify-content-between">
-            <h3>Sản phẩm tương tự</h3>
-            <div class="xem-tat-ca cl-blue"><a href="#">XEM TẤT CẢ</a></div>
+          <div class="d-flex justify-content-start">
+            <h3>Phòng khách</h3>
           </div>
           <div class="list-product row">
             <div class="item-product col-lg-3">
               <div class="img-product">
                 <img
+                  class="w-100"
                   src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
                   alt="sp-1.jpg"
                 />
@@ -335,6 +155,7 @@
             <div class="item-product col-lg-3">
               <div class="img-product">
                 <img
+                  class="w-100"
                   src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
                   alt="sp-1.jpg"
                 />
@@ -362,6 +183,7 @@
             <div class="item-product col-lg-3">
               <div class="img-product">
                 <img
+                  class="w-100"
                   src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
                   alt="sp-1.jpg"
                 />
@@ -389,6 +211,119 @@
             <div class="item-product col-lg-3">
               <div class="img-product">
                 <img
+                  class="w-100"
+                  src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                  alt="sp-1.jpg"
+                />
+              </div>
+              <div class="product-info text-center">
+                <h4>Giường Châu Âu</h4>
+                <div class="image5">
+                  <p class="vote m-0">
+                    <span>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="product-describe">(Size lớn,trắng sữa)</div>
+                <div class="product-price">
+                  8.999.000
+                  <span>VNĐ</span>
+                </div>
+              </div>
+            </div>
+            <div class="item-product col-lg-3">
+              <div class="img-product">
+                <img
+                  class="w-100"
+                  src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                  alt="sp-1.jpg"
+                />
+              </div>
+              <div class="product-info text-center">
+                <h4>Giường Châu Âu</h4>
+                <div class="image5">
+                  <p class="vote m-0">
+                    <span>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="product-describe">(Size lớn,trắng sữa)</div>
+                <div class="product-price">
+                  8.999.000
+                  <span>VNĐ</span>
+                </div>
+              </div>
+            </div>
+            <div class="item-product col-lg-3">
+              <div class="img-product">
+                <img
+                  class="w-100"
+                  src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                  alt="sp-1.jpg"
+                />
+              </div>
+              <div class="product-info text-center">
+                <h4>Giường Châu Âu</h4>
+                <div class="image5">
+                  <p class="vote m-0">
+                    <span>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="product-describe">(Size lớn,trắng sữa)</div>
+                <div class="product-price">
+                  8.999.000
+                  <span>VNĐ</span>
+                </div>
+              </div>
+            </div>
+            <div class="item-product col-lg-3">
+              <div class="img-product">
+                <img
+                  class="w-100"
+                  src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
+                  alt="sp-1.jpg"
+                />
+              </div>
+              <div class="product-info text-center">
+                <h4>Giường Châu Âu</h4>
+                <div class="image5">
+                  <p class="vote m-0">
+                    <span>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="product-describe">(Size lớn,trắng sữa)</div>
+                <div class="product-price">
+                  8.999.000
+                  <span>VNĐ</span>
+                </div>
+              </div>
+            </div>
+            <div class="item-product col-lg-3">
+              <div class="img-product">
+                <img
+                  class="w-100"
                   src="/DA10-XuongMoc/images/san-pham-noi-bat/sp-1.jpg"
                   alt="sp-1.jpg"
                 />
@@ -414,6 +349,23 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./phong khach  -->
+
+    <section id="pages">
+      <div class="pages">
+        <div class="container">
+          <ul class="d-flex justify-content-center">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>
+              <span><i class="fa-solid fa-angle-right"></i></span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

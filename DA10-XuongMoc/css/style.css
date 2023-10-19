@@ -85,6 +85,9 @@ header ul li.active:before {
 footer {
   background-color: #363636;
 }
+footer ul{
+  padding: 0;
+}
 
 footer h6 {
   position: relative;

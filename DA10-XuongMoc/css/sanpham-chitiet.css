@@ -3,6 +3,11 @@
 }
 .list-title {
   margin: 3rem 0;
+  font-family: Gotham-Medium;
+}
+.list-title span{
+  padding: 0 0.2rem ;
+
 }
 .main-product-top-right{
     padding-left: 3rem;

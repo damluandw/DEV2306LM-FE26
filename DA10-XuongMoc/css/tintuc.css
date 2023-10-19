@@ -1,0 +1,74 @@
+#tin-tuc h3 {
+  position: relative;
+  text-align: center;
+  margin: 5rem 0 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#tin-tuc h3:before {
+  position: absolute;
+  content: "";
+  width: 8.5rem;
+  height: 0.3rem;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #bd945f;
+  animation: menuHover 0.2s ease-in 1;
+}
+
+.list-tin-tuc .title-tin-tuc h4 a{
+
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  color: #bd945f;
+  font-family: Gotham-Medium;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-tin-tuc p {
+  font-family: Gotham-Medium;
+  font-size: 1.1rem;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.item-tin-tuc {
+  margin-bottom: 2rem;
+}
+
+#pages {
+  margin: 0rem 0 5rem;
+}
+
+.pages ul li{
+  list-style-type: none;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+.pages ul li {
+  padding: 0.3rem;
+  width: 2rem;
+  background-color: #ccc;
+  text-align: center;
+  margin-left: 1rem;
+  font-family: Gotham-Medium;
+  color: #fff;
+}
+
+.pages ul li:hover {
+  background-color: #bd945f;
+  color: #2c2e53;
+}
